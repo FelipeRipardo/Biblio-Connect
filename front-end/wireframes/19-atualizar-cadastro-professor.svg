@@ -1,0 +1,102 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f5f5f5"/>
+  
+  <!-- Header -->
+  <rect width="1200" height="70" fill="#1e3a5f"/>
+  <text x="40" y="45" font-family="Georgia, serif" font-size="22" fill="#fff" font-weight="bold">📚 BiblioConnect</text>
+  
+  <circle cx="1100" cy="35" r="18" fill="#9b59b6"/>
+  <text x="1100" y="40" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">MS</text>
+  
+  <!-- Page Title -->
+  <text x="40" y="115" font-family="Georgia, serif" font-size="22" fill="#1e3a5f" font-weight="bold">Atualizar Cadastro - Professor</text>
+  
+  <!-- Sidebar -->
+  <rect x="40" y="140" width="220" height="450" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  
+  <rect x="40" y="140" width="220" height="50" rx="10" fill="#9b59b6"/>
+  <text x="70" y="170" font-family="Arial" font-size="13" fill="#fff">👤 Dados Pessoais</text>
+  
+  <text x="70" y="220" font-family="Arial" font-size="13" fill="#666">🔒 Alterar Senha</text>
+  <text x="70" y="260" font-family="Arial" font-size="13" fill="#666">📚 Minhas Disciplinas</text>
+  <text x="70" y="300" font-family="Arial" font-size="13" fill="#666">🎓 Minhas Turmas</text>
+  <text x="70" y="340" font-family="Arial" font-size="13" fill="#666">📊 Meus Relatórios</text>
+  
+  <!-- Main Form -->
+  <rect x="280" y="140" width="900" height="730" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  
+  <!-- Profile Header -->
+  <rect x="280" y="140" width="900" height="100" rx="10" fill="#9b59b6"/>
+  
+  <!-- Avatar -->
+  <circle cx="380" cy="220" r="45" fill="#fff" stroke="#fff" stroke-width="3"/>
+  <text x="380" y="230" font-family="Arial" font-size="26" fill="#9b59b6" text-anchor="middle">MS</text>
+  <circle cx="410" cy="250" r="15" fill="#1e3a5f"/>
+  <text x="410" y="255" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">📷</text>
+  
+  <text x="450" y="195" font-family="Arial" font-size="20" fill="#fff" font-weight="bold">Maria Fernanda Santos</text>
+  <text x="450" y="220" font-family="Arial" font-size="12" fill="#e8d5f0">maria.santos@escola.edu.br</text>
+  <rect x="450" y="230" width="80" height="22" rx="11" fill="#fff"/>
+  <text x="490" y="245" font-family="Arial" font-size="10" fill="#9b59b6" text-anchor="middle">Professor</text>
+  
+  <!-- Section: Dados Pessoais -->
+  <text x="320" y="295" font-family="Arial" font-size="14" fill="#1e3a5f" font-weight="bold">Dados Pessoais</text>
+  
+  <text x="320" y="330" font-family="Arial" font-size="12" fill="#666">Nome Completo *</text>
+  <rect x="320" y="340" width="400" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="340" y="368" font-family="Arial" font-size="13" fill="#333">Maria Fernanda Santos Silva</text>
+  
+  <text x="740" y="330" font-family="Arial" font-size="12" fill="#666">Registro Funcional</text>
+  <rect x="740" y="340" width="200" height="45" rx="6" fill="#f0f0f0" stroke="#ddd"/>
+  <text x="760" y="368" font-family="Arial" font-size="13" fill="#999">RF2024567 🔒</text>
+  
+  <text x="320" y="415" font-family="Arial" font-size="12" fill="#666">Email Institucional *</text>
+  <rect x="320" y="425" width="300" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="340" y="453" font-family="Arial" font-size="13" fill="#333">maria.santos@escola.edu.br</text>
+  
+  <text x="640" y="415" font-family="Arial" font-size="12" fill="#666">Telefone *</text>
+  <rect x="640" y="425" width="300" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="660" y="453" font-family="Arial" font-size="13" fill="#333">(11) 98765-4321</text>
+  
+  <text x="320" y="500" font-family="Arial" font-size="12" fill="#666">CPF</text>
+  <rect x="320" y="510" width="200" height="45" rx="6" fill="#f0f0f0" stroke="#ddd"/>
+  <text x="340" y="538" font-family="Arial" font-size="13" fill="#999">987.654.321-00 🔒</text>
+  
+  <!-- Section: Disciplinas -->
+  <text x="320" y="595" font-family="Arial" font-size="14" fill="#1e3a5f" font-weight="bold">Disciplinas que Leciona</text>
+  <text x="740" y="595" font-family="Arial" font-size="11" fill="#9b59b6">Solicitar alteração</text>
+  
+  <rect x="320" y="610" width="620" height="55" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <rect x="335" y="625" width="100" height="28" rx="14" fill="#27ae60"/>
+  <text x="385" y="644" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">Matemática</text>
+  <rect x="445" y="625" width="70" height="28" rx="14" fill="#3498db"/>
+  <text x="480" y="644" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">Física</text>
+  <text x="540" y="644" font-family="Arial" font-size="11" fill="#999">🔒 Gerenciado pela coordenação</text>
+  
+  <!-- Section: Turmas -->
+  <text x="320" y="700" font-family="Arial" font-size="14" fill="#1e3a5f" font-weight="bold">Turmas Atribuídas</text>
+  <text x="740" y="700" font-family="Arial" font-size="11" fill="#9b59b6">Solicitar alteração</text>
+  
+  <rect x="320" y="715" width="620" height="55" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <rect x="335" y="730" width="60" height="28" rx="14" fill="#9b59b6"/>
+  <text x="365" y="749" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">9º A</text>
+  <rect x="405" y="730" width="60" height="28" rx="14" fill="#9b59b6"/>
+  <text x="435" y="749" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">9º B</text>
+  <rect x="475" y="730" width="60" height="28" rx="14" fill="#9b59b6"/>
+  <text x="505" y="749" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">8º A</text>
+  <rect x="545" y="730" width="60" height="28" rx="14" fill="#9b59b6"/>
+  <text x="575" y="749" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">8º B</text>
+  <text x="630" y="749" font-family="Arial" font-size="11" fill="#999">🔒</text>
+  
+  <!-- Info Box -->
+  <rect x="320" y="790" width="400" height="45" rx="8" fill="#f3e5f5" stroke="#9b59b6"/>
+  <text x="340" y="818" font-family="Arial" font-size="11" fill="#6a1b9a">ℹ️ Para alterar disciplinas ou turmas, contate a coordenação.</text>
+  
+  <!-- Buttons -->
+  <rect x="760" y="795" width="140" height="50" rx="8" fill="#fff" stroke="#ddd"/>
+  <text x="830" y="825" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">Cancelar</text>
+  
+  <rect x="920" y="795" width="180" height="50" rx="8" fill="#9b59b6"/>
+  <text x="1010" y="825" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">Salvar Alterações</text>
+</svg>

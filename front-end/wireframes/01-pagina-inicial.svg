@@ -1,0 +1,121 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f5f5f5"/>
+  
+  <!-- Header -->
+  <rect width="1200" height="70" fill="#1e3a5f"/>
+  <text x="40" y="45" font-family="Georgia, serif" font-size="22" fill="#fff" font-weight="bold">📚 BiblioConnect</text>
+  
+  <!-- Navigation -->
+  <text x="480" y="45" font-family="Arial" font-size="13" fill="#fff">Início</text>
+  <text x="550" y="45" font-family="Arial" font-size="13" fill="#b8c5d6">Acervo</text>
+  <text x="630" y="45" font-family="Arial" font-size="13" fill="#b8c5d6">Como Funciona</text>
+  <text x="760" y="45" font-family="Arial" font-size="13" fill="#b8c5d6">Sobre</text>
+  <text x="830" y="45" font-family="Arial" font-size="13" fill="#b8c5d6">Contato</text>
+  
+  <!-- Login/Register buttons -->
+  <rect x="950" y="20" width="80" height="35" rx="6" fill="transparent" stroke="#fff"/>
+  <text x="990" y="43" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">Entrar</text>
+  <rect x="1040" y="20" width="120" height="35" rx="6" fill="#27ae60"/>
+  <text x="1100" y="43" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">Cadastre-se</text>
+  
+  <!-- Hero Section -->
+  <rect x="0" y="70" width="1200" height="400" fill="#2d5a87"/>
+  
+  <!-- Hero Content -->
+  <text x="100" y="180" font-family="Georgia, serif" font-size="42" fill="#fff" font-weight="bold">BiblioConnect</text>
+  <text x="100" y="230" font-family="Arial" font-size="18" fill="#b8c5d6">SISTEMA DE BIBLIOTECA VIRTUAL PARA ESCOLAS PÚBLICAS</text>
+  
+  <text x="100" y="290" font-family="Arial" font-size="15" fill="#fff">Organização, disponibilização e consulta de livros e materiais</text>
+  <text x="100" y="315" font-family="Arial" font-size="15" fill="#fff">educacionais digitais. Facilitando o acesso dos estudantes e o</text>
+  <text x="100" y="340" font-family="Arial" font-size="15" fill="#fff">gerenciamento do acervo pela comunidade escolar.</text>
+  
+  <!-- CTA Buttons -->
+  <rect x="100" y="375" width="180" height="50" rx="8" fill="#27ae60"/>
+  <text x="190" y="407" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">📖 Acessar Acervo</text>
+  
+  <rect x="300" y="375" width="180" height="50" rx="8" fill="transparent" stroke="#fff" stroke-width="2"/>
+  <text x="390" y="407" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle">Saiba Mais</text>
+  
+  <!-- Hero Image - Digital Library -->
+  <rect x="650" y="110" width="480" height="320" rx="12" fill="#1e3a5f"/>
+  
+  <!-- Digital devices with books -->
+  <rect x="690" y="150" width="180" height="120" rx="8" fill="#34495e"/>
+  <rect x="700" y="160" width="160" height="90" fill="#fff"/>
+  <rect x="710" y="170" width="60" height="70" rx="4" fill="#e74c3c"/>
+  <text x="740" y="200" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">MATEMÁTICA</text>
+  <rect x="780" y="170" width="60" height="70" rx="4" fill="#3498db"/>
+  <text x="810" y="200" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">PORTUGUÊS</text>
+  <text x="780" y="265" font-family="Arial" font-size="9" fill="#b8c5d6" text-anchor="middle">💻 Computador</text>
+  
+  <rect x="900" y="170" width="100" height="160" rx="8" fill="#34495e"/>
+  <rect x="908" y="180" width="84" height="130" fill="#fff"/>
+  <rect x="916" y="190" width="30" height="45" rx="2" fill="#27ae60"/>
+  <rect x="952" y="190" width="30" height="45" rx="2" fill="#9b59b6"/>
+  <rect x="916" y="245" width="30" height="45" rx="2" fill="#f39c12"/>
+  <rect x="952" y="245" width="30" height="45" rx="2" fill="#e74c3c"/>
+  <text x="950" y="355" font-family="Arial" font-size="9" fill="#b8c5d6" text-anchor="middle">📱 Celular</text>
+  
+  <rect x="1020" y="140" width="90" height="130" rx="8" fill="#34495e"/>
+  <rect x="1028" y="148" width="74" height="100" fill="#fff"/>
+  <rect x="1036" y="156" width="58" height="80" fill="#2d5a87"/>
+  <text x="1065" y="195" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">📚</text>
+  <text x="1065" y="290" font-family="Arial" font-size="9" fill="#b8c5d6" text-anchor="middle">📋 Tablet</text>
+  
+  <text x="890" y="400" font-family="Arial" font-size="11" fill="#b8c5d6" text-anchor="middle">Acesse de qualquer dispositivo</text>
+  
+  <!-- Badge -->
+  <rect x="100" y="440" width="280" height="25" rx="4" fill="rgba(255,255,255,0.1)"/>
+  <text x="240" y="457" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">🏫 Feito para a Comunidade Escolar</text>
+  
+  <!-- Features Section -->
+  <text x="600" y="520" font-family="Georgia, serif" font-size="26" fill="#1e3a5f" text-anchor="middle" font-weight="bold">Facilite o acesso ao conhecimento</text>
+  <text x="600" y="548" font-family="Arial" font-size="13" fill="#666" text-anchor="middle">Gerenciamento completo do acervo digital para toda a comunidade escolar</text>
+  
+  <!-- Feature Cards -->
+  <rect x="80" y="580" width="250" height="160" rx="12" fill="#fff" stroke="#e0e0e0"/>
+  <circle cx="205" cy="625" r="28" fill="#e8f4f8"/>
+  <text x="205" y="635" font-family="Arial" font-size="24" text-anchor="middle">📚</text>
+  <text x="205" y="670" font-family="Arial" font-size="13" fill="#1e3a5f" text-anchor="middle" font-weight="bold">Acervo Digital</text>
+  <text x="205" y="693" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">Livros e materiais</text>
+  <text x="205" y="710" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">educacionais online</text>
+  
+  <rect x="360" y="580" width="250" height="160" rx="12" fill="#fff" stroke="#e0e0e0"/>
+  <circle cx="485" cy="625" r="28" fill="#e8f5e9"/>
+  <text x="485" y="635" font-family="Arial" font-size="24" text-anchor="middle">🔍</text>
+  <text x="485" y="670" font-family="Arial" font-size="13" fill="#1e3a5f" text-anchor="middle" font-weight="bold">Consulta Fácil</text>
+  <text x="485" y="693" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">Busque por título, autor</text>
+  <text x="485" y="710" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">ou disciplina</text>
+  
+  <rect x="640" y="580" width="250" height="160" rx="12" fill="#fff" stroke="#e0e0e0"/>
+  <circle cx="765" cy="625" r="28" fill="#fff3cd"/>
+  <text x="765" y="635" font-family="Arial" font-size="24" text-anchor="middle">👨‍🎓</text>
+  <text x="765" y="670" font-family="Arial" font-size="13" fill="#1e3a5f" text-anchor="middle" font-weight="bold">Para Estudantes</text>
+  <text x="765" y="693" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">Acesso gratuito</text>
+  <text x="765" y="710" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">a todo o conteúdo</text>
+  
+  <rect x="920" y="580" width="250" height="160" rx="12" fill="#fff" stroke="#e0e0e0"/>
+  <circle cx="1045" cy="625" r="28" fill="#f3e5f5"/>
+  <text x="1045" y="635" font-family="Arial" font-size="24" text-anchor="middle">👨‍🏫</text>
+  <text x="1045" y="670" font-family="Arial" font-size="13" fill="#1e3a5f" text-anchor="middle" font-weight="bold">Para Professores</text>
+  <text x="1045" y="693" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">Acompanhe as leituras</text>
+  <text x="1045" y="710" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">dos seus alunos</text>
+  
+  <!-- Stats Section -->
+  <rect x="80" y="770" width="1090" height="90" rx="12" fill="#1e3a5f"/>
+  <text x="230" y="810" font-family="Arial" font-size="28" fill="#fff" text-anchor="middle" font-weight="bold">500+</text>
+  <text x="230" y="835" font-family="Arial" font-size="11" fill="#b8c5d6" text-anchor="middle">Livros Disponíveis</text>
+  
+  <text x="480" y="810" font-family="Arial" font-size="28" fill="#fff" text-anchor="middle" font-weight="bold">1.850</text>
+  <text x="480" y="835" font-family="Arial" font-size="11" fill="#b8c5d6" text-anchor="middle">Alunos Cadastrados</text>
+  
+  <text x="730" y="810" font-family="Arial" font-size="28" fill="#fff" text-anchor="middle" font-weight="bold">45</text>
+  <text x="730" y="835" font-family="Arial" font-size="11" fill="#b8c5d6" text-anchor="middle">Professores</text>
+  
+  <text x="980" y="810" font-family="Arial" font-size="28" fill="#fff" text-anchor="middle" font-weight="bold">12.500+</text>
+  <text x="980" y="835" font-family="Arial" font-size="11" fill="#b8c5d6" text-anchor="middle">Acessos Realizados</text>
+  
+  <!-- Footer -->
+  <text x="600" y="885" font-family="Arial" font-size="10" fill="#999" text-anchor="middle">© 2026 BiblioConnect - Sistema de Biblioteca Virtual para Escolas Públicas</text>
+</svg>

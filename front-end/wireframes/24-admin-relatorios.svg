@@ -1,0 +1,139 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f5f5f5"/>
+  
+  <!-- Sidebar -->
+  <rect width="250" height="900" fill="#1e3a5f"/>
+  
+  <!-- Logo -->
+  <text x="30" y="45" font-family="Georgia, serif" font-size="18" fill="#fff" font-weight="bold">📚 BiblioConnect</text>
+  <text x="30" y="65" font-family="Arial" font-size="10" fill="#b8c5d6">Painel Administrativo</text>
+  
+  <!-- Admin Profile -->
+  <circle cx="55" cy="115" r="22" fill="#e07c24"/>
+  <text x="55" y="122" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle">AD</text>
+  <text x="90" y="110" font-family="Arial" font-size="12" fill="#fff">Administrador</text>
+  <text x="90" y="125" font-family="Arial" font-size="10" fill="#b8c5d6">Bibliotecário</text>
+  
+  <!-- Menu -->
+  <text x="50" y="180" font-family="Arial" font-size="12" fill="#b8c5d6">📊 Dashboard</text>
+  <text x="50" y="215" font-family="Arial" font-size="12" fill="#b8c5d6">📚 Livros</text>
+  <text x="50" y="250" font-family="Arial" font-size="12" fill="#b8c5d6">👥 Alunos</text>
+  <text x="50" y="285" font-family="Arial" font-size="12" fill="#b8c5d6">👨‍🏫 Professores</text>
+  <text x="50" y="320" font-family="Arial" font-size="12" fill="#b8c5d6">📋 Empréstimos</text>
+  <rect x="0" y="335" width="250" height="40" fill="#2d5a87"/>
+  <text x="50" y="360" font-family="Arial" font-size="12" fill="#fff">📝 Relatórios</text>
+  <text x="50" y="400" font-family="Arial" font-size="12" fill="#b8c5d6">⚙️ Configurações</text>
+  
+  <!-- Main Content Header -->
+  <rect x="250" y="0" width="950" height="70" fill="#fff" stroke="#e0e0e0"/>
+  <text x="280" y="45" font-family="Georgia, serif" font-size="20" fill="#1e3a5f" font-weight="bold">Relatórios e Estatísticas</text>
+  
+  <!-- Filter Bar -->
+  <rect x="280" y="85" width="860" height="50" rx="8" fill="#fff" stroke="#e0e0e0"/>
+  <text x="300" y="115" font-family="Arial" font-size="11" fill="#666">Período:</text>
+  <rect x="360" y="95" width="130" height="30" rx="4" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="375" y="115" font-family="Arial" font-size="11" fill="#333">01/09/2026</text>
+  <text x="500" y="115" font-family="Arial" font-size="11" fill="#666">até</text>
+  <rect x="530" y="95" width="130" height="30" rx="4" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="545" y="115" font-family="Arial" font-size="11" fill="#333">06/10/2026</text>
+  
+  <rect x="690" y="95" width="130" height="30" rx="4" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="705" y="115" font-family="Arial" font-size="11" fill="#333">Todas Turmas ▼</text>
+  
+  <rect x="840" y="95" width="130" height="30" rx="4" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="855" y="115" font-family="Arial" font-size="11" fill="#333">Disciplina ▼</text>
+  
+  <rect x="990" y="95" width="80" height="30" rx="4" fill="#e07c24"/>
+  <text x="1010" y="115" font-family="Arial" font-size="11" fill="#fff">Filtrar</text>
+  
+  <!-- Report Cards - Row 1 -->
+  <rect x="280" y="150" width="280" height="200" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="300" y="180" font-family="Arial" font-size="13" fill="#1e3a5f" font-weight="bold">📊 Empréstimos por Mês</text>
+  <rect x="300" y="195" width="240" height="140" fill="#f8f9fa" rx="4"/>
+  <!-- Bar chart -->
+  <rect x="315" y="280" width="25" height="45" fill="#3498db"/>
+  <rect x="350" y="260" width="25" height="65" fill="#3498db"/>
+  <rect x="385" y="240" width="25" height="85" fill="#3498db"/>
+  <rect x="420" y="265" width="25" height="60" fill="#3498db"/>
+  <rect x="455" y="230" width="25" height="95" fill="#e07c24"/>
+  <rect x="490" y="290" width="25" height="35" fill="#ccc"/>
+  <text x="320" y="335" font-family="Arial" font-size="9" fill="#666">Jul</text>
+  <text x="355" y="335" font-family="Arial" font-size="9" fill="#666">Ago</text>
+  <text x="390" y="335" font-family="Arial" font-size="9" fill="#666">Set</text>
+  <text x="425" y="335" font-family="Arial" font-size="9" fill="#666">Out</text>
+  <text x="460" y="335" font-family="Arial" font-size="9" fill="#666">Nov</text>
+  <text x="495" y="335" font-family="Arial" font-size="9" fill="#666">Dez</text>
+  
+  <rect x="580" y="150" width="280" height="200" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="600" y="180" font-family="Arial" font-size="13" fill="#1e3a5f" font-weight="bold">📚 Livros Mais Emprestados</text>
+  <text x="600" y="210" font-family="Arial" font-size="11" fill="#333">1. Matemática 7º Ano (45)</text>
+  <text x="600" y="230" font-family="Arial" font-size="11" fill="#333">2. Português 8º Ano (42)</text>
+  <text x="600" y="250" font-family="Arial" font-size="11" fill="#333">3. História do Brasil (38)</text>
+  <text x="600" y="270" font-family="Arial" font-size="11" fill="#333">4. Ciências 6º Ano (35)</text>
+  <text x="600" y="290" font-family="Arial" font-size="11" fill="#333">5. Geografia 9º Ano (32)</text>
+  <rect x="600" y="310" width="240" height="25" rx="4" fill="#f8f9fa"/>
+  <text x="680" y="327" font-family="Arial" font-size="10" fill="#3498db">Ver relatório completo →</text>
+  
+  <rect x="880" y="150" width="260" height="200" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="900" y="180" font-family="Arial" font-size="13" fill="#1e3a5f" font-weight="bold">👨‍🎓 Alunos Mais Ativos</text>
+  <text x="900" y="210" font-family="Arial" font-size="11" fill="#333">1. Lucas Costa - 12 livros</text>
+  <text x="900" y="230" font-family="Arial" font-size="11" fill="#333">2. Amanda Silva - 10 livros</text>
+  <text x="900" y="250" font-family="Arial" font-size="11" fill="#333">3. Pedro Alves - 9 livros</text>
+  <text x="900" y="270" font-family="Arial" font-size="11" fill="#333">4. Julia Martins - 8 livros</text>
+  <text x="900" y="290" font-family="Arial" font-size="11" fill="#333">5. Rafael Fernandes - 7 livros</text>
+  <rect x="900" y="310" width="220" height="25" rx="4" fill="#f8f9fa"/>
+  <text x="970" y="327" font-family="Arial" font-size="10" fill="#3498db">Ver ranking completo →</text>
+  
+  <!-- Report Cards - Row 2 -->
+  <rect x="280" y="370" width="280" height="200" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="300" y="400" font-family="Arial" font-size="13" fill="#1e3a5f" font-weight="bold">📖 Por Disciplina</text>
+  <rect x="300" y="415" width="240" height="140" fill="#f8f9fa" rx="4"/>
+  <!-- Pie chart mockup -->
+  <circle cx="420" cy="485" r="50" fill="none" stroke="#3498db" stroke-width="25" stroke-dasharray="70 130"/>
+  <circle cx="420" cy="485" r="50" fill="none" stroke="#27ae60" stroke-width="25" stroke-dasharray="50 150" stroke-dashoffset="-70"/>
+  <circle cx="420" cy="485" r="50" fill="none" stroke="#e07c24" stroke-width="25" stroke-dasharray="40 160" stroke-dashoffset="-120"/>
+  <circle cx="420" cy="485" r="50" fill="none" stroke="#9b59b6" stroke-width="25" stroke-dasharray="40 160" stroke-dashoffset="-160"/>
+  <text x="310" y="555" font-family="Arial" font-size="9" fill="#666">🔵Mat 🟢Port 🟠Hist 🟣Ciên</text>
+  
+  <rect x="580" y="370" width="280" height="200" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="600" y="400" font-family="Arial" font-size="13" fill="#1e3a5f" font-weight="bold">⚠️ Atrasos por Turma</text>
+  <text x="600" y="430" font-family="Arial" font-size="11" fill="#333">7º Ano A - 3 atrasos</text>
+  <rect x="600" y="440" width="100" height="8" rx="4" fill="#e74c3c"/>
+  <text x="600" y="470" font-family="Arial" font-size="11" fill="#333">8º Ano B - 5 atrasos</text>
+  <rect x="600" y="480" width="160" height="8" rx="4" fill="#e74c3c"/>
+  <text x="600" y="510" font-family="Arial" font-size="11" fill="#333">9º Ano A - 2 atrasos</text>
+  <rect x="600" y="520" width="70" height="8" rx="4" fill="#f39c12"/>
+  <text x="600" y="550" font-family="Arial" font-size="11" fill="#333">6º Ano C - 2 atrasos</text>
+  <rect x="600" y="560" width="70" height="8" rx="4" fill="#f39c12"/>
+  
+  <rect x="880" y="370" width="260" height="200" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="900" y="400" font-family="Arial" font-size="13" fill="#1e3a5f" font-weight="bold">📅 Resumo do Período</text>
+  <text x="900" y="440" font-family="Arial" font-size="11" fill="#666">Total de Empréstimos:</text>
+  <text x="1070" y="440" font-family="Arial" font-size="16" fill="#3498db" font-weight="bold">287</text>
+  <text x="900" y="475" font-family="Arial" font-size="11" fill="#666">Devoluções no Prazo:</text>
+  <text x="1070" y="475" font-family="Arial" font-size="16" fill="#27ae60" font-weight="bold">92%</text>
+  <text x="900" y="510" font-family="Arial" font-size="11" fill="#666">Atrasos:</text>
+  <text x="1070" y="510" font-family="Arial" font-size="16" fill="#e74c3c" font-weight="bold">12</text>
+  <text x="900" y="545" font-family="Arial" font-size="11" fill="#666">Novos Cadastros:</text>
+  <text x="1070" y="545" font-family="Arial" font-size="16" fill="#9b59b6" font-weight="bold">23</text>
+  
+  <!-- Export Buttons -->
+  <rect x="280" y="590" width="860" height="70" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="300" y="630" font-family="Arial" font-size="12" fill="#1e3a5f" font-weight="bold">📤 Exportar Relatórios:</text>
+  
+  <rect x="480" y="610" width="110" height="35" rx="6" fill="#27ae60"/>
+  <text x="505" y="633" font-family="Arial" font-size="11" fill="#fff">📄 Excel</text>
+  
+  <rect x="610" y="610" width="110" height="35" rx="6" fill="#e74c3c"/>
+  <text x="645" y="633" font-family="Arial" font-size="11" fill="#fff">📑 PDF</text>
+  
+  <rect x="740" y="610" width="110" height="35" rx="6" fill="#3498db"/>
+  <text x="765" y="633" font-family="Arial" font-size="11" fill="#fff">📊 Gráficos</text>
+  
+  <rect x="870" y="610" width="130" height="35" rx="6" fill="#9b59b6"/>
+  <text x="890" y="633" font-family="Arial" font-size="11" fill="#fff">📧 Enviar Email</text>
+  
+  <rect x="1020" y="610" width="100" height="35" rx="6" fill="#95a5a6"/>
+  <text x="1040" y="633" font-family="Arial" font-size="11" fill="#fff">🖨️ Imprimir</text>
+</svg>

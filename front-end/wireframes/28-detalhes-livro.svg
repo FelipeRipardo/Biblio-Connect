@@ -1,0 +1,131 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f5f5f5"/>
+  
+  <!-- Header -->
+  <rect width="1200" height="70" fill="#1e3a5f"/>
+  <text x="40" y="45" font-family="Georgia, serif" font-size="22" fill="#fff" font-weight="bold">📚 BiblioConnect</text>
+  
+  <!-- User logged in -->
+  <circle cx="1100" cy="35" r="18" fill="#27ae60"/>
+  <text x="1100" y="40" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">JS</text>
+  
+  <!-- Breadcrumb -->
+  <text x="40" y="105" font-family="Arial" font-size="12" fill="#666">Início › Acervo › Detalhes do Material</text>
+  
+  <!-- Back button -->
+  <rect x="40" y="120" width="100" height="32" rx="6" fill="#fff" stroke="#ddd"/>
+  <text x="65" y="140" font-family="Arial" font-size="11" fill="#666">← Voltar</text>
+  
+  <!-- Main Content Card -->
+  <rect x="40" y="165" width="1120" height="700" rx="12" fill="#fff" stroke="#e0e0e0"/>
+  
+  <!-- Book Cover Section -->
+  <rect x="70" y="195" width="280" height="380" rx="8" fill="#f0f0f0" stroke="#ddd"/>
+  <rect x="90" y="215" width="240" height="320" rx="4" fill="#1e3a5f"/>
+  <text x="210" y="330" font-family="Georgia, serif" font-size="20" fill="#fff" text-anchor="middle">MATEMÁTICA</text>
+  <text x="210" y="360" font-family="Georgia, serif" font-size="16" fill="#b8c5d6" text-anchor="middle">7º Ano</text>
+  <text x="210" y="400" font-family="Arial" font-size="12" fill="#b8c5d6" text-anchor="middle">Ensino Fundamental</text>
+  <rect x="155" y="430" width="110" height="70" rx="4" fill="#e07c24"/>
+  <text x="210" y="465" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">MATERIAL</text>
+  <text x="210" y="482" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">DIDÁTICO</text>
+  
+  <!-- Online Badge -->
+  <rect x="90" y="545" width="240" height="35" rx="6" fill="#d4edda"/>
+  <text x="210" y="568" font-family="Arial" font-size="12" fill="#27ae60" text-anchor="middle">✓ Disponível para Leitura Online</text>
+  
+  <!-- Action Buttons -->
+  <rect x="90" y="590" width="240" height="45" rx="6" fill="#27ae60"/>
+  <text x="210" y="618" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">📖 Ler Agora</text>
+  
+  <rect x="90" y="645" width="115" height="38" rx="6" fill="#3498db"/>
+  <text x="147" y="670" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">📥 Baixar PDF</text>
+  
+  <rect x="215" y="645" width="115" height="38" rx="6" fill="#fff" stroke="#ddd"/>
+  <text x="272" y="670" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">⭐ Favoritar</text>
+  
+  <rect x="90" y="693" width="240" height="38" rx="6" fill="#fff" stroke="#ddd"/>
+  <text x="210" y="718" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">📤 Compartilhar</text>
+  
+  <!-- Book Info Section -->
+  <text x="400" y="225" font-family="Georgia, serif" font-size="24" fill="#1e3a5f" font-weight="bold">Matemática - 7º Ano</text>
+  <text x="400" y="255" font-family="Arial" font-size="14" fill="#666">Ensino Fundamental - Material Didático Digital</text>
+  
+  <!-- Tags -->
+  <rect x="400" y="275" width="90" height="26" rx="13" fill="#e8f4f8"/>
+  <text x="445" y="293" font-family="Arial" font-size="11" fill="#3498db" text-anchor="middle">Matemática</text>
+  <rect x="500" y="275" width="70" height="26" rx="13" fill="#f3e5f5"/>
+  <text x="535" y="293" font-family="Arial" font-size="11" fill="#9b59b6" text-anchor="middle">7º Ano</text>
+  <rect x="580" y="275" width="80" height="26" rx="13" fill="#e8f5e9"/>
+  <text x="620" y="293" font-family="Arial" font-size="11" fill="#27ae60" text-anchor="middle">Digital</text>
+  <rect x="670" y="275" width="60" height="26" rx="13" fill="#fff3cd"/>
+  <text x="700" y="293" font-family="Arial" font-size="11" fill="#856404" text-anchor="middle">2026</text>
+  
+  <!-- Info Grid -->
+  <text x="400" y="340" font-family="Arial" font-size="12" fill="#999">Autor(es)</text>
+  <text x="400" y="360" font-family="Arial" font-size="14" fill="#333">Maria Silva, João Santos</text>
+  
+  <text x="650" y="340" font-family="Arial" font-size="12" fill="#999">Editora</text>
+  <text x="650" y="360" font-family="Arial" font-size="14" fill="#333">Editora Educação Digital</text>
+  
+  <text x="920" y="340" font-family="Arial" font-size="12" fill="#999">Edição</text>
+  <text x="920" y="360" font-family="Arial" font-size="14" fill="#333">3ª Edição - 2026</text>
+  
+  <text x="400" y="405" font-family="Arial" font-size="12" fill="#999">Formato</text>
+  <text x="400" y="425" font-family="Arial" font-size="14" fill="#333">PDF Interativo</text>
+  
+  <text x="650" y="405" font-family="Arial" font-size="12" fill="#999">Páginas</text>
+  <text x="650" y="425" font-family="Arial" font-size="14" fill="#333">320 páginas</text>
+  
+  <text x="920" y="405" font-family="Arial" font-size="12" fill="#999">Tamanho</text>
+  <text x="920" y="425" font-family="Arial" font-size="14" fill="#333">45 MB</text>
+  
+  <!-- Divider -->
+  <line x1="400" y1="455" x2="1120" y2="455" stroke="#eee" stroke-width="1"/>
+  
+  <!-- Description -->
+  <text x="400" y="490" font-family="Arial" font-size="14" fill="#1e3a5f" font-weight="bold">Descrição</text>
+  <text x="400" y="520" font-family="Arial" font-size="13" fill="#555">Este material didático digital de Matemática para o 7º ano do Ensino Fundamental</text>
+  <text x="400" y="540" font-family="Arial" font-size="13" fill="#555">aborda os principais conteúdos da grade curricular, incluindo números racionais,</text>
+  <text x="400" y="560" font-family="Arial" font-size="13" fill="#555">equações, geometria e estatística. Conta com recursos interativos, vídeos e exercícios.</text>
+  
+  <!-- Divider -->
+  <line x1="400" y1="585" x2="1120" y2="585" stroke="#eee" stroke-width="1"/>
+  
+  <!-- Conteúdo -->
+  <text x="400" y="620" font-family="Arial" font-size="14" fill="#1e3a5f" font-weight="bold">📑 Conteúdo Programático</text>
+  
+  <rect x="400" y="640" width="340" height="120" rx="8" fill="#f8f9fa"/>
+  <text x="420" y="665" font-family="Arial" font-size="11" fill="#333">• Cap. 1: Números Racionais</text>
+  <text x="420" y="685" font-family="Arial" font-size="11" fill="#333">• Cap. 2: Equações do 1º Grau</text>
+  <text x="420" y="705" font-family="Arial" font-size="11" fill="#333">• Cap. 3: Geometria Plana</text>
+  <text x="420" y="725" font-family="Arial" font-size="11" fill="#333">• Cap. 4: Estatística Básica</text>
+  <text x="420" y="745" font-family="Arial" font-size="11" fill="#3498db">+ Ver todos os 12 capítulos</text>
+  
+  <!-- Recursos -->
+  <rect x="760" y="640" width="340" height="120" rx="8" fill="#f8f9fa"/>
+  <text x="780" y="665" font-family="Arial" font-size="12" fill="#1e3a5f" font-weight="bold">🎯 Recursos Inclusos</text>
+  <text x="780" y="690" font-family="Arial" font-size="11" fill="#333">✓ 150 exercícios interativos</text>
+  <text x="780" y="710" font-family="Arial" font-size="11" fill="#333">✓ 25 vídeos explicativos</text>
+  <text x="780" y="730" font-family="Arial" font-size="11" fill="#333">✓ Simulados com correção</text>
+  <text x="780" y="750" font-family="Arial" font-size="11" fill="#333">✓ Resumos por capítulo</text>
+  
+  <!-- Stats -->
+  <text x="400" y="795" font-family="Arial" font-size="14" fill="#1e3a5f" font-weight="bold">📊 Estatísticas de Uso</text>
+  
+  <rect x="400" y="815" width="160" height="50" rx="6" fill="#f8f9fa"/>
+  <text x="420" y="835" font-family="Arial" font-size="10" fill="#999">Total de acessos</text>
+  <text x="420" y="855" font-family="Arial" font-size="16" fill="#3498db" font-weight="bold">2.450</text>
+  
+  <rect x="580" y="815" width="160" height="50" rx="6" fill="#f8f9fa"/>
+  <text x="600" y="835" font-family="Arial" font-size="10" fill="#999">Downloads</text>
+  <text x="600" y="855" font-family="Arial" font-size="16" fill="#27ae60" font-weight="bold">1.230</text>
+  
+  <rect x="760" y="815" width="160" height="50" rx="6" fill="#f8f9fa"/>
+  <text x="780" y="835" font-family="Arial" font-size="10" fill="#999">Avaliação média</text>
+  <text x="780" y="855" font-family="Arial" font-size="16" fill="#f39c12" font-weight="bold">⭐ 4.7</text>
+  
+  <rect x="940" y="815" width="160" height="50" rx="6" fill="#f8f9fa"/>
+  <text x="960" y="835" font-family="Arial" font-size="10" fill="#999">Favoritado por</text>
+  <text x="960" y="855" font-family="Arial" font-size="16" fill="#e74c3c" font-weight="bold">189 alunos</text>
+</svg>

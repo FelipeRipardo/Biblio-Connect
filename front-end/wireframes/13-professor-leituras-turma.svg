@@ -1,0 +1,154 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f5f5f5"/>
+  
+  <!-- Sidebar -->
+  <rect width="250" height="900" fill="#1e3a5f"/>
+  <text x="30" y="45" font-family="Georgia, serif" font-size="18" fill="#fff" font-weight="bold">📚 BiblioConnect</text>
+  <text x="30" y="65" font-family="Arial" font-size="10" fill="#b8c5d6">Área do Professor</text>
+  
+  <circle cx="55" cy="115" r="22" fill="#9b59b6"/>
+  <text x="55" y="122" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle">MS</text>
+  <text x="90" y="110" font-family="Arial" font-size="12" fill="#fff">Prof. Maria Santos</text>
+  <text x="90" y="125" font-family="Arial" font-size="10" fill="#b8c5d6">Matemática</text>
+  
+  <text x="50" y="175" font-family="Arial" font-size="12" fill="#b8c5d6">📊 Visão Geral</text>
+  <rect x="0" y="185" width="250" height="40" fill="#2d5a87"/>
+  <text x="50" y="210" font-family="Arial" font-size="12" fill="#fff">📚 Leituras da Turma</text>
+  <text x="50" y="250" font-family="Arial" font-size="12" fill="#b8c5d6">📖 Definir Leituras</text>
+  <text x="50" y="285" font-family="Arial" font-size="12" fill="#b8c5d6">👥 Meus Alunos</text>
+  <text x="50" y="320" font-family="Arial" font-size="12" fill="#b8c5d6">📝 Relatórios</text>
+  
+  <!-- Main Content -->
+  <rect x="250" y="0" width="950" height="70" fill="#fff" stroke="#e0e0e0"/>
+  <text x="280" y="45" font-family="Georgia, serif" font-size="20" fill="#1e3a5f" font-weight="bold">Leituras da Turma</text>
+  
+  <!-- Filters -->
+  <text x="700" y="40" font-family="Arial" font-size="12" fill="#666">Turma:</text>
+  <rect x="750" y="22" width="120" height="32" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="770" y="43" font-family="Arial" font-size="11" fill="#333">9º Ano A ▼</text>
+  
+  <text x="890" y="40" font-family="Arial" font-size="12" fill="#666">Livro:</text>
+  <rect x="930" y="22" width="180" height="32" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="950" y="43" font-family="Arial" font-size="11" fill="#333">Todos os livros ▼</text>
+  
+  <!-- Summary Cards -->
+  <rect x="280" y="90" width="280" height="80" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="300" y="115" font-family="Arial" font-size="11" fill="#666">Total de Alunos</text>
+  <text x="300" y="145" font-family="Arial" font-size="28" fill="#1e3a5f" font-weight="bold">32</text>
+  
+  <rect x="580" y="90" width="280" height="80" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="600" y="115" font-family="Arial" font-size="11" fill="#666">Com Leitura em Dia</text>
+  <text x="600" y="145" font-family="Arial" font-size="28" fill="#27ae60" font-weight="bold">28</text>
+  <text x="650" y="145" font-family="Arial" font-size="14" fill="#666">(87%)</text>
+  
+  <rect x="880" y="90" width="280" height="80" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="900" y="115" font-family="Arial" font-size="11" fill="#666">Pendentes/Atrasados</text>
+  <text x="900" y="145" font-family="Arial" font-size="28" fill="#e74c3c" font-weight="bold">4</text>
+  <text x="935" y="145" font-family="Arial" font-size="14" fill="#666">(13%)</text>
+  
+  <!-- Table Header -->
+  <rect x="280" y="190" width="880" height="45" rx="8" fill="#1e3a5f"/>
+  <text x="310" y="218" font-family="Arial" font-size="12" fill="#fff" font-weight="bold">Aluno</text>
+  <text x="500" y="218" font-family="Arial" font-size="12" fill="#fff" font-weight="bold">Livro Atual</text>
+  <text x="750" y="218" font-family="Arial" font-size="12" fill="#fff" font-weight="bold">Status</text>
+  <text x="880" y="218" font-family="Arial" font-size="12" fill="#fff" font-weight="bold">Progresso</text>
+  <text x="1020" y="218" font-family="Arial" font-size="12" fill="#fff" font-weight="bold">Ações</text>
+  
+  <!-- Table Rows -->
+  <rect x="280" y="240" width="880" height="60" fill="#fff" stroke="#e0e0e0"/>
+  <circle cx="320" cy="270" r="18" fill="#27ae60"/>
+  <text x="320" y="275" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">AC</text>
+  <text x="350" y="265" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Ana Clara Souza</text>
+  <text x="350" y="282" font-family="Arial" font-size="10" fill="#666">Mat: 2024001</text>
+  <text x="500" y="270" font-family="Arial" font-size="11" fill="#333">Matemática Compreensão 9º</text>
+  <rect x="750" y="255" width="80" height="24" rx="12" fill="#e8f8f5"/>
+  <text x="790" y="271" font-family="Arial" font-size="10" fill="#27ae60" text-anchor="middle">Concluído</text>
+  <rect x="880" y="262" width="100" height="10" rx="5" fill="#e0e0e0"/>
+  <rect x="880" y="262" width="100" height="10" rx="5" fill="#27ae60"/>
+  <text x="990" y="271" font-family="Arial" font-size="10" fill="#27ae60">100%</text>
+  <text x="1050" y="275" font-family="Arial" font-size="16" fill="#3498db">👁</text>
+  
+  <rect x="280" y="305" width="880" height="60" fill="#f8f9fa" stroke="#e0e0e0"/>
+  <circle cx="320" cy="335" r="18" fill="#3498db"/>
+  <text x="320" y="340" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">PH</text>
+  <text x="350" y="330" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Pedro Henrique Lima</text>
+  <text x="350" y="347" font-family="Arial" font-size="10" fill="#666">Mat: 2024002</text>
+  <text x="500" y="335" font-family="Arial" font-size="11" fill="#333">Matemática Compreensão 9º</text>
+  <rect x="750" y="320" width="80" height="24" rx="12" fill="#e8f4fd"/>
+  <text x="790" y="336" font-family="Arial" font-size="10" fill="#3498db" text-anchor="middle">Lendo</text>
+  <rect x="880" y="327" width="100" height="10" rx="5" fill="#e0e0e0"/>
+  <rect x="880" y="327" width="75" height="10" rx="5" fill="#3498db"/>
+  <text x="990" y="336" font-family="Arial" font-size="10" fill="#3498db">75%</text>
+  <text x="1050" y="340" font-family="Arial" font-size="16" fill="#3498db">👁</text>
+  
+  <rect x="280" y="370" width="880" height="60" fill="#fff" stroke="#e0e0e0"/>
+  <circle cx="320" cy="400" r="18" fill="#9b59b6"/>
+  <text x="320" y="405" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">MC</text>
+  <text x="350" y="395" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Mariana Costa</text>
+  <text x="350" y="412" font-family="Arial" font-size="10" fill="#666">Mat: 2024003</text>
+  <text x="500" y="400" font-family="Arial" font-size="11" fill="#333">O Homem que Calculava</text>
+  <rect x="750" y="385" width="80" height="24" rx="12" fill="#fdf2e9"/>
+  <text x="790" y="401" font-family="Arial" font-size="10" fill="#e07c24" text-anchor="middle">Lendo</text>
+  <rect x="880" y="392" width="100" height="10" rx="5" fill="#e0e0e0"/>
+  <rect x="880" y="392" width="45" height="10" rx="5" fill="#e07c24"/>
+  <text x="990" y="401" font-family="Arial" font-size="10" fill="#e07c24">45%</text>
+  <text x="1050" y="405" font-family="Arial" font-size="16" fill="#3498db">👁</text>
+  
+  <rect x="280" y="435" width="880" height="60" fill="#fbe9e7" stroke="#e74c3c"/>
+  <circle cx="320" cy="465" r="18" fill="#e74c3c"/>
+  <text x="320" y="470" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">GS</text>
+  <text x="350" y="460" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Gabriel Santos</text>
+  <text x="350" y="477" font-family="Arial" font-size="10" fill="#666">Mat: 2024004</text>
+  <text x="500" y="465" font-family="Arial" font-size="11" fill="#333">Matemática Compreensão 9º</text>
+  <rect x="750" y="450" width="80" height="24" rx="12" fill="#fbe9e7"/>
+  <text x="790" y="466" font-family="Arial" font-size="10" fill="#e74c3c" text-anchor="middle">Atrasado</text>
+  <rect x="880" y="457" width="100" height="10" rx="5" fill="#e0e0e0"/>
+  <rect x="880" y="457" width="20" height="10" rx="5" fill="#e74c3c"/>
+  <text x="990" y="466" font-family="Arial" font-size="10" fill="#e74c3c">20%</text>
+  <text x="1050" y="470" font-family="Arial" font-size="16" fill="#e74c3c">⚠️</text>
+  <rect x="1080" y="452" width="70" height="26" rx="4" fill="#e74c3c"/>
+  <text x="1115" y="470" font-family="Arial" font-size="9" fill="#fff" text-anchor="middle">Notificar</text>
+  
+  <rect x="280" y="500" width="880" height="60" fill="#f8f9fa" stroke="#e0e0e0"/>
+  <circle cx="320" cy="530" r="18" fill="#f39c12"/>
+  <text x="320" y="535" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">LO</text>
+  <text x="350" y="525" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Lucas Oliveira</text>
+  <text x="350" y="542" font-family="Arial" font-size="10" fill="#666">Mat: 2024005</text>
+  <text x="500" y="530" font-family="Arial" font-size="11" fill="#333">A Geometria do Universo</text>
+  <rect x="750" y="515" width="100" height="24" rx="12" fill="#f5f5f5"/>
+  <text x="800" y="531" font-family="Arial" font-size="10" fill="#666" text-anchor="middle">Não iniciado</text>
+  <rect x="880" y="522" width="100" height="10" rx="5" fill="#e0e0e0"/>
+  <text x="990" y="531" font-family="Arial" font-size="10" fill="#999">0%</text>
+  <text x="1050" y="535" font-family="Arial" font-size="16" fill="#3498db">👁</text>
+  
+  <rect x="280" y="565" width="880" height="60" fill="#fff" stroke="#e0e0e0"/>
+  <circle cx="320" cy="595" r="18" fill="#1abc9c"/>
+  <text x="320" y="600" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">JS</text>
+  <text x="350" y="590" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Julia Santos</text>
+  <text x="350" y="607" font-family="Arial" font-size="10" fill="#666">Mat: 2024006</text>
+  <text x="500" y="595" font-family="Arial" font-size="11" fill="#333">Matemática Compreensão 9º</text>
+  <rect x="750" y="580" width="80" height="24" rx="12" fill="#e8f8f5"/>
+  <text x="790" y="596" font-family="Arial" font-size="10" fill="#27ae60" text-anchor="middle">Concluído</text>
+  <rect x="880" y="587" width="100" height="10" rx="5" fill="#e0e0e0"/>
+  <rect x="880" y="587" width="100" height="10" rx="5" fill="#27ae60"/>
+  <text x="990" y="596" font-family="Arial" font-size="10" fill="#27ae60">100%</text>
+  <text x="1050" y="600" font-family="Arial" font-size="16" fill="#3498db">👁</text>
+  
+  <!-- Pagination -->
+  <rect x="500" y="650" width="280" height="40" rx="20" fill="#fff" stroke="#e0e0e0"/>
+  <text x="530" y="675" font-family="Arial" font-size="13" fill="#666">←</text>
+  <circle cx="570" cy="670" r="15" fill="#9b59b6"/>
+  <text x="570" y="675" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">1</text>
+  <text x="605" y="675" font-family="Arial" font-size="12" fill="#666">2</text>
+  <text x="640" y="675" font-family="Arial" font-size="12" fill="#666">3</text>
+  <text x="675" y="675" font-family="Arial" font-size="12" fill="#666">4</text>
+  <text x="750" y="675" font-family="Arial" font-size="13" fill="#666">→</text>
+  
+  <!-- Actions -->
+  <rect x="280" y="720" width="200" height="45" rx="8" fill="#9b59b6"/>
+  <text x="380" y="748" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">📊 Exportar Relatório</text>
+  
+  <rect x="500" y="720" width="220" height="45" rx="8" fill="#fff" stroke="#e74c3c"/>
+  <text x="610" y="748" font-family="Arial" font-size="12" fill="#e74c3c" text-anchor="middle">⚠️ Notificar Atrasados</text>
+</svg>

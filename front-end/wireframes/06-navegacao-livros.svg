@@ -1,0 +1,165 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f5f5f5"/>
+  
+  <!-- Header -->
+  <rect width="1200" height="70" fill="#1e3a5f"/>
+  <text x="40" y="45" font-family="Georgia, serif" font-size="22" fill="#fff" font-weight="bold">📚 BiblioConnect</text>
+  
+  <!-- User logged in -->
+  <circle cx="1100" cy="35" r="18" fill="#27ae60"/>
+  <text x="1100" y="40" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">JS</text>
+  <text x="1050" y="40" font-family="Arial" font-size="11" fill="#fff" text-anchor="end">João Silva</text>
+  
+  <!-- Page Title -->
+  <text x="40" y="115" font-family="Georgia, serif" font-size="24" fill="#1e3a5f" font-weight="bold">Acervo Digital</text>
+  <text x="40" y="140" font-family="Arial" font-size="12" fill="#666">Explore nossa biblioteca virtual de materiais educacionais</text>
+  
+  <!-- Search Bar -->
+  <rect x="40" y="160" width="700" height="50" rx="8" fill="#fff" stroke="#ddd"/>
+  <text x="70" y="192" font-family="Arial" font-size="14" fill="#999">🔍 Buscar por título, autor, disciplina...</text>
+  <rect x="660" y="168" width="70" height="34" rx="6" fill="#27ae60"/>
+  <text x="695" y="190" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">Buscar</text>
+  
+  <!-- Filters -->
+  <rect x="760" y="160" width="150" height="50" rx="8" fill="#fff" stroke="#ddd"/>
+  <text x="835" y="190" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">📚 Disciplina ▼</text>
+  
+  <rect x="920" y="160" width="120" height="50" rx="8" fill="#fff" stroke="#ddd"/>
+  <text x="980" y="190" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">📅 Ano ▼</text>
+  
+  <rect x="1050" y="160" width="110" height="50" rx="8" fill="#fff" stroke="#ddd"/>
+  <text x="1105" y="190" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">🔤 A-Z ▼</text>
+  
+  <!-- Category Pills -->
+  <rect x="40" y="230" width="80" height="32" rx="16" fill="#1e3a5f"/>
+  <text x="80" y="251" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">Todos</text>
+  <rect x="130" y="230" width="100" height="32" rx="16" fill="#fff" stroke="#ddd"/>
+  <text x="180" y="251" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">Matemática</text>
+  <rect x="240" y="230" width="90" height="32" rx="16" fill="#fff" stroke="#ddd"/>
+  <text x="285" y="251" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">Português</text>
+  <rect x="340" y="230" width="80" height="32" rx="16" fill="#fff" stroke="#ddd"/>
+  <text x="380" y="251" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">História</text>
+  <rect x="430" y="230" width="80" height="32" rx="16" fill="#fff" stroke="#ddd"/>
+  <text x="470" y="251" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">Ciências</text>
+  <rect x="520" y="230" width="90" height="32" rx="16" fill="#fff" stroke="#ddd"/>
+  <text x="565" y="251" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">Geografia</text>
+  <rect x="620" y="230" width="70" height="32" rx="16" fill="#fff" stroke="#ddd"/>
+  <text x="655" y="251" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">Inglês</text>
+  <rect x="700" y="230" width="60" height="32" rx="16" fill="#fff" stroke="#ddd"/>
+  <text x="730" y="251" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">Artes</text>
+  
+  <!-- Results count -->
+  <text x="40" y="295" font-family="Arial" font-size="12" fill="#666">Exibindo 127 materiais disponíveis</text>
+  
+  <!-- Book Grid -->
+  <!-- Row 1 -->
+  <rect x="40" y="320" width="220" height="280" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <rect x="55" y="335" width="190" height="140" rx="6" fill="#e74c3c"/>
+  <text x="150" y="395" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">MATEMÁTICA</text>
+  <text x="150" y="415" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">7º Ano</text>
+  <text x="150" y="455" font-family="Arial" font-size="20" text-anchor="middle">📐</text>
+  <text x="55" y="500" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Matemática - 7º Ano</text>
+  <text x="55" y="518" font-family="Arial" font-size="10" fill="#666">Maria Silva, João Santos</text>
+  <rect x="55" y="530" width="70" height="20" rx="10" fill="#e8f4f8"/>
+  <text x="90" y="544" font-family="Arial" font-size="9" fill="#3498db" text-anchor="middle">Matemática</text>
+  <rect x="55" y="560" width="190" height="30" rx="6" fill="#27ae60"/>
+  <text x="150" y="580" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">📖 Ler Agora</text>
+  
+  <rect x="280" y="320" width="220" height="280" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <rect x="295" y="335" width="190" height="140" rx="6" fill="#3498db"/>
+  <text x="390" y="395" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">PORTUGUÊS</text>
+  <text x="390" y="415" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">8º Ano</text>
+  <text x="390" y="455" font-family="Arial" font-size="20" text-anchor="middle">📝</text>
+  <text x="295" y="500" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Português - 8º Ano</text>
+  <text x="295" y="518" font-family="Arial" font-size="10" fill="#666">Carlos Pereira</text>
+  <rect x="295" y="530" width="70" height="20" rx="10" fill="#e8f4f8"/>
+  <text x="330" y="544" font-family="Arial" font-size="9" fill="#3498db" text-anchor="middle">Português</text>
+  <rect x="295" y="560" width="190" height="30" rx="6" fill="#27ae60"/>
+  <text x="390" y="580" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">📖 Ler Agora</text>
+  
+  <rect x="520" y="320" width="220" height="280" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <rect x="535" y="335" width="190" height="140" rx="6" fill="#27ae60"/>
+  <text x="630" y="395" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">CIÊNCIAS</text>
+  <text x="630" y="415" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">6º Ano</text>
+  <text x="630" y="455" font-family="Arial" font-size="20" text-anchor="middle">🔬</text>
+  <text x="535" y="500" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Ciências - 6º Ano</text>
+  <text x="535" y="518" font-family="Arial" font-size="10" fill="#666">Ana Oliveira</text>
+  <rect x="535" y="530" width="60" height="20" rx="10" fill="#e8f5e9"/>
+  <text x="565" y="544" font-family="Arial" font-size="9" fill="#27ae60" text-anchor="middle">Ciências</text>
+  <rect x="535" y="560" width="190" height="30" rx="6" fill="#27ae60"/>
+  <text x="630" y="580" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">📖 Ler Agora</text>
+  
+  <rect x="760" y="320" width="220" height="280" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <rect x="775" y="335" width="190" height="140" rx="6" fill="#f39c12"/>
+  <text x="870" y="395" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">HISTÓRIA</text>
+  <text x="870" y="415" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">9º Ano</text>
+  <text x="870" y="455" font-family="Arial" font-size="20" text-anchor="middle">🏛️</text>
+  <text x="775" y="500" font-family="Arial" font-size="12" fill="#333" font-weight="bold">História do Brasil</text>
+  <text x="775" y="518" font-family="Arial" font-size="10" fill="#666">Roberto Lima</text>
+  <rect x="775" y="530" width="60" height="20" rx="10" fill="#fff3cd"/>
+  <text x="805" y="544" font-family="Arial" font-size="9" fill="#856404" text-anchor="middle">História</text>
+  <rect x="775" y="560" width="190" height="30" rx="6" fill="#27ae60"/>
+  <text x="870" y="580" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">📖 Ler Agora</text>
+  
+  <rect x="1000" y="320" width="160" height="280" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <rect x="1015" y="335" width="130" height="140" rx="6" fill="#9b59b6"/>
+  <text x="1080" y="395" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">GEOGRAFIA</text>
+  <text x="1080" y="415" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">7º Ano</text>
+  <text x="1080" y="455" font-family="Arial" font-size="20" text-anchor="middle">🌍</text>
+  <text x="1015" y="500" font-family="Arial" font-size="11" fill="#333" font-weight="bold">Geografia 7º</text>
+  <text x="1015" y="518" font-family="Arial" font-size="10" fill="#666">Paula Costa</text>
+  <rect x="1015" y="560" width="130" height="30" rx="6" fill="#27ae60"/>
+  <text x="1080" y="580" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">📖 Ler</text>
+  
+  <!-- Row 2 -->
+  <rect x="40" y="620" width="220" height="280" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <rect x="55" y="635" width="190" height="140" rx="6" fill="#1abc9c"/>
+  <text x="150" y="695" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">INGLÊS</text>
+  <text x="150" y="715" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">6º Ano</text>
+  <text x="150" y="755" font-family="Arial" font-size="20" text-anchor="middle">🇬🇧</text>
+  <text x="55" y="800" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Inglês - 6º Ano</text>
+  <text x="55" y="818" font-family="Arial" font-size="10" fill="#666">Sarah Johnson</text>
+  <rect x="55" y="830" width="50" height="20" rx="10" fill="#e0f7fa"/>
+  <text x="80" y="844" font-family="Arial" font-size="9" fill="#00838f" text-anchor="middle">Inglês</text>
+  <rect x="55" y="860" width="190" height="30" rx="6" fill="#27ae60"/>
+  <text x="150" y="880" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">📖 Ler Agora</text>
+  
+  <rect x="280" y="620" width="220" height="280" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <rect x="295" y="635" width="190" height="140" rx="6" fill="#e91e63"/>
+  <text x="390" y="695" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">ARTES</text>
+  <text x="390" y="715" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">7º Ano</text>
+  <text x="390" y="755" font-family="Arial" font-size="20" text-anchor="middle">🎨</text>
+  <text x="295" y="800" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Artes - 7º Ano</text>
+  <text x="295" y="818" font-family="Arial" font-size="10" fill="#666">Marina Santos</text>
+  <rect x="295" y="830" width="50" height="20" rx="10" fill="#fce4ec"/>
+  <text x="320" y="844" font-family="Arial" font-size="9" fill="#c2185b" text-anchor="middle">Artes</text>
+  <rect x="295" y="860" width="190" height="30" rx="6" fill="#27ae60"/>
+  <text x="390" y="880" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">📖 Ler Agora</text>
+  
+  <rect x="520" y="620" width="220" height="280" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <rect x="535" y="635" width="190" height="140" rx="6" fill="#607d8b"/>
+  <text x="630" y="695" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">ED. FÍSICA</text>
+  <text x="630" y="715" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">8º Ano</text>
+  <text x="630" y="755" font-family="Arial" font-size="20" text-anchor="middle">⚽</text>
+  <text x="535" y="800" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Educação Física 8º</text>
+  <text x="535" y="818" font-family="Arial" font-size="10" fill="#666">Pedro Souza</text>
+  <rect x="535" y="860" width="190" height="30" rx="6" fill="#27ae60"/>
+  <text x="630" y="880" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">📖 Ler Agora</text>
+  
+  <!-- Pagination -->
+  <rect x="760" y="830" width="40" height="35" rx="6" fill="#f0f0f0"/>
+  <text x="780" y="853" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">‹</text>
+  <rect x="810" y="830" width="40" height="35" rx="6" fill="#1e3a5f"/>
+  <text x="830" y="853" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">1</text>
+  <rect x="860" y="830" width="40" height="35" rx="6" fill="#f0f0f0"/>
+  <text x="880" y="853" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">2</text>
+  <rect x="910" y="830" width="40" height="35" rx="6" fill="#f0f0f0"/>
+  <text x="930" y="853" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">3</text>
+  <rect x="960" y="830" width="40" height="35" rx="6" fill="#f0f0f0"/>
+  <text x="980" y="853" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">...</text>
+  <rect x="1010" y="830" width="40" height="35" rx="6" fill="#f0f0f0"/>
+  <text x="1030" y="853" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">12</text>
+  <rect x="1060" y="830" width="40" height="35" rx="6" fill="#f0f0f0"/>
+  <text x="1080" y="853" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">›</text>
+</svg>

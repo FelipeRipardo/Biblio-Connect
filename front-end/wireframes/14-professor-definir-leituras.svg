@@ -1,0 +1,154 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f5f5f5"/>
+  
+  <!-- Sidebar -->
+  <rect width="250" height="900" fill="#1e3a5f"/>
+  <text x="30" y="45" font-family="Georgia, serif" font-size="18" fill="#fff" font-weight="bold">📚 BiblioConnect</text>
+  <text x="30" y="65" font-family="Arial" font-size="10" fill="#b8c5d6">Área do Professor</text>
+  
+  <circle cx="55" cy="115" r="22" fill="#9b59b6"/>
+  <text x="55" y="122" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle">MS</text>
+  <text x="90" y="110" font-family="Arial" font-size="12" fill="#fff">Prof. Maria Santos</text>
+  
+  <text x="50" y="175" font-family="Arial" font-size="12" fill="#b8c5d6">📊 Visão Geral</text>
+  <text x="50" y="210" font-family="Arial" font-size="12" fill="#b8c5d6">📚 Leituras da Turma</text>
+  <rect x="0" y="220" width="250" height="40" fill="#2d5a87"/>
+  <text x="50" y="245" font-family="Arial" font-size="12" fill="#fff">📖 Definir Leituras</text>
+  <text x="50" y="285" font-family="Arial" font-size="12" fill="#b8c5d6">👥 Meus Alunos</text>
+  
+  <!-- Main Content -->
+  <rect x="250" y="0" width="950" height="70" fill="#fff" stroke="#e0e0e0"/>
+  <text x="280" y="45" font-family="Georgia, serif" font-size="20" fill="#1e3a5f" font-weight="bold">Definir Leituras Obrigatórias</text>
+  
+  <!-- Current Readings -->
+  <rect x="280" y="90" width="580" height="380" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="300" y="125" font-family="Arial" font-size="14" fill="#1e3a5f" font-weight="bold">📚 Leituras Definidas - 3º Bimestre</text>
+  <text x="760" y="125" font-family="Arial" font-size="11" fill="#9b59b6">Editar período</text>
+  
+  <!-- Reading 1 -->
+  <rect x="300" y="145" width="540" height="90" rx="8" fill="#f8f9fa" stroke="#27ae60"/>
+  <rect x="315" y="160" width="55" height="65" rx="4" fill="#27ae60"/>
+  <text x="342" y="195" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">MAT</text>
+  <text x="385" y="178" font-family="Arial" font-size="13" fill="#333" font-weight="bold">Matemática Compreensão - 9º Ano</text>
+  <text x="385" y="195" font-family="Arial" font-size="11" fill="#666">Manoel Paiva | Obrigatório</text>
+  <text x="385" y="218" font-family="Arial" font-size="10" fill="#27ae60">✓ 28/32 alunos concluíram</text>
+  <rect x="730" y="175" width="70" height="28" rx="4" fill="#fff" stroke="#ddd"/>
+  <text x="765" y="194" font-family="Arial" font-size="10" fill="#666" text-anchor="middle">Editar</text>
+  <rect x="805" y="175" width="25" height="28" rx="4" fill="#fbe9e7"/>
+  <text x="817" y="194" font-family="Arial" font-size="12" fill="#e74c3c" text-anchor="middle">🗑</text>
+  
+  <!-- Reading 2 -->
+  <rect x="300" y="245" width="540" height="90" rx="8" fill="#f8f9fa" stroke="#3498db"/>
+  <rect x="315" y="260" width="55" height="65" rx="4" fill="#3498db"/>
+  <text x="342" y="295" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">PARA</text>
+  <text x="385" y="278" font-family="Arial" font-size="13" fill="#333" font-weight="bold">O Homem que Calculava</text>
+  <text x="385" y="295" font-family="Arial" font-size="11" fill="#666">Malba Tahan | Paradidático</text>
+  <text x="385" y="318" font-family="Arial" font-size="10" fill="#e07c24">⏳ 18/32 alunos concluíram</text>
+  <rect x="730" y="275" width="70" height="28" rx="4" fill="#fff" stroke="#ddd"/>
+  <text x="765" y="294" font-family="Arial" font-size="10" fill="#666" text-anchor="middle">Editar</text>
+  <rect x="805" y="275" width="25" height="28" rx="4" fill="#fbe9e7"/>
+  <text x="817" y="294" font-family="Arial" font-size="12" fill="#e74c3c" text-anchor="middle">🗑</text>
+  
+  <!-- Reading 3 -->
+  <rect x="300" y="345" width="540" height="90" rx="8" fill="#f8f9fa" stroke="#9b59b6"/>
+  <rect x="315" y="360" width="55" height="65" rx="4" fill="#9b59b6"/>
+  <text x="342" y="395" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">LIT</text>
+  <text x="385" y="378" font-family="Arial" font-size="13" fill="#333" font-weight="bold">A Geometria do Universo</text>
+  <text x="385" y="395" font-family="Arial" font-size="11" fill="#666">Maria L. Caetano | Complementar</text>
+  <text x="385" y="418" font-family="Arial" font-size="10" fill="#e74c3c">⚠️ 5/32 alunos concluíram</text>
+  <rect x="730" y="375" width="70" height="28" rx="4" fill="#fff" stroke="#ddd"/>
+  <text x="765" y="394" font-family="Arial" font-size="10" fill="#666" text-anchor="middle">Editar</text>
+  <rect x="805" y="375" width="25" height="28" rx="4" fill="#fbe9e7"/>
+  <text x="817" y="394" font-family="Arial" font-size="12" fill="#e74c3c" text-anchor="middle">🗑</text>
+  
+  <!-- Add New Reading Form -->
+  <rect x="880" y="90" width="280" height="380" rx="10" fill="#fff" stroke="#9b59b6"/>
+  <text x="900" y="125" font-family="Arial" font-size="14" fill="#9b59b6" font-weight="bold">➕ Nova Leitura</text>
+  
+  <text x="900" y="160" font-family="Arial" font-size="11" fill="#666">Turma</text>
+  <rect x="900" y="168" width="240" height="35" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="915" y="190" font-family="Arial" font-size="11" fill="#333">9º Ano A ▼</text>
+  
+  <text x="900" y="225" font-family="Arial" font-size="11" fill="#666">Buscar Livro</text>
+  <rect x="900" y="233" width="240" height="35" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="915" y="255" font-family="Arial" font-size="11" fill="#999">🔍 Título ou ISBN...</text>
+  
+  <text x="900" y="290" font-family="Arial" font-size="11" fill="#666">Tipo de Leitura</text>
+  <rect x="900" y="298" width="115" height="30" rx="6" fill="#9b59b6"/>
+  <text x="957" y="318" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">Obrigatória</text>
+  <rect x="1025" y="298" width="115" height="30" rx="6" fill="#fff" stroke="#ddd"/>
+  <text x="1082" y="318" font-family="Arial" font-size="10" fill="#666" text-anchor="middle">Complementar</text>
+  
+  <text x="900" y="355" font-family="Arial" font-size="11" fill="#666">Prazo de Conclusão</text>
+  <rect x="900" y="363" width="240" height="35" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="915" y="385" font-family="Arial" font-size="11" fill="#333">📅 30/11/2026</text>
+  
+  <rect x="900" y="420" width="240" height="40" rx="8" fill="#9b59b6"/>
+  <text x="1020" y="445" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">+ Adicionar Leitura</text>
+  
+  <!-- Book Search Results -->
+  <rect x="280" y="490" width="880" height="280" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="300" y="525" font-family="Arial" font-size="14" fill="#1e3a5f" font-weight="bold">📚 Livros Disponíveis para Adicionar</text>
+  
+  <rect x="300" y="540" width="200" height="35" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="320" y="562" font-family="Arial" font-size="11" fill="#999">🔍 Buscar livro...</text>
+  
+  <text x="520" y="562" font-family="Arial" font-size="11" fill="#666">Disciplina:</text>
+  <rect x="590" y="545" width="120" height="28" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="605" y="564" font-family="Arial" font-size="10" fill="#333">Matemática ▼</text>
+  
+  <!-- Book Grid -->
+  <g transform="translate(300, 590)">
+    <rect width="130" height="160" rx="8" fill="#f8f9fa" stroke="#ddd"/>
+    <rect x="15" y="10" width="100" height="100" rx="4" fill="#27ae60"/>
+    <text x="65" y="65" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">MATEMÁTICA</text>
+    <text x="15" y="125" font-family="Arial" font-size="9" fill="#333" font-weight="bold">Praticando Mat.</text>
+    <text x="15" y="138" font-family="Arial" font-size="8" fill="#666">Andrini</text>
+    <rect x="15" y="145" width="100" height="20" rx="4" fill="#9b59b6"/>
+    <text x="65" y="158" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">+ Adicionar</text>
+  </g>
+  
+  <g transform="translate(450, 590)">
+    <rect width="130" height="160" rx="8" fill="#f8f9fa" stroke="#ddd"/>
+    <rect x="15" y="10" width="100" height="100" rx="4" fill="#27ae60"/>
+    <text x="65" y="65" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">MATEMÁTICA</text>
+    <text x="15" y="125" font-family="Arial" font-size="9" fill="#333" font-weight="bold">Mat. Contexto</text>
+    <text x="15" y="138" font-family="Arial" font-size="8" fill="#666">Dante</text>
+    <rect x="15" y="145" width="100" height="20" rx="4" fill="#9b59b6"/>
+    <text x="65" y="158" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">+ Adicionar</text>
+  </g>
+  
+  <g transform="translate(600, 590)">
+    <rect width="130" height="160" rx="8" fill="#f8f9fa" stroke="#ddd"/>
+    <rect x="15" y="10" width="100" height="100" rx="4" fill="#3498db"/>
+    <text x="65" y="65" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">PARADIDÁTICO</text>
+    <text x="15" y="125" font-family="Arial" font-size="9" fill="#333" font-weight="bold">Flatland</text>
+    <text x="15" y="138" font-family="Arial" font-size="8" fill="#666">E. Abbott</text>
+    <rect x="15" y="145" width="100" height="20" rx="4" fill="#9b59b6"/>
+    <text x="65" y="158" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">+ Adicionar</text>
+  </g>
+  
+  <g transform="translate(750, 590)">
+    <rect width="130" height="160" rx="8" fill="#f8f9fa" stroke="#ddd"/>
+    <rect x="15" y="10" width="100" height="100" rx="4" fill="#9b59b6"/>
+    <text x="65" y="65" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">LITERÁRIO</text>
+    <text x="15" y="125" font-family="Arial" font-size="9" fill="#333" font-weight="bold">O Teorema</text>
+    <text x="15" y="138" font-family="Arial" font-size="8" fill="#666">Denis Guedj</text>
+    <rect x="15" y="145" width="100" height="20" rx="4" fill="#9b59b6"/>
+    <text x="65" y="158" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">+ Adicionar</text>
+  </g>
+  
+  <g transform="translate(900, 590)">
+    <rect width="130" height="160" rx="8" fill="#f8f9fa" stroke="#ddd"/>
+    <rect x="15" y="10" width="100" height="100" rx="4" fill="#27ae60"/>
+    <text x="65" y="65" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">MATEMÁTICA</text>
+    <text x="15" y="125" font-family="Arial" font-size="9" fill="#333" font-weight="bold">Vontade Saber</text>
+    <text x="15" y="138" font-family="Arial" font-size="8" fill="#666">J. Souza</text>
+    <rect x="15" y="145" width="100" height="20" rx="4" fill="#9b59b6"/>
+    <text x="65" y="158" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">+ Adicionar</text>
+  </g>
+  
+  <!-- Pagination -->
+  <text x="1080" y="770" font-family="Arial" font-size="11" fill="#666">1 de 8 →</text>
+</svg>

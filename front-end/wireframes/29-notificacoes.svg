@@ -1,0 +1,116 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f5f5f5"/>
+  
+  <!-- Header -->
+  <rect width="1200" height="70" fill="#1e3a5f"/>
+  <text x="40" y="45" font-family="Georgia, serif" font-size="22" fill="#fff" font-weight="bold">📚 BiblioConnect</text>
+  
+  <!-- Page Title -->
+  <text x="40" y="115" font-family="Georgia, serif" font-size="22" fill="#1e3a5f" font-weight="bold">🔔 Central de Notificações</text>
+  <text x="40" y="140" font-family="Arial" font-size="12" fill="#666">Acompanhe todas as suas notificações e alertas</text>
+  
+  <!-- Filter Tabs -->
+  <rect x="40" y="165" width="1120" height="50" rx="8" fill="#fff" stroke="#e0e0e0"/>
+  <rect x="50" y="175" width="100" height="30" rx="15" fill="#1e3a5f"/>
+  <text x="100" y="195" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">Todas (12)</text>
+  <rect x="160" y="175" width="120" height="30" rx="15" fill="#f8f9fa"/>
+  <text x="220" y="195" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">Não lidas (5)</text>
+  <rect x="290" y="175" width="110" height="30" rx="15" fill="#f8f9fa"/>
+  <text x="345" y="195" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">Lembretes (3)</text>
+  <rect x="410" y="175" width="100" height="30" rx="15" fill="#f8f9fa"/>
+  <text x="460" y="195" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">Professor (2)</text>
+  <rect x="520" y="175" width="100" height="30" rx="15" fill="#f8f9fa"/>
+  <text x="570" y="195" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">Sistema (2)</text>
+  
+  <rect x="1020" y="175" width="130" height="30" rx="6" fill="#fff" stroke="#ddd"/>
+  <text x="1085" y="195" font-family="Arial" font-size="11" fill="#3498db" text-anchor="middle">Marcar todas lidas</text>
+  
+  <!-- Notifications List -->
+  <rect x="40" y="235" width="1120" height="630" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  
+  <!-- Notification 1 - Warning/Unread -->
+  <rect x="40" y="235" width="1120" height="90" rx="10" fill="#fff3cd"/>
+  <circle cx="75" cy="280" r="8" fill="#f39c12"/>
+  <rect x="100" y="255" width="50" height="50" rx="8" fill="#f39c12"/>
+  <text x="125" y="288" font-family="Arial" font-size="24" fill="#fff" text-anchor="middle">📅</text>
+  <text x="170" y="275" font-family="Arial" font-size="14" fill="#333" font-weight="bold">Lembrete: Leitura com prazo próximo</text>
+  <text x="170" y="295" font-family="Arial" font-size="12" fill="#666">A leitura "História do Brasil - Cap. 5" deve ser concluída até 10/10/2026 (4 dias)</text>
+  <text x="170" y="315" font-family="Arial" font-size="11" fill="#999">Há 2 horas</text>
+  <rect x="1000" y="265" width="80" height="30" rx="6" fill="#f39c12"/>
+  <text x="1040" y="285" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">Ler agora</text>
+  <rect x="1090" y="265" width="60" height="30" rx="6" fill="#f8f9fa"/>
+  <text x="1120" y="285" font-family="Arial" font-size="16" fill="#999" text-anchor="middle">✕</text>
+  
+  <!-- Notification 2 - Professor/Unread -->
+  <rect x="40" y="325" width="1120" height="90" fill="#f3e5f5"/>
+  <circle cx="75" cy="370" r="8" fill="#9b59b6"/>
+  <rect x="100" y="345" width="50" height="50" rx="8" fill="#9b59b6"/>
+  <text x="125" y="378" font-family="Arial" font-size="24" fill="#fff" text-anchor="middle">👨‍🏫</text>
+  <text x="170" y="365" font-family="Arial" font-size="14" fill="#333" font-weight="bold">Nova leitura atribuída pelo professor</text>
+  <text x="170" y="385" font-family="Arial" font-size="12" fill="#666">Prof. Maria Santos adicionou "Geometria - Unidade 4" como leitura obrigatória.</text>
+  <text x="170" y="405" font-family="Arial" font-size="11" fill="#999">Há 5 horas</text>
+  <rect x="1000" y="355" width="80" height="30" rx="6" fill="#9b59b6"/>
+  <text x="1040" y="375" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">Ver</text>
+  <rect x="1090" y="355" width="60" height="30" rx="6" fill="#f8f9fa"/>
+  <text x="1120" y="375" font-family="Arial" font-size="16" fill="#999" text-anchor="middle">✕</text>
+  
+  <!-- Notification 3 - Success/Unread -->
+  <rect x="40" y="415" width="1120" height="90" fill="#e8f5e9"/>
+  <circle cx="75" cy="460" r="8" fill="#27ae60"/>
+  <rect x="100" y="435" width="50" height="50" rx="8" fill="#27ae60"/>
+  <text x="125" y="468" font-family="Arial" font-size="24" fill="#fff" text-anchor="middle">✓</text>
+  <text x="170" y="455" font-family="Arial" font-size="14" fill="#333" font-weight="bold">Leitura concluída com sucesso!</text>
+  <text x="170" y="475" font-family="Arial" font-size="12" fill="#666">Você completou a leitura de "Matemática - Cap. 5: Equações". Parabéns!</text>
+  <text x="170" y="495" font-family="Arial" font-size="11" fill="#999">Ontem às 14:30</text>
+  <rect x="1000" y="445" width="80" height="30" rx="6" fill="#27ae60"/>
+  <text x="1040" y="465" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">Ver mais</text>
+  <rect x="1090" y="445" width="60" height="30" rx="6" fill="#f8f9fa"/>
+  <text x="1120" y="465" font-family="Arial" font-size="16" fill="#999" text-anchor="middle">✕</text>
+  
+  <!-- Notification 4 - Info/Unread -->
+  <rect x="40" y="505" width="1120" height="90" fill="#e3f2fd"/>
+  <circle cx="75" cy="550" r="8" fill="#3498db"/>
+  <rect x="100" y="525" width="50" height="50" rx="8" fill="#3498db"/>
+  <text x="125" y="558" font-family="Arial" font-size="24" fill="#fff" text-anchor="middle">📚</text>
+  <text x="170" y="545" font-family="Arial" font-size="14" fill="#333" font-weight="bold">Novo material disponível no acervo</text>
+  <text x="170" y="565" font-family="Arial" font-size="12" fill="#666">O livro "Ciências - Experimentos Práticos" foi adicionado à biblioteca.</text>
+  <text x="170" y="585" font-family="Arial" font-size="11" fill="#999">Ontem às 10:15</text>
+  <rect x="1000" y="535" width="80" height="30" rx="6" fill="#3498db"/>
+  <text x="1040" y="555" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">Acessar</text>
+  <rect x="1090" y="535" width="60" height="30" rx="6" fill="#f8f9fa"/>
+  <text x="1120" y="555" font-family="Arial" font-size="16" fill="#999" text-anchor="middle">✕</text>
+  
+  <!-- Notification 5 - Achievement/Unread -->
+  <rect x="40" y="595" width="1120" height="90" fill="#fff8e1"/>
+  <circle cx="75" cy="640" r="8" fill="#f39c12"/>
+  <rect x="100" y="615" width="50" height="50" rx="8" fill="#f39c12"/>
+  <text x="125" y="648" font-family="Arial" font-size="24" fill="#fff" text-anchor="middle">🏆</text>
+  <text x="170" y="635" font-family="Arial" font-size="14" fill="#333" font-weight="bold">Parabéns! Você completou 10 leituras!</text>
+  <text x="170" y="655" font-family="Arial" font-size="12" fill="#666">Você está entre os alunos mais engajados da sua turma. Continue assim!</text>
+  <text x="170" y="675" font-family="Arial" font-size="11" fill="#999">2 dias atrás</text>
+  <rect x="1000" y="625" width="80" height="30" rx="6" fill="#f39c12"/>
+  <text x="1040" y="645" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">Ver ranking</text>
+  <rect x="1090" y="625" width="60" height="30" rx="6" fill="#f8f9fa"/>
+  <text x="1120" y="645" font-family="Arial" font-size="16" fill="#999" text-anchor="middle">✕</text>
+  
+  <!-- Notification 6 - Read (dimmed) -->
+  <rect x="40" y="685" width="1120" height="90" fill="#fff"/>
+  <rect x="100" y="705" width="50" height="50" rx="8" fill="#bdc3c7"/>
+  <text x="125" y="738" font-family="Arial" font-size="24" fill="#fff" text-anchor="middle">🔧</text>
+  <text x="170" y="725" font-family="Arial" font-size="14" fill="#999">Atualização do sistema</text>
+  <text x="170" y="745" font-family="Arial" font-size="12" fill="#bbb">Novos recursos foram adicionados à plataforma. Confira as novidades!</text>
+  <text x="170" y="765" font-family="Arial" font-size="11" fill="#ccc">3 dias atrás</text>
+  <rect x="1090" y="715" width="60" height="30" rx="6" fill="#f8f9fa"/>
+  <text x="1120" y="735" font-family="Arial" font-size="16" fill="#ccc" text-anchor="middle">✕</text>
+  
+  <!-- Notification 7 - Read (dimmed) -->
+  <rect x="40" y="775" width="1120" height="90" rx="10" fill="#fff"/>
+  <rect x="100" y="795" width="50" height="50" rx="8" fill="#bdc3c7"/>
+  <text x="125" y="828" font-family="Arial" font-size="24" fill="#fff" text-anchor="middle">✓</text>
+  <text x="170" y="815" font-family="Arial" font-size="14" fill="#999">Download concluído</text>
+  <text x="170" y="835" font-family="Arial" font-size="12" fill="#bbb">O PDF de "Português 7º Ano" foi baixado com sucesso.</text>
+  <text x="170" y="855" font-family="Arial" font-size="11" fill="#ccc">5 dias atrás</text>
+  <rect x="1090" y="805" width="60" height="30" rx="6" fill="#f8f9fa"/>
+  <text x="1120" y="825" font-family="Arial" font-size="16" fill="#ccc" text-anchor="middle">✕</text>
+</svg>

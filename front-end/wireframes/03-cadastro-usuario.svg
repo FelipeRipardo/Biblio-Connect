@@ -1,0 +1,132 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sideGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d5a87;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f0f4f8"/>
+  
+  <!-- Left Side - Decorative -->
+  <rect width="380" height="900" fill="url(#sideGrad2)"/>
+  
+  <!-- Logo -->
+  <text x="50" y="70" font-family="Georgia, serif" font-size="22" fill="#fff" font-weight="bold">📚 BiblioConnect</text>
+  
+  <!-- Illustration -->
+  <rect x="50" y="180" width="60" height="90" rx="4" fill="#27ae60" opacity="0.8"/>
+  <rect x="95" y="200" width="60" height="90" rx="4" fill="#3498db" opacity="0.8"/>
+  <rect x="140" y="170" width="60" height="90" rx="4" fill="#9b59b6" opacity="0.8"/>
+  <rect x="185" y="210" width="60" height="90" rx="4" fill="#e74c3c" opacity="0.8"/>
+  
+  <!-- Welcome Text -->
+  <text x="50" y="360" font-family="Georgia, serif" font-size="26" fill="#fff" font-weight="bold">Junte-se à nossa</text>
+  <text x="50" y="395" font-family="Georgia, serif" font-size="26" fill="#e07c24" font-weight="bold">comunidade escolar!</text>
+  <text x="50" y="440" font-family="Arial" font-size="14" fill="#b8c5d6">Crie sua conta e tenha acesso</text>
+  <text x="50" y="462" font-family="Arial" font-size="14" fill="#b8c5d6">aos livros didáticos da escola.</text>
+  
+  <!-- Benefits -->
+  <text x="50" y="520" font-family="Arial" font-size="12" fill="#fff">✓ Empréstimos de livros didáticos</text>
+  <text x="50" y="545" font-family="Arial" font-size="12" fill="#fff">✓ Acompanhamento de leituras</text>
+  <text x="50" y="570" font-family="Arial" font-size="12" fill="#fff">✓ Renovações online</text>
+  <text x="50" y="595" font-family="Arial" font-size="12" fill="#fff">✓ Histórico completo</text>
+  
+  <!-- Right Side - Form -->
+  <rect x="380" width="820" height="900" fill="#fff"/>
+  
+  <!-- Form Header -->
+  <text x="790" y="70" font-family="Georgia, serif" font-size="24" fill="#1e3a5f" font-weight="bold" text-anchor="middle">Cadastro de Aluno</text>
+  <text x="790" y="95" font-family="Arial" font-size="13" fill="#666" text-anchor="middle">Preencha os dados para criar sua conta</text>
+  
+  <!-- Progress Steps -->
+  <circle cx="600" cy="135" r="15" fill="#1e3a5f"/>
+  <text x="600" y="140" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">1</text>
+  <line x1="615" y1="135" x2="755" y2="135" stroke="#ddd" stroke-width="2"/>
+  <circle cx="770" cy="135" r="15" fill="#ddd"/>
+  <text x="770" y="140" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">2</text>
+  <line x1="785" y1="135" x2="925" y2="135" stroke="#ddd" stroke-width="2"/>
+  <circle cx="940" cy="135" r="15" fill="#ddd"/>
+  <text x="940" y="140" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">3</text>
+  
+  <text x="600" y="160" font-family="Arial" font-size="10" fill="#1e3a5f" text-anchor="middle">Dados Pessoais</text>
+  <text x="770" y="160" font-family="Arial" font-size="10" fill="#999" text-anchor="middle">Dados Escolares</text>
+  <text x="940" y="160" font-family="Arial" font-size="10" fill="#999" text-anchor="middle">Confirmação</text>
+  
+  <!-- Row 1: Nome Completo -->
+  <text x="420" y="210" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Nome Completo *</text>
+  <rect x="420" y="220" width="540" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="440" y="248" font-family="Arial" font-size="13" fill="#999">Digite seu nome completo</text>
+  
+  <!-- Row 2: Email + CPF -->
+  <text x="420" y="295" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Email *</text>
+  <rect x="420" y="305" width="260" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="440" y="333" font-family="Arial" font-size="13" fill="#999">seu@email.com</text>
+  
+  <text x="700" y="295" font-family="Arial" font-size="12" fill="#333" font-weight="bold">CPF *</text>
+  <rect x="700" y="305" width="260" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="720" y="333" font-family="Arial" font-size="13" fill="#999">000.000.000-00</text>
+  
+  <!-- Row 3: Data Nascimento + Telefone -->
+  <text x="420" y="380" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Data de Nascimento *</text>
+  <rect x="420" y="390" width="260" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="440" y="418" font-family="Arial" font-size="13" fill="#999">dd/mm/aaaa</text>
+  <text x="650" y="418" font-family="Arial" font-size="14" fill="#999">📅</text>
+  
+  <text x="700" y="380" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Telefone do Responsável *</text>
+  <rect x="700" y="390" width="260" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="720" y="418" font-family="Arial" font-size="13" fill="#999">(00) 00000-0000</text>
+  
+  <!-- Row 4: Matrícula + Série -->
+  <text x="420" y="465" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Matrícula Escolar *</text>
+  <rect x="420" y="475" width="260" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="440" y="503" font-family="Arial" font-size="13" fill="#999">Ex: 2024001234</text>
+  
+  <text x="700" y="465" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Série/Ano *</text>
+  <rect x="700" y="475" width="260" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="720" y="503" font-family="Arial" font-size="13" fill="#333">9º Ano - Fundamental ▼</text>
+  
+  <!-- Row 5: Turma + Turno -->
+  <text x="420" y="550" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Turma *</text>
+  <rect x="420" y="560" width="260" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="440" y="588" font-family="Arial" font-size="13" fill="#333">Turma A ▼</text>
+  
+  <text x="700" y="550" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Turno *</text>
+  <rect x="700" y="560" width="260" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="720" y="588" font-family="Arial" font-size="13" fill="#333">Manhã ▼</text>
+  
+  <!-- Row 6: Senha -->
+  <text x="420" y="635" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Criar Senha *</text>
+  <rect x="420" y="645" width="260" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="440" y="673" font-family="Arial" font-size="13" fill="#999">••••••••</text>
+  
+  <text x="700" y="635" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Confirmar Senha *</text>
+  <rect x="700" y="645" width="260" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="720" y="673" font-family="Arial" font-size="13" fill="#999">••••••••</text>
+  
+  <!-- Password Strength -->
+  <rect x="420" y="700" width="60" height="4" rx="2" fill="#27ae60"/>
+  <rect x="485" y="700" width="60" height="4" rx="2" fill="#27ae60"/>
+  <rect x="550" y="700" width="60" height="4" rx="2" fill="#f39c12"/>
+  <rect x="615" y="700" width="60" height="4" rx="2" fill="#ddd"/>
+  <text x="420" y="720" font-family="Arial" font-size="10" fill="#f39c12">Força: Média</text>
+  
+  <!-- Terms -->
+  <rect x="420" y="745" width="18" height="18" rx="4" fill="#fff" stroke="#ddd"/>
+  <text x="445" y="759" font-family="Arial" font-size="11" fill="#666">Li e concordo com os</text>
+  <text x="565" y="759" font-family="Arial" font-size="11" fill="#e07c24">Termos de Uso</text>
+  <text x="645" y="759" font-family="Arial" font-size="11" fill="#666">e</text>
+  <text x="660" y="759" font-family="Arial" font-size="11" fill="#e07c24">Regulamento da Biblioteca</text>
+  
+  <!-- Buttons -->
+  <rect x="420" y="790" width="260" height="45" rx="6" fill="#fff" stroke="#ddd"/>
+  <text x="550" y="818" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">← Voltar</text>
+  
+  <rect x="700" y="790" width="260" height="45" rx="6" fill="#27ae60"/>
+  <text x="830" y="818" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">Próximo →</text>
+  
+  <!-- Login Link -->
+  <text x="700" y="870" font-family="Arial" font-size="13" fill="#666">Já tem uma conta?</text>
+  <text x="825" y="870" font-family="Arial" font-size="13" fill="#e07c24" font-weight="bold">Faça login</text>
+</svg>

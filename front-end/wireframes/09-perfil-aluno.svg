@@ -1,0 +1,143 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f5f5f5"/>
+  
+  <!-- Header -->
+  <rect width="1200" height="70" fill="#1e3a5f"/>
+  <text x="40" y="45" font-family="Georgia, serif" font-size="22" fill="#fff" font-weight="bold">📚 BiblioConnect</text>
+  
+  <!-- Page Title -->
+  <text x="40" y="115" font-family="Georgia, serif" font-size="22" fill="#1e3a5f" font-weight="bold">Minha Área</text>
+  
+  <!-- Sidebar Menu -->
+  <rect x="40" y="140" width="220" height="500" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  
+  <rect x="40" y="140" width="220" height="50" rx="10" fill="#1e3a5f"/>
+  <text x="70" y="170" font-family="Arial" font-size="13" fill="#fff">📊 Visão Geral</text>
+  
+  <text x="70" y="220" font-family="Arial" font-size="13" fill="#666">📚 Minhas Leituras</text>
+  <text x="70" y="260" font-family="Arial" font-size="13" fill="#666">📥 Downloads</text>
+  <text x="70" y="300" font-family="Arial" font-size="13" fill="#666">⭐ Favoritos</text>
+  <text x="70" y="340" font-family="Arial" font-size="13" fill="#666">📜 Histórico</text>
+  <text x="70" y="380" font-family="Arial" font-size="13" fill="#666">👤 Meu Perfil</text>
+  <text x="70" y="420" font-family="Arial" font-size="13" fill="#666">🔒 Alterar Senha</text>
+  
+  <!-- Main Content -->
+  <rect x="280" y="140" width="880" height="180" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  
+  <!-- Profile Header -->
+  <rect x="280" y="140" width="880" height="100" rx="10" fill="#2d5a87"/>
+  
+  <!-- Avatar -->
+  <circle cx="380" cy="230" r="50" fill="#fff" stroke="#27ae60" stroke-width="3"/>
+  <text x="380" y="240" font-family="Arial" font-size="24" fill="#27ae60" text-anchor="middle">JS</text>
+  
+  <text x="450" y="195" font-family="Arial" font-size="18" fill="#fff" font-weight="bold">João Pedro Silva</text>
+  <text x="450" y="218" font-family="Arial" font-size="12" fill="#b8c5d6">joao.silva@escola.edu.br</text>
+  <rect x="450" y="228" width="50" height="20" rx="10" fill="#27ae60"/>
+  <text x="475" y="242" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">Aluno</text>
+  <rect x="510" y="228" width="80" height="20" rx="10" fill="#e07c24"/>
+  <text x="550" y="242" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">7º Ano A</text>
+  
+  <text x="450" y="280" font-family="Arial" font-size="11" fill="#666">Membro desde: Fevereiro/2026</text>
+  
+  <!-- Quick Stats -->
+  <rect x="800" y="155" width="150" height="70" rx="8" fill="rgba(255,255,255,0.1)"/>
+  <text x="875" y="180" font-family="Arial" font-size="24" fill="#fff" text-anchor="middle" font-weight="bold">45</text>
+  <text x="875" y="200" font-family="Arial" font-size="10" fill="#b8c5d6" text-anchor="middle">Leituras realizadas</text>
+  
+  <rect x="970" y="155" width="150" height="70" rx="8" fill="rgba(255,255,255,0.1)"/>
+  <text x="1045" y="180" font-family="Arial" font-size="24" fill="#fff" text-anchor="middle" font-weight="bold">12</text>
+  <text x="1045" y="200" font-family="Arial" font-size="10" fill="#b8c5d6" text-anchor="middle">Downloads</text>
+  
+  <!-- Content Cards Row 1 -->
+  <rect x="280" y="340" width="430" height="250" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="300" y="375" font-family="Arial" font-size="14" fill="#1e3a5f" font-weight="bold">📖 Leituras Recentes</text>
+  
+  <rect x="300" y="395" width="390" height="55" rx="6" fill="#f8f9fa"/>
+  <rect x="315" y="405" width="40" height="35" rx="4" fill="#e74c3c"/>
+  <text x="335" y="428" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">MAT</text>
+  <text x="370" y="420" font-family="Arial" font-size="12" fill="#333">Matemática 7º Ano</text>
+  <text x="370" y="438" font-family="Arial" font-size="10" fill="#666">Último acesso: hoje às 14:30</text>
+  <rect x="620" y="415" width="60" height="25" rx="4" fill="#27ae60"/>
+  <text x="650" y="432" font-family="Arial" font-size="9" fill="#fff" text-anchor="middle">Continuar</text>
+  
+  <rect x="300" y="460" width="390" height="55" rx="6" fill="#f8f9fa"/>
+  <rect x="315" y="470" width="40" height="35" rx="4" fill="#3498db"/>
+  <text x="335" y="493" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">PORT</text>
+  <text x="370" y="485" font-family="Arial" font-size="12" fill="#333">Português 7º Ano</text>
+  <text x="370" y="503" font-family="Arial" font-size="10" fill="#666">Último acesso: ontem</text>
+  <rect x="620" y="480" width="60" height="25" rx="4" fill="#27ae60"/>
+  <text x="650" y="497" font-family="Arial" font-size="9" fill="#fff" text-anchor="middle">Continuar</text>
+  
+  <rect x="300" y="525" width="390" height="55" rx="6" fill="#f8f9fa"/>
+  <rect x="315" y="535" width="40" height="35" rx="4" fill="#27ae60"/>
+  <text x="335" y="558" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">CIÊN</text>
+  <text x="370" y="550" font-family="Arial" font-size="12" fill="#333">Ciências 7º Ano</text>
+  <text x="370" y="568" font-family="Arial" font-size="10" fill="#666">Último acesso: 03/10/2026</text>
+  <rect x="620" y="545" width="60" height="25" rx="4" fill="#27ae60"/>
+  <text x="650" y="562" font-family="Arial" font-size="9" fill="#fff" text-anchor="middle">Continuar</text>
+  
+  <!-- Progress Card -->
+  <rect x="730" y="340" width="430" height="250" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="750" y="375" font-family="Arial" font-size="14" fill="#1e3a5f" font-weight="bold">📈 Meu Progresso</text>
+  
+  <text x="750" y="415" font-family="Arial" font-size="11" fill="#333">Leituras obrigatórias da turma</text>
+  <rect x="750" y="425" width="390" height="12" rx="6" fill="#ecf0f1"/>
+  <rect x="750" y="425" width="312" height="12" rx="6" fill="#27ae60"/>
+  <text x="750" y="455" font-family="Arial" font-size="10" fill="#27ae60">8 de 10 concluídas (80%)</text>
+  
+  <text x="750" y="490" font-family="Arial" font-size="11" fill="#333">Tempo de leitura este mês</text>
+  <rect x="750" y="500" width="390" height="12" rx="6" fill="#ecf0f1"/>
+  <rect x="750" y="500" width="273" height="12" rx="6" fill="#3498db"/>
+  <text x="750" y="530" font-family="Arial" font-size="10" fill="#3498db">14h de 20h meta (70%)</text>
+  
+  <rect x="750" y="555" width="185" height="30" rx="6" fill="#f8f9fa"/>
+  <text x="842" y="575" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">📊 Ver relatório completo</text>
+  
+  <rect x="955" y="555" width="185" height="30" rx="6" fill="#f8f9fa"/>
+  <text x="1047" y="575" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">🏆 Minhas conquistas</text>
+  
+  <!-- Content Cards Row 2 -->
+  <rect x="280" y="610" width="430" height="200" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="300" y="645" font-family="Arial" font-size="14" fill="#1e3a5f" font-weight="bold">📝 Leituras Pendentes (Prof. atribuiu)</text>
+  
+  <rect x="300" y="665" width="390" height="50" rx="6" fill="#fff3cd"/>
+  <rect x="315" y="675" width="35" height="30" rx="4" fill="#f39c12"/>
+  <text x="332" y="695" font-family="Arial" font-size="7" fill="#fff" text-anchor="middle">HIST</text>
+  <text x="365" y="690" font-family="Arial" font-size="11" fill="#333">História do Brasil - Cap. 5</text>
+  <text x="365" y="705" font-family="Arial" font-size="9" fill="#856404">Prazo: 10/10/2026 (4 dias)</text>
+  <rect x="620" y="680" width="60" height="25" rx="4" fill="#f39c12"/>
+  <text x="650" y="697" font-family="Arial" font-size="9" fill="#fff" text-anchor="middle">Ler</text>
+  
+  <rect x="300" y="725" width="390" height="50" rx="6" fill="#e8f5e9"/>
+  <rect x="315" y="735" width="35" height="30" rx="4" fill="#9b59b6"/>
+  <text x="332" y="755" font-family="Arial" font-size="7" fill="#fff" text-anchor="middle">GEO</text>
+  <text x="365" y="750" font-family="Arial" font-size="11" fill="#333">Geografia - Unidade 3</text>
+  <text x="365" y="765" font-family="Arial" font-size="9" fill="#27ae60">Prazo: 15/10/2026 (9 dias)</text>
+  <rect x="620" y="740" width="60" height="25" rx="4" fill="#27ae60"/>
+  <text x="650" y="757" font-family="Arial" font-size="9" fill="#fff" text-anchor="middle">Ler</text>
+  
+  <!-- Favorites Card -->
+  <rect x="730" y="610" width="430" height="200" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="750" y="645" font-family="Arial" font-size="14" fill="#1e3a5f" font-weight="bold">⭐ Meus Favoritos</text>
+  
+  <rect x="750" y="665" width="100" height="120" rx="6" fill="#e74c3c"/>
+  <text x="800" y="715" font-family="Arial" font-size="9" fill="#fff" text-anchor="middle">Matemática</text>
+  <text x="800" y="730" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">7º Ano</text>
+  <text x="800" y="775" font-family="Arial" font-size="16" text-anchor="middle">⭐</text>
+  
+  <rect x="860" y="665" width="100" height="120" rx="6" fill="#3498db"/>
+  <text x="910" y="715" font-family="Arial" font-size="9" fill="#fff" text-anchor="middle">Português</text>
+  <text x="910" y="730" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">7º Ano</text>
+  <text x="910" y="775" font-family="Arial" font-size="16" text-anchor="middle">⭐</text>
+  
+  <rect x="970" y="665" width="100" height="120" rx="6" fill="#f39c12"/>
+  <text x="1020" y="715" font-family="Arial" font-size="9" fill="#fff" text-anchor="middle">História</text>
+  <text x="1020" y="730" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">Brasil</text>
+  <text x="1020" y="775" font-family="Arial" font-size="16" text-anchor="middle">⭐</text>
+  
+  <rect x="1080" y="665" width="70" height="120" rx="6" fill="#f8f9fa" stroke="#ddd" stroke-dasharray="5,5"/>
+  <text x="1115" y="725" font-family="Arial" font-size="20" fill="#ccc" text-anchor="middle">+</text>
+  <text x="1115" y="755" font-family="Arial" font-size="8" fill="#999" text-anchor="middle">Ver todos</text>
+</svg>

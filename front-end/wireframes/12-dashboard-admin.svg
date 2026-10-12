@@ -1,0 +1,174 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f5f5f5"/>
+  
+  <!-- Sidebar -->
+  <rect width="250" height="900" fill="#1e3a5f"/>
+  
+  <!-- Logo -->
+  <text x="30" y="45" font-family="Georgia, serif" font-size="18" fill="#fff" font-weight="bold">📚 BiblioConnect</text>
+  <text x="30" y="65" font-family="Arial" font-size="10" fill="#b8c5d6">Painel Administrativo</text>
+  
+  <!-- Admin Profile -->
+  <circle cx="55" cy="115" r="22" fill="#e07c24"/>
+  <text x="55" y="122" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle">AD</text>
+  <text x="90" y="110" font-family="Arial" font-size="12" fill="#fff">Administrador</text>
+  <text x="90" y="125" font-family="Arial" font-size="10" fill="#b8c5d6">Gestor do Sistema</text>
+  
+  <!-- Menu -->
+  <rect x="0" y="155" width="250" height="40" fill="#2d5a87"/>
+  <text x="50" y="180" font-family="Arial" font-size="12" fill="#fff">📊 Dashboard</text>
+  <text x="50" y="220" font-family="Arial" font-size="12" fill="#b8c5d6">📚 Acervo Digital</text>
+  <text x="50" y="255" font-family="Arial" font-size="12" fill="#b8c5d6">👥 Alunos</text>
+  <text x="50" y="290" font-family="Arial" font-size="12" fill="#b8c5d6">👨‍🏫 Professores</text>
+  <text x="50" y="325" font-family="Arial" font-size="12" fill="#b8c5d6">📖 Acessos/Leituras</text>
+  <text x="50" y="360" font-family="Arial" font-size="12" fill="#b8c5d6">📝 Relatórios</text>
+  <text x="50" y="395" font-family="Arial" font-size="12" fill="#b8c5d6">⚙️ Configurações</text>
+  
+  <!-- Main Content Header -->
+  <rect x="250" y="0" width="950" height="70" fill="#fff" stroke="#e0e0e0"/>
+  <text x="280" y="45" font-family="Georgia, serif" font-size="20" fill="#1e3a5f" font-weight="bold">Dashboard - Visão Geral</text>
+  
+  <rect x="900" y="20" width="120" height="35" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="920" y="42" font-family="Arial" font-size="11" fill="#666">📅 Out 2026 ▼</text>
+  
+  <rect x="1030" y="20" width="90" height="35" rx="6" fill="#e07c24"/>
+  <text x="1055" y="42" font-family="Arial" font-size="11" fill="#fff">Exportar</text>
+  
+  <!-- KPI Cards -->
+  <rect x="280" y="90" width="200" height="90" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="300" y="115" font-family="Arial" font-size="11" fill="#666">📚 Total no Acervo</text>
+  <text x="300" y="145" font-family="Arial" font-size="26" fill="#1e3a5f" font-weight="bold">527</text>
+  <text x="300" y="165" font-family="Arial" font-size="10" fill="#27ae60">↑ 15 novos este mês</text>
+  
+  <rect x="500" y="90" width="200" height="90" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="520" y="115" font-family="Arial" font-size="11" fill="#666">📖 Acessos Hoje</text>
+  <text x="520" y="145" font-family="Arial" font-size="26" fill="#e07c24" font-weight="bold">342</text>
+  <text x="520" y="165" font-family="Arial" font-size="10" fill="#27ae60">↑ 23% vs ontem</text>
+  
+  <rect x="720" y="90" width="200" height="90" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="740" y="115" font-family="Arial" font-size="11" fill="#666">👥 Alunos Ativos</text>
+  <text x="740" y="145" font-family="Arial" font-size="26" fill="#27ae60" font-weight="bold">1.850</text>
+  <text x="740" y="165" font-family="Arial" font-size="10" fill="#666">92% do total cadastrado</text>
+  
+  <rect x="940" y="90" width="200" height="90" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="960" y="115" font-family="Arial" font-size="11" fill="#666">👨‍🏫 Professores</text>
+  <text x="960" y="145" font-family="Arial" font-size="26" fill="#9b59b6" font-weight="bold">45</text>
+  <text x="960" y="165" font-family="Arial" font-size="10" fill="#666">100% ativos</text>
+  
+  <!-- Charts Row -->
+  <rect x="280" y="200" width="440" height="250" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="300" y="230" font-family="Arial" font-size="13" fill="#1e3a5f" font-weight="bold">📊 Acessos por Mês</text>
+  
+  <!-- Bar chart -->
+  <rect x="310" y="260" width="390" height="160" fill="#f8f9fa" rx="4"/>
+  <rect x="330" y="340" width="35" height="70" fill="#3498db"/>
+  <rect x="380" y="320" width="35" height="90" fill="#3498db"/>
+  <rect x="430" y="290" width="35" height="120" fill="#3498db"/>
+  <rect x="480" y="310" width="35" height="100" fill="#3498db"/>
+  <rect x="530" y="270" width="35" height="140" fill="#27ae60"/>
+  <rect x="580" y="280" width="35" height="130" fill="#e07c24"/>
+  <rect x="630" y="350" width="35" height="60" fill="#ccc"/>
+  <text x="347" y="405" font-family="Arial" font-size="9" fill="#666">Mai</text>
+  <text x="397" y="405" font-family="Arial" font-size="9" fill="#666">Jun</text>
+  <text x="447" y="405" font-family="Arial" font-size="9" fill="#666">Jul</text>
+  <text x="497" y="405" font-family="Arial" font-size="9" fill="#666">Ago</text>
+  <text x="547" y="405" font-family="Arial" font-size="9" fill="#666">Set</text>
+  <text x="597" y="405" font-family="Arial" font-size="9" fill="#666">Out</text>
+  <text x="647" y="405" font-family="Arial" font-size="9" fill="#666">Nov</text>
+  
+  <rect x="740" y="200" width="400" height="250" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="760" y="230" font-family="Arial" font-size="13" fill="#1e3a5f" font-weight="bold">📚 Materiais Mais Acessados</text>
+  
+  <text x="760" y="265" font-family="Arial" font-size="12" fill="#333">1. Matemática 7º Ano</text>
+  <rect x="760" y="275" width="280" height="8" rx="4" fill="#ecf0f1"/>
+  <rect x="760" y="275" width="250" height="8" rx="4" fill="#27ae60"/>
+  <text x="1050" y="282" font-family="Arial" font-size="10" fill="#666">892</text>
+  
+  <text x="760" y="310" font-family="Arial" font-size="12" fill="#333">2. Português 8º Ano</text>
+  <rect x="760" y="320" width="280" height="8" rx="4" fill="#ecf0f1"/>
+  <rect x="760" y="320" width="220" height="8" rx="4" fill="#3498db"/>
+  <text x="1050" y="327" font-family="Arial" font-size="10" fill="#666">756</text>
+  
+  <text x="760" y="355" font-family="Arial" font-size="12" fill="#333">3. História do Brasil</text>
+  <rect x="760" y="365" width="280" height="8" rx="4" fill="#ecf0f1"/>
+  <rect x="760" y="365" width="190" height="8" rx="4" fill="#f39c12"/>
+  <text x="1050" y="372" font-family="Arial" font-size="10" fill="#666">623</text>
+  
+  <text x="760" y="400" font-family="Arial" font-size="12" fill="#333">4. Ciências 6º Ano</text>
+  <rect x="760" y="410" width="280" height="8" rx="4" fill="#ecf0f1"/>
+  <rect x="760" y="410" width="160" height="8" rx="4" fill="#9b59b6"/>
+  <text x="1050" y="417" font-family="Arial" font-size="10" fill="#666">534</text>
+  
+  <text x="760" y="445" font-family="Arial" font-size="12" fill="#333">5. Geografia 9º Ano</text>
+  <rect x="760" y="455" width="280" height="8" rx="4" fill="#ecf0f1"/>
+  <rect x="760" y="455" width="140" height="8" rx="4" fill="#e74c3c"/>
+  <text x="1050" y="462" font-family="Arial" font-size="10" fill="#666">478</text>
+  
+  <!-- Bottom Row -->
+  <rect x="280" y="470" width="280" height="200" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="300" y="500" font-family="Arial" font-size="13" fill="#1e3a5f" font-weight="bold">📱 Acessos por Dispositivo</text>
+  
+  <!-- Pie chart mockup -->
+  <circle cx="420" cy="580" r="60" fill="none" stroke="#3498db" stroke-width="20" stroke-dasharray="120 260"/>
+  <circle cx="420" cy="580" r="60" fill="none" stroke="#27ae60" stroke-width="20" stroke-dasharray="80 300" stroke-dashoffset="-120"/>
+  <circle cx="420" cy="580" r="60" fill="none" stroke="#f39c12" stroke-width="20" stroke-dasharray="60 320" stroke-dashoffset="-200"/>
+  
+  <text x="300" y="660" font-family="Arial" font-size="10" fill="#3498db">● Computador 45%</text>
+  <text x="390" y="660" font-family="Arial" font-size="10" fill="#27ae60">● Celular 35%</text>
+  <text x="480" y="660" font-family="Arial" font-size="10" fill="#f39c12">● Tablet 20%</text>
+  
+  <rect x="580" y="470" width="280" height="200" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="600" y="500" font-family="Arial" font-size="13" fill="#1e3a5f" font-weight="bold">🎓 Acessos por Turma</text>
+  
+  <text x="600" y="535" font-family="Arial" font-size="11" fill="#333">7º Ano A</text>
+  <rect x="680" y="522" width="160" height="15" rx="4" fill="#ecf0f1"/>
+  <rect x="680" y="522" width="140" height="15" rx="4" fill="#27ae60"/>
+  
+  <text x="600" y="565" font-family="Arial" font-size="11" fill="#333">8º Ano B</text>
+  <rect x="680" y="552" width="160" height="15" rx="4" fill="#ecf0f1"/>
+  <rect x="680" y="552" width="130" height="15" rx="4" fill="#27ae60"/>
+  
+  <text x="600" y="595" font-family="Arial" font-size="11" fill="#333">9º Ano A</text>
+  <rect x="680" y="582" width="160" height="15" rx="4" fill="#ecf0f1"/>
+  <rect x="680" y="582" width="120" height="15" rx="4" fill="#3498db"/>
+  
+  <text x="600" y="625" font-family="Arial" font-size="11" fill="#333">6º Ano C</text>
+  <rect x="680" y="612" width="160" height="15" rx="4" fill="#ecf0f1"/>
+  <rect x="680" y="612" width="100" height="15" rx="4" fill="#f39c12"/>
+  
+  <text x="600" y="655" font-family="Arial" font-size="11" fill="#333">7º Ano B</text>
+  <rect x="680" y="642" width="160" height="15" rx="4" fill="#ecf0f1"/>
+  <rect x="680" y="642" width="90" height="15" rx="4" fill="#e74c3c"/>
+  
+  <rect x="880" y="470" width="260" height="200" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="900" y="500" font-family="Arial" font-size="13" fill="#1e3a5f" font-weight="bold">⚡ Atividade Recente</text>
+  
+  <circle cx="920" cy="535" r="8" fill="#27ae60"/>
+  <text x="940" y="532" font-family="Arial" font-size="10" fill="#333">Lucas Costa acessou</text>
+  <text x="940" y="546" font-family="Arial" font-size="9" fill="#666">Matemática 7º - há 2 min</text>
+  
+  <circle cx="920" cy="580" r="8" fill="#3498db"/>
+  <text x="940" y="577" font-family="Arial" font-size="10" fill="#333">Julia Martins baixou PDF</text>
+  <text x="940" y="591" font-family="Arial" font-size="9" fill="#666">História 9º - há 5 min</text>
+  
+  <circle cx="920" cy="625" r="8" fill="#9b59b6"/>
+  <text x="940" y="622" font-family="Arial" font-size="10" fill="#333">Prof. Ana definiu leitura</text>
+  <text x="940" y="636" font-family="Arial" font-size="9" fill="#666">Português 8º - há 15 min</text>
+  
+  <text x="900" y="665" font-family="Arial" font-size="10" fill="#3498db">Ver todas as atividades →</text>
+  
+  <!-- Quick Stats Footer -->
+  <rect x="280" y="690" width="860" height="80" rx="10" fill="#1e3a5f"/>
+  <text x="340" y="725" font-family="Arial" font-size="24" fill="#fff" font-weight="bold">12.847</text>
+  <text x="340" y="750" font-family="Arial" font-size="11" fill="#b8c5d6">Acessos este mês</text>
+  
+  <text x="540" y="725" font-family="Arial" font-size="24" fill="#fff" font-weight="bold">4.523</text>
+  <text x="540" y="750" font-family="Arial" font-size="11" fill="#b8c5d6">Downloads PDF</text>
+  
+  <text x="740" y="725" font-family="Arial" font-size="24" fill="#fff" font-weight="bold">98%</text>
+  <text x="740" y="750" font-family="Arial" font-size="11" fill="#b8c5d6">Disponibilidade</text>
+  
+  <text x="940" y="725" font-family="Arial" font-size="24" fill="#fff" font-weight="bold">4.8</text>
+  <text x="940" y="750" font-family="Arial" font-size="11" fill="#b8c5d6">Avaliação média ⭐</text>
+</svg>

@@ -1,0 +1,118 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sideGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d5a87;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f0f4f8"/>
+  
+  <!-- Left Side - Decorative -->
+  <rect width="380" height="900" fill="url(#sideGrad3)"/>
+  
+  <!-- Logo -->
+  <text x="50" y="70" font-family="Georgia, serif" font-size="22" fill="#fff" font-weight="bold">📚 BiblioConnect</text>
+  
+  <!-- Illustration -->
+  <rect x="80" y="200" width="200" height="150" rx="8" fill="rgba(255,255,255,0.1)"/>
+  <text x="180" y="260" font-family="Arial" font-size="50" fill="#fff" text-anchor="middle">👨‍🏫</text>
+  <text x="180" y="320" font-family="Arial" font-size="14" fill="#b8c5d6" text-anchor="middle">Área do Professor</text>
+  
+  <!-- Welcome Text -->
+  <text x="50" y="420" font-family="Georgia, serif" font-size="26" fill="#fff" font-weight="bold">Cadastro de</text>
+  <text x="50" y="455" font-family="Georgia, serif" font-size="26" fill="#e07c24" font-weight="bold">Professor</text>
+  <text x="50" y="500" font-family="Arial" font-size="14" fill="#b8c5d6">Crie sua conta e gerencie</text>
+  <text x="50" y="522" font-family="Arial" font-size="14" fill="#b8c5d6">as leituras da sua turma.</text>
+  
+  <!-- Benefits -->
+  <text x="50" y="580" font-family="Arial" font-size="12" fill="#fff">✓ Acompanhe leituras dos alunos</text>
+  <text x="50" y="605" font-family="Arial" font-size="12" fill="#fff">✓ Defina leituras obrigatórias</text>
+  <text x="50" y="630" font-family="Arial" font-size="12" fill="#fff">✓ Relatórios por disciplina</text>
+  <text x="50" y="655" font-family="Arial" font-size="12" fill="#fff">✓ Gestão de acervo didático</text>
+  
+  <!-- Right Side - Form -->
+  <rect x="380" width="820" height="900" fill="#fff"/>
+  
+  <!-- Form Header -->
+  <text x="790" y="60" font-family="Georgia, serif" font-size="24" fill="#1e3a5f" font-weight="bold" text-anchor="middle">Cadastro de Professor</text>
+  <text x="790" y="85" font-family="Arial" font-size="13" fill="#666" text-anchor="middle">Preencha os dados para criar sua conta</text>
+  
+  <!-- Row 1: Nome Completo -->
+  <text x="420" y="130" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Nome Completo *</text>
+  <rect x="420" y="140" width="540" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="440" y="168" font-family="Arial" font-size="13" fill="#999">Digite seu nome completo</text>
+  
+  <!-- Row 2: Email + CPF -->
+  <text x="420" y="210" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Email Institucional *</text>
+  <rect x="420" y="220" width="260" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="440" y="248" font-family="Arial" font-size="13" fill="#999">professor@escola.edu.br</text>
+  
+  <text x="700" y="210" font-family="Arial" font-size="12" fill="#333" font-weight="bold">CPF *</text>
+  <rect x="700" y="220" width="260" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="720" y="248" font-family="Arial" font-size="13" fill="#999">000.000.000-00</text>
+  
+  <!-- Row 3: Telefone + Registro -->
+  <text x="420" y="290" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Telefone *</text>
+  <rect x="420" y="300" width="260" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="440" y="328" font-family="Arial" font-size="13" fill="#999">(00) 00000-0000</text>
+  
+  <text x="700" y="290" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Registro Funcional *</text>
+  <rect x="700" y="300" width="260" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="720" y="328" font-family="Arial" font-size="13" fill="#999">Ex: RF123456</text>
+  
+  <!-- Disciplinas Section -->
+  <text x="420" y="380" font-family="Arial" font-size="14" fill="#1e3a5f" font-weight="bold">📚 Disciplinas que Leciona *</text>
+  
+  <rect x="420" y="395" width="540" height="100" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  
+  <rect x="435" y="410" width="100" height="30" rx="15" fill="#27ae60"/>
+  <text x="485" y="430" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">Matemática ✕</text>
+  
+  <rect x="545" y="410" width="90" height="30" rx="15" fill="#3498db"/>
+  <text x="590" y="430" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">Física ✕</text>
+  
+  <rect x="645" y="410" width="100" height="30" rx="15" fill="#fff" stroke="#ddd"/>
+  <text x="695" y="430" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">+ Adicionar</text>
+  
+  <text x="435" y="475" font-family="Arial" font-size="10" fill="#666">Selecione todas as disciplinas que você leciona nesta escola</text>
+  
+  <!-- Turmas Section -->
+  <text x="420" y="530" font-family="Arial" font-size="14" fill="#1e3a5f" font-weight="bold">🎓 Turmas *</text>
+  
+  <rect x="420" y="545" width="540" height="80" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  
+  <rect x="435" y="560" width="90" height="28" rx="14" fill="#9b59b6"/>
+  <text x="480" y="578" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">9º A ✕</text>
+  
+  <rect x="535" y="560" width="90" height="28" rx="14" fill="#9b59b6"/>
+  <text x="580" y="578" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">9º B ✕</text>
+  
+  <rect x="635" y="560" width="90" height="28" rx="14" fill="#9b59b6"/>
+  <text x="680" y="578" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">8º A ✕</text>
+  
+  <rect x="735" y="560" width="100" height="28" rx="14" fill="#fff" stroke="#ddd"/>
+  <text x="785" y="578" font-family="Arial" font-size="10" fill="#666" text-anchor="middle">+ Adicionar</text>
+  
+  <!-- Row: Senha -->
+  <text x="420" y="660" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Criar Senha *</text>
+  <rect x="420" y="670" width="260" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="440" y="698" font-family="Arial" font-size="13" fill="#999">••••••••</text>
+  
+  <text x="700" y="660" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Confirmar Senha *</text>
+  <rect x="700" y="670" width="260" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="720" y="698" font-family="Arial" font-size="13" fill="#999">••••••••</text>
+  
+  <!-- Upload de Documento -->
+  <text x="420" y="755" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Comprovante de Vínculo (opcional)</text>
+  <rect x="420" y="765" width="540" height="50" rx="6" fill="#f8f9fa" stroke="#ddd" stroke-dasharray="5,5"/>
+  <text x="690" y="795" font-family="Arial" font-size="12" fill="#999" text-anchor="middle">📎 Arraste ou clique para upload (PDF, JPG até 5MB)</text>
+  
+  <!-- Buttons -->
+  <rect x="420" y="835" width="260" height="45" rx="6" fill="#fff" stroke="#ddd"/>
+  <text x="550" y="863" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">← Cancelar</text>
+  
+  <rect x="700" y="835" width="260" height="45" rx="6" fill="#27ae60"/>
+  <text x="830" y="863" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">Cadastrar</text>
+</svg>

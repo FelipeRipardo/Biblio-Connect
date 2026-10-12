@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframes BiblioConnect</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
+        h1 { color: #1e3a5f; text-align: center; margin-bottom: 10px; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 20px; }
+        h2 { color: #1e3a5f; margin: 30px 0 15px; padding-left: 20px; border-left: 4px solid #9b59b6; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; max-width: 1400px; margin: 0 auto 40px; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .card h3 { padding: 12px 15px; background: #1e3a5f; color: white; font-size: 13px; }
+        .card.professor h3 { background: #9b59b6; }
+        .card.aluno h3 { background: #27ae60; }
+        .card.admin h3 { background: #e07c24; }
+        .card object, .card img { width: 100%; height: auto; display: block; }
+        .card .actions { padding: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
+        .btn { padding: 8px 14px; border: none; border-radius: 6px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; }
+        .btn-primary { background: #27ae60; color: white; }
+        .btn-secondary { background: #e07c24; color: white; }
+        .btn:hover { opacity: 0.9; }
+        .instructions { background: #fff3cd; border: 1px solid #ffc107; padding: 15px; border-radius: 8px; margin-bottom: 20px; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .instructions h4 { color: #856404; margin-bottom: 10px; }
+        .instructions p { color: #856404; font-size: 14px; line-height: 1.6; }
+        .summary { background: #e8f4f8; border: 1px solid #3498db; padding: 15px; border-radius: 8px; margin-bottom: 30px; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .summary h4 { color: #1e3a5f; margin-bottom: 10px; }
+        .summary ul { color: #333; font-size: 14px; line-height: 1.8; columns: 2; }
+    </style>
+</head>
+<body>
+    <h1>📚 Wireframes BiblioConnect</h1>
+    <p class="subtitle">Sistema de Biblioteca Virtual para Escolas Públicas</p>
+    
+    <div class="summary">
+        <h4>📋 Total: 32 Wireframes</h4>
+        <ul>
+            <li>01-12: Telas principais do sistema</li>
+            <li>13-15: Área do Professor (detalhes)</li>
+            <li>16-17: Área do Aluno (detalhes)</li>
+            <li>18-19: Atualização de cadastros</li>
+            <li>20-24: Área Admin (livros, alunos, professores, empréstimos, relatórios)</li>
+            <li>25: Relatórios do Professor</li>
+            <li>26-27: Alterar senha (aluno e professor)</li>
+            <li>28-32: Complementares (detalhes livro, notificações, config, recuperar/redefinir senha)</li>
+        </ul>
+    </div>
+    
+    <div class="instructions">
+        <h4>💡 Como baixar as imagens PNG:</h4>
+        <p>Clique em "Baixar PNG" para converter automaticamente, ou "Baixar SVG" para o arquivo vetorial.</p>
+    </div>
+    
+    <h2>🏠 Telas Principais</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>01 - Página Inicial</h3>
+            <object data="01-pagina-inicial.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('01-pagina-inicial.svg', '01-pagina-inicial.png')">📥 PNG</button>
+                <a href="01-pagina-inicial.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3>02 - Login</h3>
+            <object data="02-login.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('02-login.svg', '02-login.png')">📥 PNG</button>
+                <a href="02-login.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card aluno">
+            <h3>03 - Cadastro de Aluno</h3>
+            <object data="03-cadastro-usuario.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('03-cadastro-usuario.svg', '03-cadastro-usuario.png')">📥 PNG</button>
+                <a href="03-cadastro-usuario.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card professor">
+            <h3>04 - Cadastro de Professor</h3>
+            <object data="04-cadastro-professor.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('04-cadastro-professor.svg', '04-cadastro-professor.png')">📥 PNG</button>
+                <a href="04-cadastro-professor.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card admin">
+            <h3>05 - Cadastro de Livro</h3>
+            <object data="05-cadastro-livro.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('05-cadastro-livro.svg', '05-cadastro-livro.png')">📥 PNG</button>
+                <a href="05-cadastro-livro.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3>06 - Navegação de Livros</h3>
+            <object data="06-navegacao-livros.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('06-navegacao-livros.svg', '06-navegacao-livros.png')">📥 PNG</button>
+                <a href="06-navegacao-livros.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3>07 - Empréstimo de Livro</h3>
+            <object data="07-emprestimo-livro.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('07-emprestimo-livro.svg', '07-emprestimo-livro.png')">📥 PNG</button>
+                <a href="07-emprestimo-livro.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3>08 - Renovação</h3>
+            <object data="08-renovacao.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('08-renovacao.svg', '08-renovacao.png')">📥 PNG</button>
+                <a href="08-renovacao.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card aluno">
+            <h3>09 - Perfil do Aluno</h3>
+            <object data="09-perfil-aluno.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('09-perfil-aluno.svg', '09-perfil-aluno.png')">📥 PNG</button>
+                <a href="09-perfil-aluno.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card professor">
+            <h3>10 - Painel do Professor</h3>
+            <object data="10-painel-professor.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('10-painel-professor.svg', '10-painel-professor.png')">📥 PNG</button>
+                <a href="10-painel-professor.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card professor">
+            <h3>11 - Perfil do Professor</h3>
+            <object data="11-perfil-professor.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('11-perfil-professor.svg', '11-perfil-professor.png')">📥 PNG</button>
+                <a href="11-perfil-professor.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card admin">
+            <h3>12 - Dashboard Admin</h3>
+            <object data="12-dashboard-admin.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('12-dashboard-admin.svg', '12-dashboard-admin.png')">📥 PNG</button>
+                <a href="12-dashboard-admin.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+    </div>
+    
+    <h2>👨‍🏫 Área do Professor (Detalhes)</h2>
+    <div class="grid">
+        <div class="card professor">
+            <h3>13 - Leituras da Turma</h3>
+            <object data="13-professor-leituras-turma.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('13-professor-leituras-turma.svg', '13-professor-leituras-turma.png')">📥 PNG</button>
+                <a href="13-professor-leituras-turma.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card professor">
+            <h3>14 - Definir Leituras</h3>
+            <object data="14-professor-definir-leituras.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('14-professor-definir-leituras.svg', '14-professor-definir-leituras.png')">📥 PNG</button>
+                <a href="14-professor-definir-leituras.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card professor">
+            <h3>15 - Meus Alunos</h3>
+            <object data="15-professor-meus-alunos.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('15-professor-meus-alunos.svg', '15-professor-meus-alunos.png')">📥 PNG</button>
+                <a href="15-professor-meus-alunos.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card professor">
+            <h3>25 - Relatórios do Professor</h3>
+            <object data="25-professor-relatorios.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('25-professor-relatorios.svg', '25-professor-relatorios.png')">📥 PNG</button>
+                <a href="25-professor-relatorios.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card professor">
+            <h3>27 - Alterar Senha Professor</h3>
+            <object data="27-alterar-senha-professor.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('27-alterar-senha-professor.svg', '27-alterar-senha-professor.png')">📥 PNG</button>
+                <a href="27-alterar-senha-professor.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+    </div>
+    
+    <h2>👨‍🎓 Área do Aluno (Detalhes)</h2>
+    <div class="grid">
+        <div class="card aluno">
+            <h3>16 - Histórico de Leitura</h3>
+            <object data="16-aluno-historico-leitura.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('16-aluno-historico-leitura.svg', '16-aluno-historico-leitura.png')">📥 PNG</button>
+                <a href="16-aluno-historico-leitura.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card aluno">
+            <h3>17 - Favoritos</h3>
+            <object data="17-aluno-favoritos.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('17-aluno-favoritos.svg', '17-aluno-favoritos.png')">📥 PNG</button>
+                <a href="17-aluno-favoritos.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card aluno">
+            <h3>26 - Alterar Senha Aluno</h3>
+            <object data="26-alterar-senha-aluno.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('26-alterar-senha-aluno.svg', '26-alterar-senha-aluno.png')">📥 PNG</button>
+                <a href="26-alterar-senha-aluno.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+    </div>
+    
+    <h2>✏️ Atualização de Cadastros</h2>
+    <div class="grid">
+        <div class="card aluno">
+            <h3>18 - Atualizar Cadastro Aluno</h3>
+            <object data="18-atualizar-cadastro-aluno.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('18-atualizar-cadastro-aluno.svg', '18-atualizar-cadastro-aluno.png')">📥 PNG</button>
+                <a href="18-atualizar-cadastro-aluno.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card professor">
+            <h3>19 - Atualizar Cadastro Professor</h3>
+            <object data="19-atualizar-cadastro-professor.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('19-atualizar-cadastro-professor.svg', '19-atualizar-cadastro-professor.png')">📥 PNG</button>
+                <a href="19-atualizar-cadastro-professor.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+    </div>
+    
+    <h2>🔧 Área Administrativa</h2>
+    <div class="grid">
+        <div class="card admin">
+            <h3>20 - Admin: Gestão de Livros</h3>
+            <object data="20-admin-livros.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('20-admin-livros.svg', '20-admin-livros.png')">📥 PNG</button>
+                <a href="20-admin-livros.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card admin">
+            <h3>21 - Admin: Gestão de Alunos</h3>
+            <object data="21-admin-alunos.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('21-admin-alunos.svg', '21-admin-alunos.png')">📥 PNG</button>
+                <a href="21-admin-alunos.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card admin">
+            <h3>22 - Admin: Gestão de Professores</h3>
+            <object data="22-admin-professores.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('22-admin-professores.svg', '22-admin-professores.png')">📥 PNG</button>
+                <a href="22-admin-professores.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card admin">
+            <h3>23 - Admin: Gestão de Empréstimos</h3>
+            <object data="23-admin-emprestimos.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('23-admin-emprestimos.svg', '23-admin-emprestimos.png')">📥 PNG</button>
+                <a href="23-admin-emprestimos.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card admin">
+            <h3>24 - Admin: Relatórios</h3>
+            <object data="24-admin-relatorios.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('24-admin-relatorios.svg', '24-admin-relatorios.png')">📥 PNG</button>
+                <a href="24-admin-relatorios.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+    </div>
+    
+    <h2>📄 Telas Complementares</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>28 - Detalhes do Livro</h3>
+            <object data="28-detalhes-livro.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('28-detalhes-livro.svg', '28-detalhes-livro.png')">📥 PNG</button>
+                <a href="28-detalhes-livro.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3>29 - Central de Notificações</h3>
+            <object data="29-notificacoes.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('29-notificacoes.svg', '29-notificacoes.png')">📥 PNG</button>
+                <a href="29-notificacoes.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card admin">
+            <h3>30 - Admin: Configurações</h3>
+            <object data="30-admin-configuracoes.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('30-admin-configuracoes.svg', '30-admin-configuracoes.png')">📥 PNG</button>
+                <a href="30-admin-configuracoes.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3>31 - Recuperar Senha</h3>
+            <object data="31-recuperar-senha.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('31-recuperar-senha.svg', '31-recuperar-senha.png')">📥 PNG</button>
+                <a href="31-recuperar-senha.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3>32 - Redefinir Senha (Nova)</h3>
+            <object data="32-redefinir-senha.svg" type="image/svg+xml"></object>
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadSVG('32-redefinir-senha.svg', '32-redefinir-senha.png')">📥 PNG</button>
+                <a href="32-redefinir-senha.svg" download class="btn btn-secondary">📄 SVG</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function downloadSVG(svgFile, pngName) {
+            fetch(svgFile)
+                .then(response => response.text())
+                .then(svgText => {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = 1200;
+                    canvas.height = 900;
+                    const ctx = canvas.getContext('2d');
+                    const img = new Image();
+                    const svgBlob = new Blob([svgText], {type: 'image/svg+xml;charset=utf-8'});
+                    const url = URL.createObjectURL(svgBlob);
+                    img.onload = function() {
+                        ctx.fillStyle = '#ffffff';
+                        ctx.fillRect(0, 0, canvas.width, canvas.height);
+                        ctx.drawImage(img, 0, 0, 1200, 900);
+                        URL.revokeObjectURL(url);
+                        const link = document.createElement('a');
+                        link.download = pngName;
+                        link.href = canvas.toDataURL('image/png');
+                        link.click();
+                    };
+                    img.src = url;
+                });
+        }
+    </script>
+</body>
+</html>

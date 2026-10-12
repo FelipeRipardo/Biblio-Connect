@@ -1,0 +1,132 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f5f5f5"/>
+  
+  <!-- Sidebar -->
+  <rect width="250" height="900" fill="#1e3a5f"/>
+  
+  <!-- Logo -->
+  <text x="30" y="45" font-family="Georgia, serif" font-size="18" fill="#fff" font-weight="bold">📚 BiblioConnect</text>
+  <text x="30" y="65" font-family="Arial" font-size="10" fill="#b8c5d6">Painel Administrativo</text>
+  
+  <!-- Admin Profile -->
+  <circle cx="55" cy="115" r="22" fill="#e07c24"/>
+  <text x="55" y="122" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle">AD</text>
+  <text x="90" y="110" font-family="Arial" font-size="12" fill="#fff">Administrador</text>
+  <text x="90" y="125" font-family="Arial" font-size="10" fill="#b8c5d6">Gestor do Sistema</text>
+  
+  <!-- Menu -->
+  <text x="50" y="180" font-family="Arial" font-size="12" fill="#b8c5d6">📊 Dashboard</text>
+  <text x="50" y="215" font-family="Arial" font-size="12" fill="#b8c5d6">📚 Acervo Digital</text>
+  <text x="50" y="250" font-family="Arial" font-size="12" fill="#b8c5d6">👥 Alunos</text>
+  <text x="50" y="285" font-family="Arial" font-size="12" fill="#b8c5d6">👨‍🏫 Professores</text>
+  <text x="50" y="320" font-family="Arial" font-size="12" fill="#b8c5d6">📖 Acessos/Leituras</text>
+  <text x="50" y="355" font-family="Arial" font-size="12" fill="#b8c5d6">📝 Relatórios</text>
+  <rect x="0" y="370" width="250" height="40" fill="#2d5a87"/>
+  <text x="50" y="395" font-family="Arial" font-size="12" fill="#fff">⚙️ Configurações</text>
+  
+  <!-- Main Content Header -->
+  <rect x="250" y="0" width="950" height="70" fill="#fff" stroke="#e0e0e0"/>
+  <text x="280" y="45" font-family="Georgia, serif" font-size="20" fill="#1e3a5f" font-weight="bold">Configurações do Sistema</text>
+  
+  <!-- Settings Tabs -->
+  <rect x="280" y="90" width="860" height="45" rx="8" fill="#fff" stroke="#e0e0e0"/>
+  <rect x="290" y="100" width="80" height="25" rx="4" fill="#1e3a5f"/>
+  <text x="330" y="118" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">Geral</text>
+  <text x="430" y="118" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">Acervo</text>
+  <text x="540" y="118" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">Notificações</text>
+  <text x="650" y="118" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">Backup</text>
+  <text x="760" y="118" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">Usuários</text>
+  <text x="870" y="118" font-family="Arial" font-size="11" fill="#666" text-anchor="middle">Aparência</text>
+  
+  <!-- General Settings Card -->
+  <rect x="280" y="155" width="420" height="320" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="300" y="185" font-family="Arial" font-size="14" fill="#1e3a5f" font-weight="bold">🏫 Informações da Escola</text>
+  
+  <text x="300" y="220" font-family="Arial" font-size="11" fill="#666">Nome da Biblioteca Virtual</text>
+  <rect x="300" y="230" width="380" height="38" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="320" y="255" font-family="Arial" font-size="12" fill="#333">BiblioConnect - Escola Municipal</text>
+  
+  <text x="300" y="290" font-family="Arial" font-size="11" fill="#666">Email de Contato</text>
+  <rect x="300" y="300" width="380" height="38" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="320" y="325" font-family="Arial" font-size="12" fill="#333">biblioteca@escola.edu.br</text>
+  
+  <text x="300" y="360" font-family="Arial" font-size="11" fill="#666">URL do Sistema</text>
+  <rect x="300" y="370" width="380" height="38" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="320" y="395" font-family="Arial" font-size="12" fill="#333">https://biblioconnect.escola.edu.br</text>
+  
+  <rect x="300" y="425" width="150" height="38" rx="6" fill="#27ae60"/>
+  <text x="375" y="450" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">Salvar Alterações</text>
+  
+  <!-- Digital Access Settings Card -->
+  <rect x="720" y="155" width="420" height="320" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="740" y="185" font-family="Arial" font-size="14" fill="#1e3a5f" font-weight="bold">📖 Configurações de Acesso</text>
+  
+  <text x="740" y="225" font-family="Arial" font-size="11" fill="#666">Permitir download de PDF</text>
+  <rect x="1070" y="210" width="50" height="25" rx="12" fill="#27ae60"/>
+  <circle cx="1107" cy="222" r="10" fill="#fff"/>
+  
+  <text x="740" y="270" font-family="Arial" font-size="11" fill="#666">Leitura offline (app)</text>
+  <rect x="1070" y="255" width="50" height="25" rx="12" fill="#27ae60"/>
+  <circle cx="1107" cy="267" r="10" fill="#fff"/>
+  
+  <text x="740" y="315" font-family="Arial" font-size="11" fill="#666">Limite de downloads por aluno/mês</text>
+  <rect x="1020" y="300" width="100" height="30" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="1050" y="320" font-family="Arial" font-size="12" fill="#333">Ilimitado ▼</text>
+  
+  <text x="740" y="360" font-family="Arial" font-size="11" fill="#666">Acesso simultâneo ao mesmo material</text>
+  <rect x="1070" y="345" width="50" height="25" rx="12" fill="#27ae60"/>
+  <circle cx="1107" cy="357" r="10" fill="#fff"/>
+  
+  <text x="740" y="405" font-family="Arial" font-size="11" fill="#666">Exigir login para visualizar acervo</text>
+  <rect x="1070" y="390" width="50" height="25" rx="12" fill="#ccc"/>
+  <circle cx="1083" cy="402" r="10" fill="#fff"/>
+  
+  <rect x="740" y="435" width="150" height="38" rx="6" fill="#27ae60"/>
+  <text x="815" y="460" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">Salvar Alterações</text>
+  
+  <!-- Notification Settings Card -->
+  <rect x="280" y="495" width="420" height="280" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="300" y="525" font-family="Arial" font-size="14" fill="#1e3a5f" font-weight="bold">🔔 Configurações de Notificação</text>
+  
+  <text x="300" y="565" font-family="Arial" font-size="11" fill="#666">Notificar novos materiais disponíveis</text>
+  <rect x="630" y="550" width="50" height="25" rx="12" fill="#27ae60"/>
+  <circle cx="667" cy="562" r="10" fill="#fff"/>
+  
+  <text x="300" y="610" font-family="Arial" font-size="11" fill="#666">Lembrete de leituras atribuídas</text>
+  <rect x="630" y="595" width="50" height="25" rx="12" fill="#27ae60"/>
+  <circle cx="667" cy="607" r="10" fill="#fff"/>
+  
+  <text x="300" y="655" font-family="Arial" font-size="11" fill="#666">Relatório semanal para professores</text>
+  <rect x="630" y="640" width="50" height="25" rx="12" fill="#27ae60"/>
+  <circle cx="667" cy="652" r="10" fill="#fff"/>
+  
+  <text x="300" y="700" font-family="Arial" font-size="11" fill="#666">Email de boas-vindas para novos usuários</text>
+  <rect x="630" y="685" width="50" height="25" rx="12" fill="#27ae60"/>
+  <circle cx="667" cy="697" r="10" fill="#fff"/>
+  
+  <rect x="300" y="730" width="150" height="38" rx="6" fill="#27ae60"/>
+  <text x="375" y="755" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">Salvar Alterações</text>
+  
+  <!-- System Status Card -->
+  <rect x="720" y="495" width="420" height="280" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="740" y="525" font-family="Arial" font-size="14" fill="#1e3a5f" font-weight="bold">💾 Status do Sistema</text>
+  
+  <rect x="740" y="545" width="380" height="60" rx="8" fill="#d4edda"/>
+  <text x="760" y="570" font-family="Arial" font-size="12" fill="#27ae60" font-weight="bold">✓ Sistema Online e Operacional</text>
+  <text x="760" y="590" font-family="Arial" font-size="11" fill="#666">Última verificação: 06/10/2026 às 08:30</text>
+  
+  <text x="740" y="635" font-family="Arial" font-size="11" fill="#666">Armazenamento utilizado</text>
+  <rect x="740" y="645" width="380" height="12" rx="6" fill="#ecf0f1"/>
+  <rect x="740" y="645" width="152" height="12" rx="6" fill="#3498db"/>
+  <text x="740" y="675" font-family="Arial" font-size="10" fill="#666">15.2 GB de 50 GB (30%)</text>
+  
+  <text x="740" y="705" font-family="Arial" font-size="11" fill="#666">Último backup</text>
+  <text x="740" y="725" font-family="Arial" font-size="12" fill="#333">05/10/2026 às 23:00 (automático)</text>
+  
+  <rect x="740" y="745" width="180" height="38" rx="6" fill="#3498db"/>
+  <text x="830" y="770" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">Fazer Backup Agora</text>
+  
+  <rect x="940" y="745" width="180" height="38" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="1030" y="770" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">Ver Logs do Sistema</text>
+</svg>

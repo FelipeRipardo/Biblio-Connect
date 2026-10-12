@@ -1,0 +1,158 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f5f5f5"/>
+  
+  <!-- Sidebar -->
+  <rect width="250" height="900" fill="#1e3a5f"/>
+  
+  <!-- Logo -->
+  <text x="30" y="45" font-family="Georgia, serif" font-size="18" fill="#fff" font-weight="bold">📚 BiblioConnect</text>
+  <text x="30" y="65" font-family="Arial" font-size="10" fill="#b8c5d6">Painel Administrativo</text>
+  
+  <!-- Admin Profile -->
+  <circle cx="55" cy="115" r="22" fill="#e07c24"/>
+  <text x="55" y="122" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle">AD</text>
+  <text x="90" y="110" font-family="Arial" font-size="12" fill="#fff">Admin</text>
+  <text x="90" y="125" font-family="Arial" font-size="10" fill="#b8c5d6">Bibliotecário</text>
+  
+  <!-- Menu Items -->
+  <text x="50" y="175" font-family="Arial" font-size="12" fill="#b8c5d6">📊 Dashboard</text>
+  <rect x="0" y="190" width="250" height="40" fill="#2d5a87"/>
+  <text x="50" y="215" font-family="Arial" font-size="12" fill="#fff">📚 Gerenciar Livros</text>
+  <text x="50" y="255" font-family="Arial" font-size="12" fill="#b8c5d6">👥 Alunos</text>
+  <text x="50" y="290" font-family="Arial" font-size="12" fill="#b8c5d6">👨‍🏫 Professores</text>
+  <text x="50" y="325" font-family="Arial" font-size="12" fill="#b8c5d6">📋 Empréstimos</text>
+  <text x="50" y="360" font-family="Arial" font-size="12" fill="#b8c5d6">📝 Relatórios</text>
+  
+  <!-- Main Content -->
+  <rect x="250" y="0" width="950" height="70" fill="#fff" stroke="#e0e0e0"/>
+  <text x="280" y="45" font-family="Georgia, serif" font-size="20" fill="#1e3a5f" font-weight="bold">Cadastro de Livro Didático</text>
+  
+  <!-- Form Container -->
+  <rect x="280" y="90" width="600" height="780" rx="12" fill="#fff" stroke="#e0e0e0"/>
+  
+  <!-- ISBN Auto-fill Section -->
+  <rect x="300" y="110" width="560" height="70" rx="8" fill="#e8f4f8" stroke="#3498db"/>
+  <text x="320" y="135" font-family="Arial" font-size="12" fill="#1e3a5f" font-weight="bold">🔍 Preenchimento Automático por ISBN</text>
+  <rect x="320" y="148" width="360" height="35" rx="6" fill="#fff" stroke="#ddd"/>
+  <text x="340" y="170" font-family="Arial" font-size="11" fill="#999">Digite o ISBN do livro...</text>
+  <rect x="690" y="148" width="150" height="35" rx="6" fill="#3498db"/>
+  <text x="740" y="170" font-family="Arial" font-size="11" fill="#fff">Buscar Dados</text>
+  
+  <!-- Cover Upload -->
+  <rect x="300" y="200" width="130" height="170" rx="8" fill="#f8f9fa" stroke="#ddd" stroke-dasharray="5,5"/>
+  <text x="365" y="280" font-family="Arial" font-size="24" fill="#ccc" text-anchor="middle">📷</text>
+  <text x="365" y="305" font-family="Arial" font-size="9" fill="#999" text-anchor="middle">Capa do Livro</text>
+  <text x="365" y="355" font-family="Arial" font-size="8" fill="#bbb" text-anchor="middle">Clique para upload</text>
+  
+  <!-- Form Fields -->
+  <text x="450" y="215" font-family="Arial" font-size="11" fill="#333" font-weight="bold">Título *</text>
+  <rect x="450" y="225" width="390" height="38" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="465" y="248" font-family="Arial" font-size="11" fill="#999">Título do livro didático</text>
+  
+  <text x="450" y="280" font-family="Arial" font-size="11" fill="#333" font-weight="bold">Autor(es) *</text>
+  <rect x="450" y="290" width="390" height="38" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="465" y="313" font-family="Arial" font-size="11" fill="#999">Nome dos autores</text>
+  
+  <text x="450" y="345" font-family="Arial" font-size="11" fill="#333" font-weight="bold">Editora *</text>
+  <rect x="450" y="355" width="390" height="38" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="465" y="378" font-family="Arial" font-size="11" fill="#999">Nome da editora</text>
+  
+  <!-- Disciplina e Série -->
+  <text x="300" y="420" font-family="Arial" font-size="13" fill="#1e3a5f" font-weight="bold">📚 Informações Didáticas</text>
+  
+  <text x="300" y="450" font-family="Arial" font-size="11" fill="#333" font-weight="bold">Disciplina *</text>
+  <rect x="300" y="460" width="180" height="38" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="315" y="483" font-family="Arial" font-size="11" fill="#333">Matemática ▼</text>
+  
+  <text x="500" y="450" font-family="Arial" font-size="11" fill="#333" font-weight="bold">Série/Ano *</text>
+  <rect x="500" y="460" width="140" height="38" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="515" y="483" font-family="Arial" font-size="11" fill="#333">9º Ano ▼</text>
+  
+  <text x="660" y="450" font-family="Arial" font-size="11" fill="#333" font-weight="bold">Nível *</text>
+  <rect x="660" y="460" width="180" height="38" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="675" y="483" font-family="Arial" font-size="11" fill="#333">Fundamental II ▼</text>
+  
+  <!-- Tipo de Livro -->
+  <text x="300" y="530" font-family="Arial" font-size="11" fill="#333" font-weight="bold">Tipo de Livro *</text>
+  
+  <rect x="300" y="545" width="130" height="35" rx="6" fill="#1e3a5f"/>
+  <text x="365" y="567" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">📖 Didático</text>
+  
+  <rect x="445" y="545" width="140" height="35" rx="6" fill="#fff" stroke="#ddd"/>
+  <text x="515" y="567" font-family="Arial" font-size="10" fill="#666" text-anchor="middle">📚 Paradidático</text>
+  
+  <rect x="600" y="545" width="120" height="35" rx="6" fill="#fff" stroke="#ddd"/>
+  <text x="660" y="567" font-family="Arial" font-size="10" fill="#666" text-anchor="middle">📕 Literário</text>
+  
+  <!-- Detalhes -->
+  <text x="300" y="615" font-family="Arial" font-size="11" fill="#333" font-weight="bold">Ano Edição</text>
+  <rect x="300" y="625" width="100" height="38" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="315" y="648" font-family="Arial" font-size="11" fill="#999">2024</text>
+  
+  <text x="420" y="615" font-family="Arial" font-size="11" fill="#333" font-weight="bold">Edição</text>
+  <rect x="420" y="625" width="80" height="38" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="435" y="648" font-family="Arial" font-size="11" fill="#999">5ª</text>
+  
+  <text x="520" y="615" font-family="Arial" font-size="11" fill="#333" font-weight="bold">Páginas</text>
+  <rect x="520" y="625" width="80" height="38" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="535" y="648" font-family="Arial" font-size="11" fill="#999">320</text>
+  
+  <text x="620" y="615" font-family="Arial" font-size="11" fill="#333" font-weight="bold">Quantidade *</text>
+  <rect x="620" y="625" width="100" height="38" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="655" y="648" font-family="Arial" font-size="13" fill="#333">← 15 →</text>
+  
+  <text x="740" y="615" font-family="Arial" font-size="11" fill="#333" font-weight="bold">Status</text>
+  <rect x="740" y="625" width="100" height="38" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="755" y="648" font-family="Arial" font-size="10" fill="#27ae60">● Disponível</text>
+  
+  <!-- Localização -->
+  <text x="300" y="700" font-family="Arial" font-size="11" fill="#333" font-weight="bold">Localização na Biblioteca</text>
+  <rect x="300" y="710" width="130" height="38" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="315" y="733" font-family="Arial" font-size="11" fill="#333">Estante A ▼</text>
+  
+  <rect x="450" y="710" width="130" height="38" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="465" y="733" font-family="Arial" font-size="11" fill="#333">Prateleira 3 ▼</text>
+  
+  <!-- Buttons -->
+  <rect x="300" y="780" width="130" height="42" rx="6" fill="#fff" stroke="#ddd"/>
+  <text x="365" y="806" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">Cancelar</text>
+  
+  <rect x="570" y="780" width="270" height="42" rx="6" fill="#27ae60"/>
+  <text x="705" y="806" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">Cadastrar Livro</text>
+  
+  <!-- Right Panel -->
+  <rect x="900" y="90" width="270" height="350" rx="12" fill="#fff" stroke="#e0e0e0"/>
+  <text x="920" y="120" font-family="Arial" font-size="13" fill="#1e3a5f" font-weight="bold">📊 Estatísticas</text>
+  
+  <text x="920" y="160" font-family="Arial" font-size="11" fill="#666">Total Livros Didáticos</text>
+  <text x="920" y="185" font-family="Arial" font-size="24" fill="#1e3a5f" font-weight="bold">3.450</text>
+  
+  <text x="920" y="230" font-family="Arial" font-size="11" fill="#666">Livros Disponíveis</text>
+  <text x="920" y="255" font-family="Arial" font-size="24" fill="#27ae60" font-weight="bold">2.890</text>
+  
+  <text x="920" y="300" font-family="Arial" font-size="11" fill="#666">Em Empréstimo</text>
+  <text x="920" y="325" font-family="Arial" font-size="24" fill="#e07c24" font-weight="bold">560</text>
+  
+  <text x="920" y="370" font-family="Arial" font-size="11" fill="#666">Disciplinas Cobertas</text>
+  <text x="920" y="395" font-family="Arial" font-size="24" fill="#9b59b6" font-weight="bold">25</text>
+  
+  <!-- Últimos Cadastrados -->
+  <rect x="900" y="460" width="270" height="200" rx="12" fill="#fff" stroke="#e0e0e0"/>
+  <text x="920" y="490" font-family="Arial" font-size="13" fill="#1e3a5f" font-weight="bold">Últimos Cadastrados</text>
+  
+  <rect x="920" y="510" width="230" height="45" rx="6" fill="#f8f9fa"/>
+  <rect x="930" y="518" width="25" height="30" rx="3" fill="#27ae60"/>
+  <text x="965" y="535" font-family="Arial" font-size="10" fill="#333">Matemática 9º Ano</text>
+  <text x="965" y="548" font-family="Arial" font-size="9" fill="#666">Manoel Paiva</text>
+  
+  <rect x="920" y="565" width="230" height="45" rx="6" fill="#f8f9fa"/>
+  <rect x="930" y="573" width="25" height="30" rx="3" fill="#3498db"/>
+  <text x="965" y="590" font-family="Arial" font-size="10" fill="#333">Português 8º Ano</text>
+  <text x="965" y="603" font-family="Arial" font-size="9" fill="#666">William Cereja</text>
+  
+  <rect x="920" y="620" width="230" height="45" rx="6" fill="#f8f9fa"/>
+  <rect x="930" y="628" width="25" height="30" rx="3" fill="#9b59b6"/>
+  <text x="965" y="645" font-family="Arial" font-size="10" fill="#333">História 7º Ano</text>
+  <text x="965" y="658" font-family="Arial" font-size="9" fill="#666">Alfredo Boulos</text>
+</svg>

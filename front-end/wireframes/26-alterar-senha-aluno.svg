@@ -1,0 +1,99 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f5f5f5"/>
+  
+  <!-- Header -->
+  <rect width="1200" height="70" fill="#1e3a5f"/>
+  <text x="40" y="45" font-family="Georgia, serif" font-size="22" fill="#fff" font-weight="bold">📚 BiblioConnect</text>
+  
+  <!-- Page Title -->
+  <text x="40" y="115" font-family="Georgia, serif" font-size="22" fill="#1e3a5f" font-weight="bold">Alterar Senha</text>
+  <text x="40" y="140" font-family="Arial" font-size="12" fill="#666">Atualize sua senha de acesso ao sistema</text>
+  
+  <!-- Sidebar Menu -->
+  <rect x="40" y="165" width="220" height="400" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  
+  <text x="70" y="200" font-family="Arial" font-size="13" fill="#666">👤 Dados Pessoais</text>
+  <rect x="40" y="215" width="220" height="45" rx="0" fill="#1e3a5f"/>
+  <text x="70" y="243" font-family="Arial" font-size="13" fill="#fff">🔒 Alterar Senha</text>
+  <text x="70" y="290" font-family="Arial" font-size="13" fill="#666">📚 Meus Empréstimos</text>
+  <text x="70" y="330" font-family="Arial" font-size="13" fill="#666">📖 Histórico de Leitura</text>
+  <text x="70" y="370" font-family="Arial" font-size="13" fill="#666">⭐ Favoritos</text>
+  
+  <!-- Main Form Area -->
+  <rect x="280" y="165" width="500" height="520" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  
+  <!-- Security Icon -->
+  <circle cx="530" cy="235" r="40" fill="#e8f5e9"/>
+  <text x="530" y="250" font-family="Arial" font-size="40" text-anchor="middle">🔐</text>
+  
+  <text x="530" y="295" font-family="Arial" font-size="16" fill="#1e3a5f" text-anchor="middle" font-weight="bold">Segurança da Conta</text>
+  <text x="530" y="315" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">Mantenha sua senha segura e atualizada</text>
+  
+  <!-- Current Password -->
+  <text x="330" y="365" font-family="Arial" font-size="12" fill="#333">Senha Atual *</text>
+  <rect x="330" y="375" width="400" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="350" y="405" font-family="Arial" font-size="13" fill="#999">••••••••</text>
+  <text x="700" y="405" font-family="Arial" font-size="12" fill="#27ae60">👁️</text>
+  
+  <!-- New Password -->
+  <text x="330" y="445" font-family="Arial" font-size="12" fill="#333">Nova Senha *</text>
+  <rect x="330" y="455" width="400" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="350" y="485" font-family="Arial" font-size="13" fill="#999">Digite a nova senha</text>
+  <text x="700" y="485" font-family="Arial" font-size="12" fill="#27ae60">👁️</text>
+  
+  <!-- Password Strength Indicator -->
+  <rect x="330" y="505" width="400" height="6" rx="3" fill="#ecf0f1"/>
+  <rect x="330" y="505" width="150" height="6" rx="3" fill="#f39c12"/>
+  <text x="330" y="525" font-family="Arial" font-size="10" fill="#f39c12">Força da senha: Média</text>
+  
+  <!-- Confirm New Password -->
+  <text x="330" y="560" font-family="Arial" font-size="12" fill="#333">Confirmar Nova Senha *</text>
+  <rect x="330" y="570" width="400" height="45" rx="6" fill="#f8f9fa" stroke="#ddd"/>
+  <text x="350" y="600" font-family="Arial" font-size="13" fill="#999">Confirme a nova senha</text>
+  <text x="700" y="600" font-family="Arial" font-size="12" fill="#27ae60">👁️</text>
+  
+  <!-- Buttons -->
+  <rect x="330" y="635" width="190" height="45" rx="6" fill="#27ae60"/>
+  <text x="385" y="663" font-family="Arial" font-size="13" fill="#fff" font-weight="bold">Salvar Nova Senha</text>
+  
+  <rect x="540" y="635" width="190" height="45" rx="6" fill="#fff" stroke="#ddd"/>
+  <text x="610" y="663" font-family="Arial" font-size="13" fill="#666">Cancelar</text>
+  
+  <!-- Security Tips Card -->
+  <rect x="810" y="165" width="320" height="320" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="830" y="200" font-family="Arial" font-size="14" fill="#1e3a5f" font-weight="bold">💡 Dicas de Segurança</text>
+  
+  <rect x="830" y="220" width="280" height="45" rx="5" fill="#e8f5e9"/>
+  <text x="850" y="240" font-family="Arial" font-size="11" fill="#27ae60">✓ Use no mínimo 8 caracteres</text>
+  <text x="850" y="255" font-family="Arial" font-size="10" fill="#666">Quanto mais, melhor!</text>
+  
+  <rect x="830" y="275" width="280" height="45" rx="5" fill="#fff3cd"/>
+  <text x="850" y="295" font-family="Arial" font-size="11" fill="#856404">✓ Inclua letras e números</text>
+  <text x="850" y="310" font-family="Arial" font-size="10" fill="#666">Exemplo: Escola2026</text>
+  
+  <rect x="830" y="330" width="280" height="45" rx="5" fill="#e3f2fd"/>
+  <text x="850" y="350" font-family="Arial" font-size="11" fill="#1976d2">✓ Use caracteres especiais</text>
+  <text x="850" y="365" font-family="Arial" font-size="10" fill="#666">Como: @, #, $, !</text>
+  
+  <rect x="830" y="385" width="280" height="45" rx="5" fill="#fce4ec"/>
+  <text x="850" y="405" font-family="Arial" font-size="11" fill="#c62828">✗ Evite dados pessoais</text>
+  <text x="850" y="420" font-family="Arial" font-size="10" fill="#666">Nome, data de nascimento</text>
+  
+  <rect x="830" y="445" width="280" height="25" rx="5" fill="#f8f9fa"/>
+  <text x="890" y="463" font-family="Arial" font-size="10" fill="#666">Troque sua senha regularmente</text>
+  
+  <!-- Help Section -->
+  <rect x="810" y="505" width="320" height="180" rx="10" fill="#fff" stroke="#e0e0e0"/>
+  <text x="830" y="540" font-family="Arial" font-size="14" fill="#1e3a5f" font-weight="bold">❓ Precisa de Ajuda?</text>
+  
+  <text x="830" y="575" font-family="Arial" font-size="11" fill="#333">Esqueceu sua senha atual?</text>
+  <text x="830" y="595" font-family="Arial" font-size="11" fill="#27ae60">→ Fale com a secretaria da escola</text>
+  
+  <text x="830" y="630" font-family="Arial" font-size="11" fill="#333">Problemas para acessar?</text>
+  <text x="830" y="650" font-family="Arial" font-size="11" fill="#27ae60">→ Entre em contato com o suporte</text>
+  
+  <!-- Footer note -->
+  <text x="280" y="720" font-family="Arial" font-size="10" fill="#999">* Campos obrigatórios</text>
+  <text x="280" y="740" font-family="Arial" font-size="10" fill="#999">Sua senha é criptografada e armazenada de forma segura.</text>
+</svg>
