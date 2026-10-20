@@ -1,0 +1,7 @@
+ALTER TABLE professores
+    ADD COLUMN cpf VARCHAR(14) NOT NULL UNIQUE,
+    ADD COLUMN telefone VARCHAR(20) NOT NULL,
+    ADD COLUMN registro_funcional VARCHAR(50) NOT NULL UNIQUE,
+    ADD COLUMN disciplinas VARCHAR(255) NOT NULL,
+    ADD COLUMN turmas VARCHAR(255) NOT NULL,
+    ADD COLUMN comprovante_vinculo VARCHAR(255);
