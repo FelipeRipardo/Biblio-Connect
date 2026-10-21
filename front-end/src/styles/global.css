@@ -1,0 +1,56 @@
+:root {
+  --azul-escuro: #1e3a5f;
+  --azul-escuro-hover: #16304f;
+  --painel-inicio: #1f3a63;
+  --painel-fim: #2d5d8f;
+  --laranja: #e8730c;
+  --texto: #1f2937;
+  --texto-suave: #4b5563;
+  --texto-claro: #9ca3af;
+  --borda: #d9dee5;
+  --fundo-input: #f7f9fb;
+  --sucesso-fundo: #ecfdf3;
+  --sucesso-texto: #166534;
+  --erro-fundo: #fef2f2;
+  --erro-texto: #b91c1c;
+
+  --fonte-titulo: Georgia, 'Times New Roman', serif;
+  --fonte-texto: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --raio: 6px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte-texto);
+  color: var(--texto);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+a {
+  color: var(--laranja);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
