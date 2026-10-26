@@ -21,12 +21,9 @@ public class ProfessorService {
     private final ProfessorRepository professorRepository;
     private final UsuarioRepository usuarioRepository;
     private final PasswordEncoder passwordEncoder;
-    private final SenhaValidator senhaValidator;
 
     @Transactional
     public Professor cadastrar(ProfessorCadastroDTO dto) {
-        senhaValidator.validarForcaSenha(dto.senha());
-
         if (usuarioRepository.existsByEmail(dto.email())) {
             throw new IllegalArgumentException("Este e-mail institucional já está cadastrado.");
         }
