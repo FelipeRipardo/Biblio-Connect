@@ -3,31 +3,41 @@ package com.biblioconnect.api.domain;
 import com.biblioconnect.api.domain.enums.Perfil;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data //Gera Getters, Setters, toString, equals e hashCode
-@NoArgsConstructor //Gera construtor vazio, pois é exigido pelo JPA
-@AllArgsConstructor //Gera construtor com todos os argumentos
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "usuarios")
-@Inheritance(strategy = InheritanceType.JOINED) //Cria tabelas separadas para as classes filhas (Aluno, Professor) unidas por chave estrangeira
+@Inheritance(strategy = InheritanceType.JOINED)
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public abstract class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, length = 100)
+    @Column(nullable = false, length = 150)
     private String nome;
 
-    @Column(nullable = false, unique = true, length = 100) //unique = true atende à Regra de Negócio RN03 (E-mail único)
+    @Column(nullable = false, unique = true, length = 150)
     private String email;
 
     @Column(nullable = false)
     private String senha;
 
-    @Enumerated(EnumType.STRING) //Garante que será salvo como VARCHAR (ex: 'ALUNO') no banco
-    @Column(nullable = false, length = 50)
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 30)
     private Perfil perfil;
+
+    @Column(name = "token_recuperacao", length = 100)
+    private String tokenRecuperacao;
+
+    @Column(name = "token_expiracao")
+    private LocalDateTime tokenExpiracao;
 }

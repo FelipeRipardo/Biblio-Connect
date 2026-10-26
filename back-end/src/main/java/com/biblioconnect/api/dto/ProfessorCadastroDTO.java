@@ -13,7 +13,6 @@ public record ProfessorCadastroDTO(
         @NotBlank(message = "O registro funcional é obrigatório") String registroFuncional,
         @NotEmpty(message = "Selecione pelo menos uma disciplina") List<String> disciplinas,
         @NotEmpty(message = "Selecione pelo menos uma turma") List<String> turmas,
-        @NotBlank(message = "A senha é obrigatória") String senha,
-        @NotBlank(message = "A confirmação de senha é obrigatória") String confirmarSenha,
-        String comprovanteVinculo //Opcional
+        @NotBlank(message = "A senha inicial é obrigatória") String senha,
+        String comprovanteVinculo
 ) {}

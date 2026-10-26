@@ -21,12 +21,12 @@ public class ProfessorService {
     private final ProfessorRepository professorRepository;
     private final UsuarioRepository usuarioRepository;
     private final PasswordEncoder passwordEncoder;
+    private final SenhaValidator senhaValidator;
 
     @Transactional
     public Professor cadastrar(ProfessorCadastroDTO dto) {
-        if (!dto.senha().equals(dto.confirmarSenha())) {
-            throw new IllegalArgumentException("As senhas não coincidem.");
-        }
+        senhaValidator.validarForcaSenha(dto.senha());
+
         if (usuarioRepository.existsByEmail(dto.email())) {
             throw new IllegalArgumentException("Este e-mail institucional já está cadastrado.");
         }
@@ -40,7 +40,7 @@ public class ProfessorService {
         Professor professor = new Professor();
         professor.setNome(dto.nome());
         professor.setEmail(dto.email());
-        professor.setSenha(passwordEncoder.encode(dto.senha())); // Argon2
+        professor.setSenha(passwordEncoder.encode(dto.senha()));
         professor.setPerfil(Perfil.PROFESSOR);
 
         professor.setCpf(dto.cpf());

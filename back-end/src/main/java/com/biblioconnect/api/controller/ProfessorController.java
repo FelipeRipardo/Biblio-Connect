@@ -3,6 +3,7 @@ package com.biblioconnect.api.controller;
 import com.biblioconnect.api.domain.Professor;
 import com.biblioconnect.api.dto.ProfessorAtualizacaoDTO;
 import com.biblioconnect.api.dto.ProfessorCadastroDTO;
+import com.biblioconnect.api.service.PermissaoService;
 import com.biblioconnect.api.service.ProfessorService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -19,13 +20,17 @@ import java.util.Map;
 public class ProfessorController {
 
     private final ProfessorService professorService;
+    private final PermissaoService permissaoService;
 
     @PostMapping("/cadastro")
-    public ResponseEntity<?> cadastrar(@RequestBody @Valid ProfessorCadastroDTO dto) {
+    public ResponseEntity<?> cadastrar(
+            @RequestHeader(value = "X-Admin-Id", required = false) Integer adminId,
+            @RequestBody @Valid ProfessorCadastroDTO dto) {
+        permissaoService.validarAdministrador(adminId);
         try {
             Professor novo = professorService.cadastrar(dto);
             return ResponseEntity.status(HttpStatus.CREATED).body(Map.of(
-                    "mensagem", "Professor cadastrado com sucesso!",
+                    "mensagem", "Professor provisionado pelo Administrador com sucesso!",
                     "id", novo.getId(),
                     "nome", novo.getNome(),
                     "email", novo.getEmail()
@@ -50,7 +55,11 @@ public class ProfessorController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> atualizar(@PathVariable Integer id, @RequestBody @Valid ProfessorAtualizacaoDTO dto) {
+    public ResponseEntity<?> atualizar(
+            @RequestHeader(value = "X-Admin-Id", required = false) Integer adminId,
+            @PathVariable Integer id,
+            @RequestBody @Valid ProfessorAtualizacaoDTO dto) {
+        permissaoService.validarAdministrador(adminId);
         try {
             return ResponseEntity.ok(professorService.atualizar(id, dto));
         } catch (IllegalArgumentException e) {
@@ -59,7 +68,10 @@ public class ProfessorController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> excluir(@PathVariable Integer id) {
+    public ResponseEntity<?> excluir(
+            @RequestHeader(value = "X-Admin-Id", required = false) Integer adminId,
+            @PathVariable Integer id) {
+        permissaoService.validarAdministrador(adminId);
         try {
             professorService.excluir(id);
             return ResponseEntity.ok(Map.of("mensagem", "Professor excluído com sucesso!"));

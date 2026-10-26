@@ -21,15 +21,12 @@ public class AlunoService {
     private final AlunoRepository alunoRepository;
     private final UsuarioRepository usuarioRepository;
     private final PasswordEncoder passwordEncoder;
+    private final SenhaValidator senhaValidator;
 
     @Transactional
     public Aluno cadastrar(AlunoCadastroDTO dto) {
-        if (!Boolean.TRUE.equals(dto.termosAceitos())) {
-            throw new IllegalArgumentException("Você precisa aceitar os Termos de Uso e Regulamento.");
-        }
-        if (!dto.senha().equals(dto.confirmarSenha())) {
-            throw new IllegalArgumentException("As senhas não coincidem.");
-        }
+        senhaValidator.validarForcaSenha(dto.senha());
+
         if (usuarioRepository.existsByEmail(dto.email())) {
             throw new IllegalArgumentException("Este email já está cadastrado.");
         }

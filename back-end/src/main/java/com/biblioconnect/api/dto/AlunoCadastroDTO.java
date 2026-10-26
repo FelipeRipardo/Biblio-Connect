@@ -15,7 +15,5 @@ public record AlunoCadastroDTO(
         @NotBlank(message = "A série é obrigatória") String serie,
         @NotBlank(message = "A turma é obrigatória") String turma,
         @NotBlank(message = "O turno é obrigatório") String turno,
-        @NotBlank(message = "A senha é obrigatória") String senha,
-        @NotBlank(message = "A confirmação de senha é obrigatória") String confirmarSenha,
-        @NotNull(message = "É necessário aceitar os termos de uso") Boolean termosAceitos
+        @NotBlank(message = "A senha inicial é obrigatória") String senha
 ) {}
