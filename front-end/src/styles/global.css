@@ -1,22 +1,33 @@
+/* Paleta extraída dos wireframes (front-end/wireframes) */
 :root {
   --azul-escuro: #1e3a5f;
   --azul-escuro-hover: #16304f;
-  --painel-inicio: #1f3a63;
-  --painel-fim: #2d5d8f;
-  --laranja: #e8730c;
-  --texto: #1f2937;
-  --texto-suave: #4b5563;
-  --texto-claro: #9ca3af;
-  --borda: #d9dee5;
-  --fundo-input: #f7f9fb;
-  --sucesso-fundo: #ecfdf3;
-  --sucesso-texto: #166534;
-  --erro-fundo: #fef2f2;
-  --erro-texto: #b91c1c;
+  --azul-medio: #2d5a87;
+  --azul-claro: #b8c5d6;
+  --azul-link: #3498db;
+  --laranja: #e07c24;
+  --verde: #27ae60;
+  --verde-hover: #219150;
+  --roxo: #9b59b6;
+  --vermelho: #e74c3c;
+  --amarelo: #f39c12;
+  --texto: #333;
+  --texto-suave: #666;
+  --texto-claro: #999;
+  --borda: #ddd;
+  --borda-cartao: #e0e0e0;
+  --fundo: #f5f5f5;
+  --fundo-input: #f8f9fa;
+  --sucesso-fundo: #e8f5e9;
+  --sucesso-texto: #1e7e45;
+  --erro-fundo: #fbe9e7;
+  --erro-texto: #c0392b;
+  --info-fundo: #eaf4fb;
+  --info-texto: #1f5f8b;
 
   --fonte-titulo: Georgia, 'Times New Roman', serif;
-  --fonte-texto: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
-  --raio: 6px;
+  --fonte-texto: Arial, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --raio: 8px;
 }
 
 *,
@@ -47,7 +58,6 @@ select {
 
 a {
   color: var(--laranja);
-  font-weight: 600;
   text-decoration: none;
 }
 
