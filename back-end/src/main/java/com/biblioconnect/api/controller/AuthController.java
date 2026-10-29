@@ -1,16 +1,16 @@
 package com.biblioconnect.api.controller;
 
 import com.biblioconnect.api.domain.Usuario;
-import com.biblioconnect.api.domain.enums.Perfil;
 import com.biblioconnect.api.dto.EsqueciSenhaDTO;
 import com.biblioconnect.api.dto.LoginRequestDTO;
 import com.biblioconnect.api.dto.RedefinirSenhaDTO;
 import com.biblioconnect.api.service.AuthService;
-import com.biblioconnect.api.service.PermissaoService;
+import com.biblioconnect.api.service.TokenService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -22,14 +22,18 @@ import java.util.Map;
 public class AuthController {
 
     private final AuthService authService;
-    private final PermissaoService permissaoService;
+    private final TokenService tokenService;
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody @Valid LoginRequestDTO dto) {
         try {
             Usuario usuario = authService.autenticar(dto);
+            String token = tokenService.gerarToken(usuario);
+
             return ResponseEntity.ok(Map.of(
                     "mensagem", "Login realizado com sucesso!",
+                    "token", token,
+                    "tipo", "Bearer",
                     "id", usuario.getId(),
                     "nome", usuario.getNome(),
                     "email", usuario.getEmail(),
@@ -59,15 +63,13 @@ public class AuthController {
         }
     }
 
-    @GetMapping("/validar-permissao")
-    public ResponseEntity<?> validarPermissaoPerfil(
-            @RequestHeader("X-Usuario-Id") Integer usuarioId,
-            @RequestParam Perfil perfilExigido) {
-        Usuario u = permissaoService.validarPermissao(usuarioId, perfilExigido);
+    @GetMapping("/me")
+    public ResponseEntity<?> dadosUsuarioAutenticado(@AuthenticationPrincipal Usuario usuario) {
         return ResponseEntity.ok(Map.of(
-                "mensagem", "Permissão validada com sucesso!",
-                "usuario", u.getNome(),
-                "perfilAtual", u.getPerfil()
+                "id", usuario.getId(),
+                "nome", usuario.getNome(),
+                "email", usuario.getEmail(),
+                "perfil", usuario.getPerfil()
         ));
     }
 }

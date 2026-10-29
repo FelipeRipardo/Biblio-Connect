@@ -3,7 +3,7 @@ package com.biblioconnect.api.controller;
 import com.biblioconnect.api.domain.Professor;
 import com.biblioconnect.api.dto.ProfessorAtualizacaoDTO;
 import com.biblioconnect.api.dto.ProfessorCadastroDTO;
-import com.biblioconnect.api.service.PermissaoService;
+import com.biblioconnect.api.dto.ProfessorResponseDTO;
 import com.biblioconnect.api.service.ProfessorService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -20,20 +21,16 @@ import java.util.Map;
 public class ProfessorController {
 
     private final ProfessorService professorService;
-    private final PermissaoService permissaoService;
 
-    @PostMapping("/cadastro")
-    public ResponseEntity<?> cadastrar(
-            @RequestHeader(value = "X-Admin-Id", required = false) Integer adminId,
-            @RequestBody @Valid ProfessorCadastroDTO dto) {
-        permissaoService.validarAdministrador(adminId);
+    @PostMapping
+    public ResponseEntity<?> cadastrar(@RequestBody @Valid ProfessorCadastroDTO dto) {
         try {
-            Professor novo = professorService.cadastrar(dto);
+            Professor professor = professorService.cadastrar(dto);
             return ResponseEntity.status(HttpStatus.CREATED).body(Map.of(
                     "mensagem", "Professor provisionado pelo Administrador com sucesso!",
-                    "id", novo.getId(),
-                    "nome", novo.getNome(),
-                    "email", novo.getEmail()
+                    "id", professor.getId(),
+                    "nome", professor.getNome(),
+                    "registroFuncional", professor.getRegistroFuncional()
             ));
         } catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest().body(Map.of("erro", e.getMessage()));
@@ -41,7 +38,7 @@ public class ProfessorController {
     }
 
     @GetMapping
-    public ResponseEntity<?> listar(@RequestParam(required = false) String nome) {
+    public ResponseEntity<List<ProfessorResponseDTO>> listar(@RequestParam(required = false) String nome) {
         return ResponseEntity.ok(professorService.listar(nome));
     }
 
@@ -55,11 +52,7 @@ public class ProfessorController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> atualizar(
-            @RequestHeader(value = "X-Admin-Id", required = false) Integer adminId,
-            @PathVariable Integer id,
-            @RequestBody @Valid ProfessorAtualizacaoDTO dto) {
-        permissaoService.validarAdministrador(adminId);
+    public ResponseEntity<?> atualizar(@PathVariable Integer id, @RequestBody @Valid ProfessorAtualizacaoDTO dto) {
         try {
             return ResponseEntity.ok(professorService.atualizar(id, dto));
         } catch (IllegalArgumentException e) {
@@ -68,13 +61,10 @@ public class ProfessorController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> excluir(
-            @RequestHeader(value = "X-Admin-Id", required = false) Integer adminId,
-            @PathVariable Integer id) {
-        permissaoService.validarAdministrador(adminId);
+    public ResponseEntity<?> excluir(@PathVariable Integer id) {
         try {
             professorService.excluir(id);
-            return ResponseEntity.ok(Map.of("mensagem", "Professor excluído com sucesso!"));
+            return ResponseEntity.ok(Map.of("mensagem", "Professor excluído com sucesso."));
         } catch (IllegalArgumentException e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("erro", e.getMessage()));
         }
