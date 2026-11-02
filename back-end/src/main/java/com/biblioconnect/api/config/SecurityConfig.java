@@ -2,6 +2,7 @@ package com.biblioconnect.api.config;
 
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.security.SecurityRequirement;
 import io.swagger.v3.oas.models.security.SecurityScheme;
 import jakarta.servlet.http.HttpServletResponse;
@@ -25,6 +26,15 @@ public class SecurityConfig {
 
     private final SecurityFilter securityFilter;
 
+    //Mapeamento absoluto de todas as variações de rotas que o Swagger utiliza
+    private static final String[] SWAGGER_WHITELIST = {
+            "/v3/api-docs",
+            "/v3/api-docs/**",
+            "/swagger-ui/**",
+            "/swagger-ui.html",
+            "/error"
+    };
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
@@ -33,15 +43,22 @@ public class SecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         //1 - Rotas Públicas (Autenticação, Recuperação de Senha e Documentação Swagger)
-                        .requestMatchers(HttpMethod.POST, "/api/auth/login", "/api/auth/esqueci-senha", "/api/auth/redefinir-senha").permitAll()
-                        .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
+                        .requestMatchers(SWAGGER_WHITELIST).permitAll()
 
-                        //2 - Rotas de Gestão de Usuários (Exclusivas do ADMINISTRADOR via Token JWT)
+                        //2 - Rotas Públicas de Negócio
+                        .requestMatchers(HttpMethod.POST, "/api/auth/login", "/api/auth/esqueci-senha", "/api/auth/redefinir-senha").permitAll()
+
+                        //3 - Rotas de Gestão de Usuários (Exclusivas do ADMINISTRADOR)
                         .requestMatchers(HttpMethod.POST, "/api/alunos/**", "/api/professores/**", "/api/gestores/**").hasRole("ADMINISTRADOR")
                         .requestMatchers(HttpMethod.PUT, "/api/alunos/**", "/api/professores/**", "/api/gestores/**").hasRole("ADMINISTRADOR")
                         .requestMatchers(HttpMethod.DELETE, "/api/alunos/**", "/api/professores/**", "/api/gestores/**").hasRole("ADMINISTRADOR")
 
-                        //3 - Consultas (GET) e demais rotas exigem apenas estar autenticado com JWT válido
+                        //4 - Consultas (GET) ao acervo e demais rotas exigem apenas estar autenticado com JWT válido
+                        .requestMatchers(HttpMethod.POST, "/api/materiais/**").hasAnyRole("GESTOR", "ADMINISTRADOR")
+                        .requestMatchers(HttpMethod.PUT, "/api/materiais/**").hasAnyRole("GESTOR", "ADMINISTRADOR")
+                        .requestMatchers(HttpMethod.DELETE, "/api/materiais/**").hasAnyRole("GESTOR", "ADMINISTRADOR")
+
+                        //5 - Consultas (GET) ao acervo e demais rotas exigem apenas token JWT válido
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(ex -> ex
@@ -69,6 +86,10 @@ public class SecurityConfig {
     public OpenAPI customOpenAPI() {
         final String securitySchemeName = "bearerAuth";
         return new OpenAPI()
+                .info(new Info()
+                        .title("Biblio-Connect API")
+                        .version("v1.0")
+                        .description("Documentação interativa dos endpoints da biblioteca digital."))
                 .addSecurityItem(new SecurityRequirement().addList(securitySchemeName))
                 .components(new Components()
                         .addSecuritySchemes(securitySchemeName, new SecurityScheme()
