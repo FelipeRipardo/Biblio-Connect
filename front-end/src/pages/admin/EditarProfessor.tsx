@@ -7,7 +7,7 @@ import { Chips } from '../../components/Chips';
 import type { Professor, ProfessorAtualizacaoRequest } from '../../types/api';
 import { DISCIPLINAS, emailValido } from '../../utils/escola';
 import { mascaraTelefone } from '../../utils/masks';
-import { AdminLayout, idDoAdmin } from './AdminLayout';
+import { AdminLayout } from './AdminLayout';
 
 type Formulario = Required<ProfessorAtualizacaoRequest>;
 
@@ -66,7 +66,7 @@ export function EditarProfessor() {
 
     setCarregando(true);
     try {
-      const atualizado = await atualizarProfessor(idDoAdmin(), id, {
+      const atualizado = await atualizarProfessor(id, {
         ...form,
         nome: form.nome.trim(),
         email: form.email.trim(),

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { buscarAluno } from '../../api/alunos';
 import { ApiError } from '../../api/http';
 import { encerrarSessao, obterSessao } from '../../api/sessao';
@@ -7,9 +7,10 @@ import { Avatar } from '../../components/Avatar';
 import type { Aluno } from '../../types/api';
 import { serieTurmaCurta } from '../../utils/escola';
 
-//Itens do menu do wireframe; só a Visão Geral tem suporte no back-end por enquanto
-const MENU = [
+//Itens do menu do wireframe; só a Visão Geral e o Acervo têm suporte no back-end por enquanto
+const MENU: { icone: string; rotulo: string; ativo?: boolean; rota?: string }[] = [
   { icone: '📊', rotulo: 'Visão Geral', ativo: true },
+  { icone: '🔍', rotulo: 'Acervo Digital', rota: '/acervo' },
   { icone: '📚', rotulo: 'Minhas Leituras' },
   { icone: '📥', rotulo: 'Downloads' },
   { icone: '⭐', rotulo: 'Favoritos' },
@@ -64,7 +65,11 @@ export function AreaAluno() {
 
       <div className="area__corpo">
         <nav className="area__menu cartao">
-          {MENU.map(({ icone, rotulo, ativo }) => (
+          {MENU.map(({ icone, rotulo, ativo, rota }) => rota ? (
+            <Link key={rotulo} to={rota} className="area__item">
+              <span aria-hidden="true">{icone}</span> {rotulo}
+            </Link>
+          ) : (
             <span
               key={rotulo}
               className={`area__item ${ativo ? 'area__item--ativo' : 'area__item--inativo'}`}
@@ -112,8 +117,9 @@ export function AreaAluno() {
             <article className="cartao">
               <h2 className="cartao__titulo">📖 Leituras e Empréstimos</h2>
               <p className="vazio">
-                Em breve você poderá consultar o acervo, acompanhar suas leituras, baixar materiais e salvar seus favoritos por aqui.
+                Em breve você poderá acompanhar suas leituras e salvar seus favoritos por aqui.
               </p>
+              <Link to="/acervo" className="botao botao--verde">📖 Explorar o acervo</Link>
             </article>
           </section>
         </main>

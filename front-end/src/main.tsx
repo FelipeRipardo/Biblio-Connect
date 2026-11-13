@@ -6,6 +6,8 @@ import './styles/global.css';
 import './styles/formulario.css';
 import './styles/acesso.css';
 import './styles/painel.css';
+import './styles/inicio.css';
+import './styles/acervo.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

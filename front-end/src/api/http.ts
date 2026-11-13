@@ -1,3 +1,5 @@
+import { encerrarSessao, obterSessao } from './sessao';
+
 export class ApiError extends Error {
   readonly status: number;
 
@@ -10,7 +12,7 @@ export class ApiError extends Error {
 const MENSAGEM_SEM_CONEXAO =
   'Não foi possível conectar ao servidor. Verifique se o back-end está rodando.';
 
-//Usada quando o back-end não devolve { "erro": "..." } (ex.: ResponseStatusException do PermissaoService)
+//Usada quando o back-end não devolve { "erro": "..." }
 function mensagemPadrao(status: number): string {
   if (status >= 500) return MENSAGEM_SEM_CONEXAO;
   if (status === 400) return 'Dados inválidos. Revise os campos e tente novamente.';
@@ -26,11 +28,17 @@ interface Opcoes {
 }
 
 async function requisicao<T>(metodo: string, caminho: string, { corpo, headers }: Opcoes = {}): Promise<T> {
+  //Exceto login e recuperação de senha, toda rota exige o JWT do usuário logado (Spring Security)
+  const token = obterSessao()?.token;
   let resposta: Response;
   try {
     resposta = await fetch(`/api${caminho}`, {
       method: metodo,
-      headers: { ...(corpo !== undefined && { 'Content-Type': 'application/json' }), ...headers },
+      headers: {
+        ...(corpo !== undefined && { 'Content-Type': 'application/json' }),
+        ...(token && { Authorization: `Bearer ${token}` }),
+        ...headers,
+      },
       body: corpo !== undefined ? JSON.stringify(corpo) : undefined,
     });
   } catch {
@@ -39,10 +47,18 @@ async function requisicao<T>(metodo: string, caminho: string, { corpo, headers }
 
   const dados = await resposta.json().catch(() => null);
 
+  //Token expirado ou inválido: descarta a sessão e recarrega para a RotaProtegida levar ao login do perfil
+  if (resposta.status === 401 && token && !caminho.startsWith('/auth/')) {
+    encerrarSessao();
+    window.location.reload();
+  }
+
   if (!resposta.ok) {
     //Os controllers devolvem erros de regra de negócio no formato { "erro": "..." }
     const erro = dados && typeof dados.erro === 'string' ? dados.erro : mensagemPadrao(resposta.status);
-    throw new ApiError(erro, resposta.status);
+    //Erros de @Valid (GlobalExceptionHandler) trazem o motivo de cada campo em { "campos": { campo: mensagem } }
+    const campos = dados?.campos && typeof dados.campos === 'object' ? Object.values(dados.campos).join('; ') : '';
+    throw new ApiError(campos ? `${erro} ${campos}.` : erro, resposta.status);
   }
 
   return dados as T;
@@ -54,6 +70,3 @@ export const post = <T>(caminho: string, corpo: unknown, opcoes?: Opcoes) =>
 export const put = <T>(caminho: string, corpo: unknown, opcoes?: Opcoes) =>
   requisicao<T>('PUT', caminho, { ...opcoes, corpo });
 export const del = <T>(caminho: string, opcoes?: Opcoes) => requisicao<T>('DELETE', caminho, opcoes);
-
-//Os endpoints de escrita exigem o id do Administrador logado no cabeçalho X-Admin-Id
-export const comoAdmin = (adminId: number): Opcoes => ({ headers: { 'X-Admin-Id': String(adminId) } });
