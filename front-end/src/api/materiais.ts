@@ -1,5 +1,5 @@
-import type { FiltrosMaterial, Material, MaterialRequest } from '../types/api';
-import { get, post } from './http';
+import type { FiltrosMaterial, Material, MaterialRequest, MensagemResponse } from '../types/api';
+import { del, get, post, put } from './http';
 
 export function listarMateriais(filtros: FiltrosMaterial = {}): Promise<Material[]> {
   const params = new URLSearchParams();
@@ -16,4 +16,13 @@ export function buscarMaterial(id: number): Promise<Material> {
 
 export function cadastrarMaterial(dados: MaterialRequest): Promise<Material> {
   return post<Material>('/materiais', dados);
+}
+
+//PUT e DELETE de /api/materiais são restritos a GESTOR e ADMINISTRADOR (SecurityConfig)
+export function atualizarMaterial(id: number, dados: MaterialRequest): Promise<Material> {
+  return put<Material>(`/materiais/${id}`, dados);
+}
+
+export function excluirMaterial(id: number): Promise<MensagemResponse> {
+  return del<MensagemResponse>(`/materiais/${id}`);
 }

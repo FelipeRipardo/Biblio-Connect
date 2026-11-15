@@ -1,0 +1,95 @@
+/* Modo de visualização (/preview), só em desenvolvimento */
+.preview {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.preview__cabecalho h1 {
+  margin: 0 0 8px;
+  font-family: var(--fonte-titulo);
+  color: var(--azul-escuro);
+}
+
+.preview__cabecalho p {
+  margin: 0 0 12px;
+  color: var(--texto-suave);
+}
+
+.preview__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.preview__grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.preview__lista {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.preview__lista li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: var(--fundo-input);
+}
+
+.preview__lista button,
+.preview__lista a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--azul-link);
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.preview__lista button:hover,
+.preview__lista a:hover {
+  text-decoration: underline;
+}
+
+.preview__lista code {
+  color: var(--texto-claro);
+  font-size: 12px;
+}
+
+.preview__selo {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1000;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--amarelo);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.preview__selo:hover {
+  text-decoration: none;
+  background: #d68910;
+}

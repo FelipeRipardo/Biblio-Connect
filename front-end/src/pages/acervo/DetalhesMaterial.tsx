@@ -1,10 +1,20 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { ApiError } from '../../api/http';
-import { buscarMaterial } from '../../api/materiais';
+import { buscarMaterial, excluirMaterial } from '../../api/materiais';
+import { obterSessao } from '../../api/sessao';
 import { TopoUsuario } from '../../components/TopoUsuario';
 import type { Material } from '../../types/api';
-import { nivelDaSerie, rotuloCategoria, rotuloTipo, serieCurta, urlSegura, visualDisciplina } from '../../utils/acervo';
+import {
+  nivelDaSerie,
+  podeGerenciarAcervo,
+  rotaGestaoAcervo,
+  rotuloCategoria,
+  rotuloTipo,
+  serieCurta,
+  urlSegura,
+  visualDisciplina,
+} from '../../utils/acervo';
 
 //O back-end devolve LocalDateTime sem fuso ("2026-11-13T10:00:00")
 const dataBr = (iso: string) => new Date(iso).toLocaleDateString('pt-BR');
@@ -18,6 +28,11 @@ export function DetalhesMaterial() {
   const [erro, setErro] = useState<string | null>(null);
   const [aviso, setAviso] = useState<string | null>(null);
   const [capaFalhou, setCapaFalhou] = useState(false);
+  const [excluindo, setExcluindo] = useState(false);
+  //Editar e excluir aparecem só para quem pode alterar o acervo (Administrador e Gestor)
+  const perfil = obterSessao()?.perfil;
+  const gerencia = podeGerenciarAcervo(perfil);
+  const listaLivros = rotaGestaoAcervo(perfil);
 
   useEffect(() => {
     const numero = Number(id);
@@ -51,6 +66,19 @@ export function DetalhesMaterial() {
       setAviso('Link copiado! Quem receber precisa entrar no BiblioConnect para ver o material.');
     } catch (err) {
       if ((err as Error).name !== 'AbortError') setAviso(`Não foi possível copiar automaticamente. Link: ${url}`);
+    }
+  }
+
+  async function excluir() {
+    if (!material || !window.confirm(`Excluir "${material.titulo}" do acervo? Esta ação não pode ser desfeita.`)) return;
+    setExcluindo(true);
+    setAviso(null);
+    try {
+      const resposta = await excluirMaterial(material.id);
+      navigate(listaLivros, { replace: true, state: { mensagem: resposta.mensagem } });
+    } catch (err) {
+      setAviso(err instanceof ApiError ? err.message : 'Não foi possível excluir o material.');
+      setExcluindo(false);
     }
   }
 
@@ -116,6 +144,14 @@ export function DetalhesMaterial() {
                 <span className="detalhes__status detalhes__status--indisponivel">Arquivo digital indisponível</span>
               )}
               <button type="button" className="botao botao--secundario" onClick={compartilhar}>📤 Compartilhar</button>
+              {gerencia && (
+                <>
+                  <Link className="botao botao--secundario" to={`${listaLivros}/${material.id}/editar`}>✏️ Editar</Link>
+                  <button type="button" className="botao detalhes__excluir" onClick={excluir} disabled={excluindo}>
+                    {excluindo ? 'Excluindo...' : '🗑️ Excluir'}
+                  </button>
+                </>
+              )}
               {aviso && <small className="dica detalhes__aviso" role="status">{aviso}</small>}
             </aside>
 
