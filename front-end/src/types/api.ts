@@ -166,3 +166,26 @@ export interface Professor {
   turmas: string[];
   comprovanteVinculo: string | null;
 }
+
+//GestorCadastroDTO
+export interface GestorCadastroRequest {
+  nome: string;
+  email: string;
+  senha: string; //Senha inicial definida pelo Administrador
+}
+
+//Resposta de POST /api/gestores
+export interface GestorCadastroResponse {
+  mensagem: string;
+  id: number;
+  nome: string;
+  email: string;
+}
+
+//GET /api/gestores devolve a entidade Gestor; o front usa apenas estes campos
+export interface Gestor {
+  id: number;
+  nome: string;
+  email: string;
+  perfil: Perfil;
+}

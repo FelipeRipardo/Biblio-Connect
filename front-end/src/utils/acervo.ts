@@ -1,4 +1,4 @@
-import type { CategoriaMaterial, TipoMaterial } from '../types/api';
+import type { CategoriaMaterial, Perfil, TipoMaterial } from '../types/api';
 
 //Rótulos dos enums do back-end (domain.enums.CategoriaMaterial e TipoMaterial)
 export const CATEGORIAS: { valor: CategoriaMaterial; rotulo: string; icone: string }[] = [
@@ -52,3 +52,9 @@ export function nivelDaSerie(serie: string): string | null {
   const nivel = serie.split(' - ')[1];
   return nivel ? `Ensino ${nivel}` : null;
 }
+
+//Perfis que podem cadastrar, editar e excluir materiais (POST/PUT/DELETE de /api/materiais)
+export const podeGerenciarAcervo = (perfil: Perfil | undefined) => perfil === 'ADMINISTRADOR' || perfil === 'GESTOR';
+
+//Base das telas de gestão do acervo de cada perfil: /admin/livros ou /gestor/livros
+export const rotaGestaoAcervo = (perfil: Perfil | undefined) => (perfil === 'GESTOR' ? '/gestor/livros' : '/admin/livros');

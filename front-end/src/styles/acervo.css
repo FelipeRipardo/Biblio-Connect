@@ -313,6 +313,17 @@ a.material__capa:hover {
   background: #2c86c4;
 }
 
+.detalhes__excluir {
+  border: 1px solid var(--vermelho);
+  background: #fff;
+  color: var(--vermelho);
+  font-weight: 400;
+}
+
+.detalhes__excluir:hover:not(:disabled) {
+  background: var(--erro-fundo);
+}
+
 .detalhes__aviso {
   overflow-wrap: anywhere;
 }

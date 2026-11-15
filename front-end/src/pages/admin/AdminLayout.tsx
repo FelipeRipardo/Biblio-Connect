@@ -6,6 +6,7 @@ const MENU_ADMIN: ItemMenu[] = [
   { icone: '📚', rotulo: 'Livros', rota: '/admin/livros' },
   { icone: '👥', rotulo: 'Alunos', rota: '/admin/alunos' },
   { icone: '👨‍🏫', rotulo: 'Professores', rota: '/admin/professores' },
+  { icone: '🗂️', rotulo: 'Gestores', rota: '/admin/gestores' },
   { icone: '📋', rotulo: 'Empréstimos' },
   { icone: '📝', rotulo: 'Relatórios' },
   { icone: '⚙️', rotulo: 'Configurações' },
