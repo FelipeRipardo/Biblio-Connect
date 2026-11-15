@@ -1,12 +1,12 @@
 import type { ReactNode } from 'react';
-import { obterSessao } from '../../api/sessao';
 import { PainelLayout, type ItemMenu } from '../../components/PainelLayout';
 
 const MENU_ADMIN: ItemMenu[] = [
   { icone: '📊', rotulo: 'Dashboard', rota: '/admin', exato: true },
-  { icone: '📚', rotulo: 'Livros' },
+  { icone: '📚', rotulo: 'Livros', rota: '/admin/livros' },
   { icone: '👥', rotulo: 'Alunos', rota: '/admin/alunos' },
   { icone: '👨‍🏫', rotulo: 'Professores', rota: '/admin/professores' },
+  { icone: '🗂️', rotulo: 'Gestores', rota: '/admin/gestores' },
   { icone: '📋', rotulo: 'Empréstimos' },
   { icone: '📝', rotulo: 'Relatórios' },
   { icone: '⚙️', rotulo: 'Configurações' },
@@ -25,6 +25,3 @@ export function AdminLayout({ titulo, acoes, children }: AdminLayoutProps) {
     </PainelLayout>
   );
 }
-
-//Id do Administrador logado, enviado no cabeçalho X-Admin-Id (a rota já é protegida por RotaProtegida)
-export const idDoAdmin = () => obterSessao()!.id;

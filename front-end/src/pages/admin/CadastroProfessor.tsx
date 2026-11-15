@@ -9,7 +9,7 @@ import type { ProfessorCadastroRequest } from '../../types/api';
 import { DISCIPLINAS, emailValido } from '../../utils/escola';
 import { mascaraCpf, mascaraTelefone } from '../../utils/masks';
 import { REGRA_SENHA, senhaForte } from '../../utils/senha';
-import { AdminLayout, idDoAdmin } from './AdminLayout';
+import { AdminLayout } from './AdminLayout';
 
 type Formulario = Required<ProfessorCadastroRequest> & { confirmarSenha: string };
 
@@ -65,7 +65,7 @@ export function CadastroProfessor() {
     setCarregando(true);
     try {
       const { confirmarSenha: _, ...dados } = form;
-      const resposta = await cadastrarProfessor(idDoAdmin(), {
+      const resposta = await cadastrarProfessor({
         ...dados,
         nome: dados.nome.trim(),
         email: dados.email.trim(),

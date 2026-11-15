@@ -8,7 +8,7 @@ import type { AlunoCadastroRequest } from '../../types/api';
 import { SERIES, TURMAS, TURNOS, emailValido } from '../../utils/escola';
 import { mascaraCpf, mascaraTelefone } from '../../utils/masks';
 import { REGRA_SENHA, senhaForte } from '../../utils/senha';
-import { AdminLayout, idDoAdmin } from './AdminLayout';
+import { AdminLayout } from './AdminLayout';
 
 const PASSOS = ['Dados Pessoais', 'Dados Escolares', 'Confirmação'];
 
@@ -90,7 +90,7 @@ export function CadastroAluno() {
     setCarregando(true);
     try {
       const { confirmarSenha: _, ...dados } = form;
-      const resposta = await cadastrarAluno(idDoAdmin(), {
+      const resposta = await cadastrarAluno({
         ...dados,
         nome: dados.nome.trim(),
         email: dados.email.trim(),

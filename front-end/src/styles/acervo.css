@@ -1,0 +1,620 @@
+/* ---------- Navegação do acervo (wireframe 06) ---------- */
+/* O topo reaproveita o da página inicial, sem o menu: a conta vai para a direita */
+.acervo__topo .inicio__conta {
+  margin-left: auto;
+}
+
+.acervo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 40px 48px;
+}
+
+.acervo__titulo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.acervo__titulo h1 {
+  margin: 0 0 8px;
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  color: var(--azul-escuro);
+}
+
+.acervo__titulo p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+}
+
+.acervo__filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.acervo__busca {
+  position: relative;
+  flex: 1 1 420px;
+  display: flex;
+}
+
+.acervo__busca .input,
+.acervo__select {
+  height: 50px;
+  border-radius: var(--raio);
+  background: #fff;
+}
+
+.acervo__busca .input {
+  padding-right: 96px;
+}
+
+.acervo__busca .botao {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  height: 34px;
+}
+
+.acervo__select {
+  width: auto;
+  flex: 0 1 170px;
+  color: var(--texto-suave);
+  cursor: pointer;
+}
+
+.acervo__pilulas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pilula {
+  height: 32px;
+  padding: 0 18px;
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  background: #fff;
+  font-size: 0.72rem;
+  color: var(--texto-suave);
+  cursor: pointer;
+}
+
+.pilula:hover {
+  border-color: var(--azul-escuro);
+}
+
+.pilula--ativa {
+  border-color: var(--azul-escuro);
+  background: var(--azul-escuro);
+  color: #fff;
+}
+
+.acervo__contagem {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+}
+
+.acervo__grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 20px;
+}
+
+.material {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 15px;
+  border: 1px solid var(--borda-cartao);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.material__capa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 140px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  border-radius: 6px;
+  color: #fff;
+  text-align: center;
+}
+
+.material__capa strong {
+  font-size: 0.78rem;
+  padding: 0 10px;
+}
+
+.material__capa span {
+  font-size: 0.72rem;
+}
+
+.material__capa .material__icone {
+  margin-top: 10px;
+  font-size: 1.4rem;
+}
+
+.material__capa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.material__titulo {
+  margin: 0;
+  font-size: 0.82rem;
+  overflow-wrap: anywhere;
+}
+
+.material__titulo a {
+  color: var(--texto);
+}
+
+.material__titulo a:hover {
+  color: var(--azul-escuro);
+}
+
+a.material__capa:hover {
+  text-decoration: none;
+  filter: brightness(1.05);
+}
+
+.material__autor {
+  font-size: 0.7rem;
+  color: var(--texto-suave);
+}
+
+.material .etiquetas {
+  margin-bottom: 4px;
+}
+
+.material .etiqueta {
+  padding: 3px 10px;
+  font-size: 0.62rem;
+}
+
+.etiqueta--cinza {
+  background: #f0f0f0;
+  color: var(--texto-suave);
+}
+
+.material__ler {
+  width: 100%;
+  margin-top: auto;
+  font-weight: 400;
+}
+
+.material__ler[aria-disabled='true'] {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* ---------- Detalhes do material (wireframe 28) ---------- */
+.trilha {
+  font-size: 0.78rem;
+  color: var(--texto-suave);
+}
+
+.trilha a {
+  color: var(--texto-suave);
+}
+
+.trilha a:hover {
+  color: var(--azul-escuro);
+}
+
+.detalhes {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 50px;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.detalhes__lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detalhes__moldura {
+  padding: 20px;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  background: #f0f0f0;
+}
+
+.detalhes__capa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 4px;
+  color: var(--azul-claro);
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.detalhes__capa strong {
+  padding: 0 12px;
+  font-family: var(--fonte-titulo);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #fff;
+  overflow-wrap: anywhere;
+}
+
+.detalhes__capa-serie {
+  font-family: var(--fonte-titulo);
+  font-size: 1rem;
+  color: #fff;
+}
+
+.detalhes__capa-selo {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 4px;
+  background: var(--laranja);
+  color: #fff;
+  font-size: 0.68rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.detalhes__capa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detalhes__status {
+  padding: 9px;
+  border-radius: 6px;
+  background: #d4edda;
+  color: var(--verde);
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+.detalhes__status--indisponivel {
+  background: var(--erro-fundo);
+  color: var(--erro-texto);
+}
+
+.detalhes__ler {
+  height: 45px;
+}
+
+.detalhes__baixar {
+  background: var(--azul-link);
+  color: #fff;
+  font-weight: 400;
+}
+
+.detalhes__baixar:hover {
+  background: #2c86c4;
+}
+
+.detalhes__excluir {
+  border: 1px solid var(--vermelho);
+  background: #fff;
+  color: var(--vermelho);
+  font-weight: 400;
+}
+
+.detalhes__excluir:hover:not(:disabled) {
+  background: var(--erro-fundo);
+}
+
+.detalhes__aviso {
+  overflow-wrap: anywhere;
+}
+
+.detalhes__info {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+}
+
+.detalhes__info h1 {
+  margin: 0 0 10px;
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  color: var(--azul-escuro);
+  overflow-wrap: anywhere;
+}
+
+.detalhes__info header p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--texto-suave);
+}
+
+.etiqueta--amarela {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.detalhes__dados {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px 20px;
+  margin: 0;
+  padding-bottom: 26px;
+  border-bottom: 1px solid #eee;
+}
+
+.detalhes__dados dt {
+  margin-bottom: 6px;
+  font-size: 0.75rem;
+  color: var(--texto-claro);
+}
+
+.detalhes__dados dd {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--texto);
+  overflow-wrap: anywhere;
+}
+
+.detalhes__secao h2 {
+  margin: 0 0 12px;
+  font-size: 0.88rem;
+  color: var(--azul-escuro);
+}
+
+.detalhes__descricao {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: #555;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Cadastro de livro (wireframe 05) ---------- */
+.cadastro-livro {
+  display: grid;
+  grid-template-columns: minmax(0, 640px) 270px;
+  align-items: start;
+  gap: 20px;
+}
+
+.cadastro-livro .formulario {
+  max-width: none;
+  padding: 24px 20px;
+}
+
+.caixa--info {
+  gap: 8px;
+  border-color: var(--azul-link);
+  background: #e8f4f8;
+}
+
+.caixa--info .rotulo {
+  color: var(--azul-escuro);
+}
+
+.caixa--info .input {
+  background: #fff;
+}
+
+.cadastro-livro__principal {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 20px;
+}
+
+.cadastro-livro__campos {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.capa-previa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 170px;
+  overflow: hidden;
+  border: 1px dashed var(--borda);
+  border-radius: var(--raio);
+  background: var(--fundo-input);
+  color: var(--texto-claro);
+  text-align: center;
+}
+
+.capa-previa > span {
+  font-size: 1.5rem;
+  opacity: 0.5;
+}
+
+.capa-previa small {
+  font-size: 0.62rem;
+}
+
+.capa-previa__dica {
+  margin-top: 30px;
+  padding: 0 8px;
+  color: #bbb;
+}
+
+.capa-previa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.input--area {
+  height: auto;
+  min-height: 110px;
+  padding: 12px 16px;
+  font: inherit;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.opcoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.opcao {
+  height: 36px;
+  padding: 0 16px;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  background: #fff;
+  font-size: 0.75rem;
+  color: var(--texto-suave);
+  cursor: pointer;
+}
+
+.opcao--ativa {
+  border-color: var(--azul-escuro);
+  background: var(--azul-escuro);
+  color: #fff;
+}
+
+.cadastro-livro__lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.estatistica {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.estatistica span {
+  font-size: 0.75rem;
+  color: var(--texto-suave);
+}
+
+.estatistica strong {
+  font-size: 1.5rem;
+}
+
+.recente {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: var(--fundo-input);
+}
+
+.recente__capa {
+  flex-shrink: 0;
+  width: 25px;
+  height: 30px;
+  border-radius: 3px;
+}
+
+.recente div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.recente strong,
+.recente span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.recente strong {
+  font-size: 0.7rem;
+  color: var(--texto);
+}
+
+.recente span {
+  font-size: 0.62rem;
+  color: var(--texto-suave);
+}
+
+@media (max-width: 1100px) {
+  .detalhes {
+    gap: 30px;
+  }
+
+  .detalhes__dados {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cadastro-livro {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cadastro-livro__lateral {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .acervo {
+    padding: 24px 16px 40px;
+  }
+
+  .acervo__busca {
+    flex-basis: 100%;
+  }
+
+  .acervo__select {
+    flex: 1 1 140px;
+  }
+
+  .acervo__grade {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  .detalhes {
+    grid-template-columns: 1fr;
+    padding: 20px 16px;
+  }
+
+  .detalhes__moldura {
+    width: min(100%, 280px);
+    margin: 0 auto;
+  }
+
+  .cadastro-livro__principal {
+    grid-template-columns: 1fr;
+  }
+
+  .capa-previa {
+    width: 130px;
+  }
+
+  .linha--3 {
+    grid-template-columns: 1fr;
+  }
+}

@@ -7,7 +7,7 @@ import type { Perfil } from '../types/api';
 import { AcessoLayout } from './AcessoLayout';
 import { CampoSenha } from './CampoSenha';
 
-type PerfilLogin = Exclude<Perfil, 'GESTOR'>;
+type PerfilLogin = Perfil;
 
 interface ConfigPerfil {
   rotulo: string;
@@ -18,10 +18,11 @@ interface ConfigPerfil {
   rota: string;
 }
 
-//O AuthService só aceita matrícula para Aluno e e-mail para Professor/Administrador
+//O AuthService só aceita matrícula para Aluno e e-mail para Professor/Gestor/Administrador
 export const CONFIG_PERFIS: Record<PerfilLogin, ConfigPerfil> = {
   ALUNO: { rotulo: 'Aluno', icone: '👨‍🎓', campo: 'Matrícula', placeholder: 'Ex: 2024001234', tipoCampo: 'text', rota: '/login' },
   PROFESSOR: { rotulo: 'Professor', icone: '👨‍🏫', campo: 'Email institucional', placeholder: 'seu.email@escola.edu.br', tipoCampo: 'email', rota: '/login/professor' },
+  GESTOR: { rotulo: 'Gestor', icone: '🗂️', campo: 'Email institucional', placeholder: 'seu.email@escola.edu.br', tipoCampo: 'email', rota: '/login/gestor' },
   ADMINISTRADOR: { rotulo: 'Admin', icone: '👤', campo: 'Email institucional', placeholder: 'seu.email@escola.edu.br', tipoCampo: 'email', rota: '/login/administrador' },
 };
 
@@ -29,10 +30,11 @@ export const CONFIG_PERFIS: Record<PerfilLogin, ConfigPerfil> = {
 export function destinoDoPerfil(perfil: Perfil): string {
   if (perfil === 'ADMINISTRADOR') return '/admin';
   if (perfil === 'PROFESSOR') return '/professor';
+  if (perfil === 'GESTOR') return '/gestor';
   return '/aluno';
 }
 
-export const rotaLoginDoPerfil = (perfil: Perfil) => (perfil === 'GESTOR' ? '/login' : CONFIG_PERFIS[perfil].rota);
+export const rotaLoginDoPerfil = (perfil: Perfil) => CONFIG_PERFIS[perfil].rota;
 
 interface LoginFormProps {
   perfil: PerfilLogin;

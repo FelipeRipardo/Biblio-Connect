@@ -7,6 +7,7 @@ import type { Professor } from '../../types/api';
 
 const MENU_PROFESSOR: ItemMenu[] = [
   { icone: '📊', rotulo: 'Visão Geral', rota: '/professor', exato: true },
+  { icone: '🔍', rotulo: 'Acervo Digital', rota: '/acervo' },
   { icone: '📚', rotulo: 'Leituras da Turma' },
   { icone: '📖', rotulo: 'Atribuir Leituras' },
   { icone: '👥', rotulo: 'Meus Alunos' },

@@ -6,7 +6,7 @@ import { Avatar } from '../../components/Avatar';
 import type { Aluno, AlunoAtualizacaoRequest } from '../../types/api';
 import { SERIES, TURMAS, TURNOS, emailValido, opcoesCom, serieTurmaCurta } from '../../utils/escola';
 import { mascaraTelefone } from '../../utils/masks';
-import { AdminLayout, idDoAdmin } from './AdminLayout';
+import { AdminLayout } from './AdminLayout';
 
 const mensagemDeErro = (err: unknown) =>
   err instanceof ApiError ? err.message : 'Ocorreu um erro inesperado. Tente novamente.';
@@ -63,7 +63,7 @@ export function EditarAluno() {
 
     setCarregando(true);
     try {
-      const atualizado = await atualizarAluno(idDoAdmin(), id, { ...form, nome: form.nome.trim(), email: form.email.trim() });
+      const atualizado = await atualizarAluno(id, { ...form, nome: form.nome.trim(), email: form.email.trim() });
       setAluno(atualizado);
       setForm(paraFormulario(atualizado));
       setSucesso('✓ Dados atualizados com sucesso!');

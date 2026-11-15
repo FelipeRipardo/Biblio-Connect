@@ -7,7 +7,7 @@ import { CartaoNumero } from '../../components/PainelLayout';
 import { Paginacao } from '../../components/Paginacao';
 import type { Professor } from '../../types/api';
 import { distintos } from '../../utils/escola';
-import { AdminLayout, idDoAdmin } from './AdminLayout';
+import { AdminLayout } from './AdminLayout';
 
 const POR_PAGINA = 7;
 
@@ -34,7 +34,7 @@ export function ListaProfessores() {
     setSucesso(null);
     setErro(null);
     try {
-      setSucesso((await excluirProfessor(idDoAdmin(), professor.id)).mensagem);
+      setSucesso((await excluirProfessor(professor.id)).mensagem);
       setProfessores((atual) => atual?.filter((p) => p.id !== professor.id) ?? null);
     } catch (err) {
       setErro(mensagemDeErro(err));

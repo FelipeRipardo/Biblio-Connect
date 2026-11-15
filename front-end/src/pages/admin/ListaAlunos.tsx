@@ -7,7 +7,7 @@ import { CartaoNumero } from '../../components/PainelLayout';
 import { Paginacao } from '../../components/Paginacao';
 import type { Aluno } from '../../types/api';
 import { SERIES, TURMAS, TURNOS, distintos, serieTurmaCurta } from '../../utils/escola';
-import { AdminLayout, idDoAdmin } from './AdminLayout';
+import { AdminLayout } from './AdminLayout';
 
 const POR_PAGINA = 8;
 const FILTROS_VAZIOS = { busca: '', serie: '', turma: '', turno: '' };
@@ -41,7 +41,7 @@ export function ListaAlunos() {
     setSucesso(null);
     setErro(null);
     try {
-      setSucesso((await excluirAluno(idDoAdmin(), aluno.id)).mensagem);
+      setSucesso((await excluirAluno(aluno.id)).mensagem);
       setAlunos((atual) => atual?.filter((a) => a.id !== aluno.id) ?? null);
     } catch (err) {
       setErro(mensagemDeErro(err));

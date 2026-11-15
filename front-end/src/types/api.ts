@@ -12,6 +12,8 @@ export interface LoginRequest {
 //Resposta de POST /api/auth/login
 export interface LoginResponse {
   mensagem: string;
+  token: string; //JWT enviado no cabeçalho Authorization das demais requisições
+  tipo: 'Bearer';
   id: number;
   nome: string;
   email: string;
@@ -19,7 +21,7 @@ export interface LoginResponse {
 }
 
 //Usuário guardado na sessão do navegador após o login
-export type UsuarioLogado = Omit<LoginResponse, 'mensagem'>;
+export type UsuarioLogado = Omit<LoginResponse, 'mensagem' | 'tipo'>;
 
 //Resposta de POST /api/auth/esqueci-senha
 export interface EsqueciSenhaResponse {
@@ -57,7 +59,7 @@ export interface AlunoCadastroRequest {
 //AlunoAtualizacaoDTO (CPF e matrícula não podem ser alterados)
 export type AlunoAtualizacaoRequest = Omit<AlunoCadastroRequest, 'cpf' | 'matricula' | 'senha'>;
 
-//Resposta de POST /api/alunos/cadastro
+//Resposta de POST /api/alunos
 export interface AlunoCadastroResponse {
   mensagem: string;
   id: number;
@@ -96,12 +98,59 @@ export interface ProfessorCadastroRequest {
 //ProfessorAtualizacaoDTO (CPF e registro funcional não podem ser alterados)
 export type ProfessorAtualizacaoRequest = Omit<ProfessorCadastroRequest, 'cpf' | 'registroFuncional' | 'senha'>;
 
-//Resposta de POST /api/professores/cadastro
+//Resposta de POST /api/professores
 export interface ProfessorCadastroResponse {
   mensagem: string;
   id: number;
   nome: string;
   email: string;
+}
+
+//domain.enums.TipoMaterial e CategoriaMaterial
+export type TipoMaterial = 'LIVRO' | 'ARTIGO' | 'APOSTILA' | 'REVISTA' | 'MANUAL';
+export type CategoriaMaterial = 'LITERATURA' | 'DIDATICO' | 'CIENTIFICO' | 'PERIODICO' | 'COMPLEMENTAR' | 'TECNICO';
+
+//MaterialRequestDTO
+export interface MaterialRequest {
+  titulo: string;
+  autor: string;
+  categoria: CategoriaMaterial;
+  tipoMaterial: TipoMaterial;
+  ano: number;
+  serie: string;
+  disciplina: string;
+  descricao: string;
+  isbn?: string;
+  editora?: string;
+  urlArquivo: string; //Link do PDF/e-book: o back-end guarda só a URL, não recebe o arquivo
+  capaUrl?: string;
+}
+
+//Filtros aceitos por GET /api/materiais
+export interface FiltrosMaterial {
+  termo?: string; //Busca no título e no autor
+  categoria?: CategoriaMaterial;
+  serie?: string; //Comparação exata (ignora maiúsculas)
+  disciplina?: string; //Busca parcial
+}
+
+//MaterialResponseDTO
+export interface Material {
+  id: number;
+  titulo: string;
+  autor: string;
+  categoria: CategoriaMaterial;
+  tipoMaterial: TipoMaterial;
+  ano: number | null;
+  serie: string | null;
+  disciplina: string | null;
+  descricao: string | null;
+  isbn: string | null;
+  editora: string | null;
+  urlArquivo: string | null;
+  capaUrl: string | null;
+  criadoEm: string;
+  atualizadoEm: string | null;
 }
 
 //ProfessorResponseDTO
@@ -116,4 +165,27 @@ export interface Professor {
   disciplinas: string[];
   turmas: string[];
   comprovanteVinculo: string | null;
+}
+
+//GestorCadastroDTO
+export interface GestorCadastroRequest {
+  nome: string;
+  email: string;
+  senha: string; //Senha inicial definida pelo Administrador
+}
+
+//Resposta de POST /api/gestores
+export interface GestorCadastroResponse {
+  mensagem: string;
+  id: number;
+  nome: string;
+  email: string;
+}
+
+//GET /api/gestores devolve a entidade Gestor; o front usa apenas estes campos
+export interface Gestor {
+  id: number;
+  nome: string;
+  email: string;
+  perfil: Perfil;
 }
