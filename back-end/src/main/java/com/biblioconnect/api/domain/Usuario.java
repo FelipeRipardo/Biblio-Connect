@@ -48,7 +48,7 @@ public abstract class Usuario implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        // Mapeia o perfil para o padrão ROLE_ do Spring Security (ex: ROLE_ADMINISTRADOR)
+        //Mapeia o perfil para o padrão ROLE_ do Spring Security (ex: ROLE_ADMINISTRADOR)
         return List.of(new SimpleGrantedAuthority("ROLE_" + this.perfil.name()));
     }
 

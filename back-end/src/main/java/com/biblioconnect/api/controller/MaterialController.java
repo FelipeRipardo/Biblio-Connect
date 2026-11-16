@@ -1,11 +1,16 @@
 package com.biblioconnect.api.controller;
 
 import com.biblioconnect.api.domain.enums.CategoriaMaterial;
+import com.biblioconnect.api.domain.enums.TipoMaterial;
 import com.biblioconnect.api.dto.MaterialRequestDTO;
 import com.biblioconnect.api.dto.MaterialResponseDTO;
 import com.biblioconnect.api.service.MaterialService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -34,10 +39,28 @@ public class MaterialController {
     @GetMapping
     public ResponseEntity<List<MaterialResponseDTO>> listar(
             @RequestParam(required = false) String termo,
+            @RequestParam(required = false) String isbn,
             @RequestParam(required = false) CategoriaMaterial categoria,
+            @RequestParam(required = false) TipoMaterial tipoMaterial,
+            @RequestParam(required = false) Integer ano,
             @RequestParam(required = false) String serie,
             @RequestParam(required = false) String disciplina) {
-        return ResponseEntity.ok(materialService.listar(termo, categoria, serie, disciplina));
+        return ResponseEntity.ok(materialService.listar(termo, isbn, categoria, tipoMaterial, ano, serie, disciplina));
+    }
+
+    @GetMapping("/paginado")
+    public ResponseEntity<Page<MaterialResponseDTO>> listarPaginado(
+            @RequestParam(required = false) String termo,
+            @RequestParam(required = false) String isbn,
+            @RequestParam(required = false) CategoriaMaterial categoria,
+            @RequestParam(required = false) TipoMaterial tipoMaterial,
+            @RequestParam(required = false) Integer ano,
+            @RequestParam(required = false) String serie,
+            @RequestParam(required = false) String disciplina,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size) {
+        Pageable pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.ASC, "titulo"));
+        return ResponseEntity.ok(materialService.listarPaginado(termo, isbn, categoria, tipoMaterial, ano, serie, disciplina, pageable));
     }
 
     @GetMapping("/{id}")
