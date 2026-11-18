@@ -1,4 +1,4 @@
-import type { CategoriaMaterial, Perfil, TipoMaterial } from '../types/api';
+import type { CategoriaMaterial, Material, Perfil, TipoMaterial, Visibilidade } from '../types/api';
 
 //Rótulos dos enums do back-end (domain.enums.CategoriaMaterial e TipoMaterial)
 export const CATEGORIAS: { valor: CategoriaMaterial; rotulo: string; icone: string }[] = [
@@ -17,6 +17,34 @@ export const TIPOS_MATERIAL: { valor: TipoMaterial; rotulo: string }[] = [
   { valor: 'REVISTA', rotulo: 'Revista' },
   { valor: 'MANUAL', rotulo: 'Manual' },
 ];
+
+//Acesso ao material (Material.visibilidade)
+export const VISIBILIDADES: { valor: Visibilidade; rotulo: string; icone: string; descricao: string; etiqueta: string }[] = [
+  {
+    valor: 'PUBLICO',
+    rotulo: 'Público',
+    icone: '🌐',
+    descricao: 'O aluno lê na biblioteca e também pode baixar o arquivo.',
+    etiqueta: 'etiqueta--verde',
+  },
+  {
+    valor: 'INTERNO',
+    rotulo: 'Interno',
+    icone: '🔒',
+    descricao: 'Leitura somente dentro da biblioteca, sem opção de download.',
+    etiqueta: 'etiqueta--amarela',
+  },
+];
+
+export const infoVisibilidade = (visibilidade: Visibilidade | null | undefined) =>
+  VISIBILIDADES.find((v) => v.valor === visibilidade) ?? VISIBILIDADES[1]; //Sem informação, trata como interno (mais restritivo)
+
+//Só materiais públicos com arquivo válido podem ser baixados
+export const podeBaixar = (material: Pick<Material, 'visibilidade' | 'urlArquivo'>) =>
+  material.visibilidade === 'PUBLICO' && !!urlSegura(material.urlArquivo);
+
+//Leitor interno da biblioteca
+export const rotaLeitura = (id: number) => `/acervo/${id}/ler`;
 
 export const rotuloCategoria = (categoria: CategoriaMaterial) =>
   CATEGORIAS.find((c) => c.valor === categoria)?.rotulo ?? categoria;

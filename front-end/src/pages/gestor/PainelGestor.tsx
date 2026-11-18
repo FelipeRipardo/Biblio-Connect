@@ -4,7 +4,7 @@ import { ApiError } from '../../api/http';
 import { listarMateriais } from '../../api/materiais';
 import { CartaoNumero } from '../../components/PainelLayout';
 import type { Material } from '../../types/api';
-import { rotuloTipo, urlSegura, visualDisciplina } from '../../utils/acervo';
+import { infoVisibilidade, rotuloTipo, urlSegura, visualDisciplina } from '../../utils/acervo';
 import { distintos } from '../../utils/escola';
 import { GestorLayout } from './GestorLayout';
 
@@ -38,6 +38,7 @@ export function PainelGestor() {
       <section className="indicadores">
         <CartaoNumero icone="📚" rotulo="Materiais no Acervo" valor={valor(lista.length)} cor="var(--azul-escuro)" />
         <CartaoNumero icone="💻" rotulo="Com Arquivo Digital" valor={valor(lista.filter((m) => urlSegura(m.urlArquivo)).length)} cor="var(--verde)" />
+        <CartaoNumero icone="🔒" rotulo="Internos (sem download)" valor={valor(lista.filter((m) => m.visibilidade !== 'PUBLICO').length)} cor="var(--azul-link)" />
         <CartaoNumero icone="🏷️" rotulo="Disciplinas Cobertas" valor={valor(porDisciplina.length)} cor="var(--laranja)" />
         <CartaoNumero icone="🎓" rotulo="Séries Atendidas" valor={valor(distintos(lista.map((m) => m.serie ?? '')).length)} cor="var(--roxo)" />
       </section>
@@ -73,7 +74,7 @@ export function PainelGestor() {
                   <span className="recente__capa" style={{ background: visualDisciplina(m.disciplina ?? '').cor }} aria-hidden="true" />
                   <Link to={`/gestor/livros/${m.id}/editar`}>
                     <strong>{m.titulo}</strong>
-                    <span>{rotuloTipo(m.tipoMaterial)} · {m.autor}</span>
+                    <span>{rotuloTipo(m.tipoMaterial)} · {infoVisibilidade(m.visibilidade).rotulo} · {m.autor}</span>
                   </Link>
                 </li>
               ))}

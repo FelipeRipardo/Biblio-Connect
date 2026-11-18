@@ -3,10 +3,13 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { ApiError } from '../../api/http';
 import { listarMateriais } from '../../api/materiais';
 import { obterSessao } from '../../api/sessao';
+import { BotaoFavorito } from '../../components/BotaoFavorito';
 import { Paginacao } from '../../components/Paginacao';
+import { SeloVisibilidade } from '../../components/SeloVisibilidade';
 import { TopoUsuario } from '../../components/TopoUsuario';
+import { useFavoritos } from '../../hooks/useFavoritos';
 import type { CategoriaMaterial, Material } from '../../types/api';
-import { CATEGORIAS, rotuloCategoria, serieCurta, urlSegura, visualDisciplina } from '../../utils/acervo';
+import { CATEGORIAS, rotaLeitura, rotuloCategoria, serieCurta, urlSegura, visualDisciplina } from '../../utils/acervo';
 import { DISCIPLINAS, SERIES } from '../../utils/escola';
 
 const POR_PAGINA = 12;
@@ -36,6 +39,7 @@ export function Acervo() {
   const [busca, setBusca] = useState(termo);
   const [materiais, setMateriais] = useState<Material[] | null>(null);
   const [erro, setErro] = useState<string | null>(null);
+  const favoritos = useFavoritos();
 
   useEffect(() => {
     let ativo = true;
@@ -137,6 +141,7 @@ export function Acervo() {
         </nav>
 
         {erro && <div className="alerta alerta--erro" role="alert">{erro}</div>}
+        {favoritos.erro && <div className="alerta alerta--erro" role="alert">{favoritos.erro}</div>}
 
         {!erro && !materiais && <p className="vazio">Carregando acervo...</p>}
 
@@ -150,7 +155,10 @@ export function Acervo() {
               <p className="vazio">Nenhum material encontrado com esses filtros.</p>
             ) : (
               <div className="acervo__grade">
-                {visiveis.map((m) => <CartaoMaterial key={m.id} material={m} />)}
+                {visiveis.map((m) => (
+                  <CartaoMaterial key={m.id} material={m} favorito={favoritos.ehFavorito(m.id)}
+                    favoritando={favoritos.pendente(m.id)} onFavoritar={() => favoritos.alternar(m.id)} />
+                ))}
               </div>
             )}
 
@@ -165,7 +173,15 @@ export function Acervo() {
   );
 }
 
-function CartaoMaterial({ material }: { material: Material }) {
+interface CartaoMaterialProps {
+  material: Material;
+  favorito: boolean;
+  favoritando?: boolean;
+  onFavoritar: () => void;
+}
+
+//Cartão do material, usado também na tela de Favoritos
+export function CartaoMaterial({ material, favorito, favoritando, onFavoritar }: CartaoMaterialProps) {
   const { cor, icone } = visualDisciplina(material.disciplina ?? '');
   const [capaFalhou, setCapaFalhou] = useState(false);
   const capa = capaFalhou ? null : urlSegura(material.capaUrl);
@@ -174,6 +190,9 @@ function CartaoMaterial({ material }: { material: Material }) {
 
   return (
     <article className="material">
+      <div className="material__favorito">
+        <BotaoFavorito compacto favorito={favorito} titulo={material.titulo} onClick={onFavoritar} desabilitado={favoritando} />
+      </div>
       <Link to={detalhes} className="material__capa" style={{ background: cor }} aria-label={`Ver detalhes de ${material.titulo}`}>
         {capa ? (
           <img src={capa} alt="" loading="lazy" onError={() => setCapaFalhou(true)} />
@@ -198,12 +217,14 @@ function CartaoMaterial({ material }: { material: Material }) {
           </span>
         )}
         <span className="etiqueta etiqueta--cinza">{rotuloCategoria(material.categoria)}</span>
+        <SeloVisibilidade visibilidade={material.visibilidade} />
       </div>
 
+      {/* A leitura acontece sempre dentro da biblioteca; o download (só materiais públicos) fica nos detalhes */}
       {arquivo ? (
-        <a className="botao botao--verde botao--pequeno material__ler" href={arquivo} target="_blank" rel="noopener noreferrer">
+        <Link className="botao botao--verde botao--pequeno material__ler" to={rotaLeitura(material.id)}>
           📖 Ler Agora
-        </a>
+        </Link>
       ) : (
         <span className="botao botao--secundario botao--pequeno material__ler" aria-disabled="true">Arquivo indisponível</span>
       )}

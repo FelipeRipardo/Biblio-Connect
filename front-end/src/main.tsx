@@ -9,6 +9,7 @@ import './styles/acesso.css';
 import './styles/painel.css';
 import './styles/inicio.css';
 import './styles/acervo.css';
+import './styles/leitura.css';
 
 //Modo de visualização com dados fictícios (/preview), só em desenvolvimento
 instalarPreviewSeAtivo();

@@ -1,13 +1,20 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { ApiError } from '../../api/http';
+import { listarLeituras } from '../../api/leituras';
 import { buscarMaterial, excluirMaterial } from '../../api/materiais';
 import { obterSessao } from '../../api/sessao';
+import { BotaoFavorito } from '../../components/BotaoFavorito';
+import { SeloVisibilidade } from '../../components/SeloVisibilidade';
 import { TopoUsuario } from '../../components/TopoUsuario';
-import type { Material } from '../../types/api';
+import { useFavoritos } from '../../hooks/useFavoritos';
+import type { Leitura, Material } from '../../types/api';
 import {
+  infoVisibilidade,
   nivelDaSerie,
+  podeBaixar,
   podeGerenciarAcervo,
+  rotaLeitura,
   rotaGestaoAcervo,
   rotuloCategoria,
   rotuloTipo,
@@ -29,6 +36,8 @@ export function DetalhesMaterial() {
   const [aviso, setAviso] = useState<string | null>(null);
   const [capaFalhou, setCapaFalhou] = useState(false);
   const [excluindo, setExcluindo] = useState(false);
+  const [leitura, setLeitura] = useState<Leitura | null>(null);
+  const favoritos = useFavoritos();
   //Editar e excluir aparecem só para quem pode alterar o acervo (Administrador e Gestor)
   const perfil = obterSessao()?.perfil;
   const gerencia = podeGerenciarAcervo(perfil);
@@ -44,6 +53,10 @@ export function DetalhesMaterial() {
     buscarMaterial(numero)
       .then((m) => ativo && setMaterial(m))
       .catch((err) => ativo && setErro(err instanceof ApiError ? err.message : 'Não foi possível carregar o material.'));
+    //Se o usuário já começou este material, o botão vira "Continuar leitura"
+    listarLeituras()
+      .then((lista) => ativo && setLeitura(lista.find((l) => l.material.id === numero) ?? null))
+      .catch(() => ativo && setLeitura(null));
     return () => {
       ativo = false;
     };
@@ -85,6 +98,9 @@ export function DetalhesMaterial() {
   const visual = visualDisciplina(material?.disciplina ?? '');
   const capa = capaFalhou ? null : urlSegura(material?.capaUrl);
   const arquivo = urlSegura(material?.urlArquivo);
+  const baixavel = !!material && podeBaixar(material);
+  const acesso = infoVisibilidade(material?.visibilidade);
+  const textoLer = !leitura ? '📖 Ler Agora' : leitura.concluida ? '📖 Ler novamente' : `📖 Continuar leitura (pág. ${leitura.paginaAtual})`;
   const nivel = material?.serie ? nivelDaSerie(material.serie) : null;
 
   return (
@@ -132,17 +148,23 @@ export function DetalhesMaterial() {
 
               {arquivo ? (
                 <>
-                  <span className="detalhes__status">✓ Disponível para Leitura Online</span>
-                  <a className="botao botao--verde detalhes__ler" href={arquivo} target="_blank" rel="noopener noreferrer">
-                    📖 Ler Agora
-                  </a>
-                  <a className="botao detalhes__baixar" href={arquivo} target="_blank" rel="noopener noreferrer" download>
-                    📥 Baixar
-                  </a>
+                  <span className="detalhes__status">✓ Disponível para Leitura na Biblioteca</span>
+                  <Link className="botao botao--verde detalhes__ler" to={rotaLeitura(material.id)}>{textoLer}</Link>
+                  {baixavel ? (
+                    <a className="botao detalhes__baixar" href={arquivo} target="_blank" rel="noopener noreferrer" download>
+                      📥 Baixar
+                    </a>
+                  ) : (
+                    <span className="detalhes__status detalhes__status--interno" title={acesso.descricao}>
+                      🔒 Material interno: leitura somente na biblioteca
+                    </span>
+                  )}
                 </>
               ) : (
                 <span className="detalhes__status detalhes__status--indisponivel">Arquivo digital indisponível</span>
               )}
+              <BotaoFavorito favorito={favoritos.ehFavorito(material.id)} titulo={material.titulo}
+                onClick={() => favoritos.alternar(material.id)} desabilitado={favoritos.pendente(material.id)} />
               <button type="button" className="botao botao--secundario" onClick={compartilhar}>📤 Compartilhar</button>
               {gerencia && (
                 <>
@@ -153,6 +175,7 @@ export function DetalhesMaterial() {
                 </>
               )}
               {aviso && <small className="dica detalhes__aviso" role="status">{aviso}</small>}
+              {favoritos.erro && <small className="dica detalhes__aviso" role="alert">{favoritos.erro}</small>}
             </aside>
 
             <div className="detalhes__info">
@@ -165,6 +188,7 @@ export function DetalhesMaterial() {
                 {material.disciplina && <span className="etiqueta etiqueta--azul">{material.disciplina}</span>}
                 {material.serie && <span className="etiqueta etiqueta--roxo">{serieCurta(material.serie)}</span>}
                 <span className="etiqueta etiqueta--verde">Digital</span>
+                <SeloVisibilidade visibilidade={material.visibilidade} />
                 {material.ano && <span className="etiqueta etiqueta--amarela">{material.ano}</span>}
               </div>
 
@@ -174,6 +198,7 @@ export function DetalhesMaterial() {
                 <div><dt>ISBN</dt><dd>{material.isbn || 'Não informado'}</dd></div>
                 <div><dt>Formato</dt><dd>{rotuloTipo(material.tipoMaterial)}</dd></div>
                 <div><dt>Categoria</dt><dd>{rotuloCategoria(material.categoria)}</dd></div>
+                <div><dt>Acesso</dt><dd>{acesso.icone} {acesso.rotulo}</dd></div>
                 <div><dt>No acervo desde</dt><dd>{dataBr(material.criadoEm)}</dd></div>
               </dl>
 

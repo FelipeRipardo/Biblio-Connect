@@ -2,20 +2,23 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { buscarAluno } from '../../api/alunos';
 import { ApiError } from '../../api/http';
+import { listarLeituras } from '../../api/leituras';
 import { encerrarSessao, obterSessao } from '../../api/sessao';
 import { Avatar } from '../../components/Avatar';
-import type { Aluno } from '../../types/api';
+import type { Aluno, Leitura } from '../../types/api';
+import { rotaLeitura, visualDisciplina } from '../../utils/acervo';
 import { serieTurmaCurta } from '../../utils/escola';
+import { percentualLeitura } from '../../utils/leitura';
 
-//Itens do menu do wireframe; só a Visão Geral e o Acervo têm suporte no back-end por enquanto
+//Itens do menu do wireframe; "Downloads" ainda não tem tela (o download é feito nos detalhes do material público)
 const MENU: { icone: string; rotulo: string; ativo?: boolean; rota?: string }[] = [
   { icone: '📊', rotulo: 'Visão Geral', ativo: true },
   { icone: '🔍', rotulo: 'Acervo Digital', rota: '/acervo' },
-  { icone: '📚', rotulo: 'Minhas Leituras' },
+  { icone: '📚', rotulo: 'Minhas Leituras', rota: '/historico' },
   { icone: '📥', rotulo: 'Downloads' },
-  { icone: '⭐', rotulo: 'Favoritos' },
-  { icone: '📜', rotulo: 'Histórico' },
-  { icone: '🔒', rotulo: 'Alterar Senha' },
+  { icone: '⭐', rotulo: 'Favoritos', rota: '/favoritos' },
+  { icone: '📜', rotulo: 'Histórico', rota: '/historico' },
+  { icone: '🔒', rotulo: 'Alterar Senha', rota: '/alterar-senha' },
 ];
 
 const dataBr = (iso: string) => iso.split('-').reverse().join('/');
@@ -26,6 +29,13 @@ export function AreaAluno() {
   const sessao = obterSessao()!;
   const [aluno, setAluno] = useState<Aluno | null>(null);
   const [erro, setErro] = useState<string | null>(null);
+  const [leituras, setLeituras] = useState<Leitura[] | null>(null);
+
+  useEffect(() => {
+    listarLeituras()
+      .then((lista) => setLeituras([...lista].sort((a, b) => b.ultimoAcessoEm.localeCompare(a.ultimoAcessoEm))))
+      .catch(() => setLeituras([]));
+  }, []);
 
   useEffect(() => {
     buscarAluno(sessao.id)
@@ -115,11 +125,31 @@ export function AreaAluno() {
             </article>
 
             <article className="cartao">
-              <h2 className="cartao__titulo">📖 Leituras e Empréstimos</h2>
-              <p className="vazio">
-                Em breve você poderá acompanhar suas leituras e salvar seus favoritos por aqui.
-              </p>
-              <Link to="/acervo" className="botao botao--verde">📖 Explorar o acervo</Link>
+              <h2 className="cartao__titulo">📖 Continue de onde parou</h2>
+              {!leituras && <p className="vazio">Carregando...</p>}
+              {leituras?.filter((l) => !l.concluida).length === 0 && (
+                <p className="vazio">Nenhuma leitura em andamento. Abra um material do acervo para começar.</p>
+              )}
+              {leituras && leituras.filter((l) => !l.concluida).length > 0 && (
+                <ul className="atividades">
+                  {leituras.filter((l) => !l.concluida).slice(0, 3).map((l) => {
+                    const percentual = percentualLeitura(l);
+                    return (
+                      <li key={l.id}>
+                        <span className="recente__capa" style={{ background: visualDisciplina(l.material.disciplina ?? '').cor }} aria-hidden="true" />
+                        <Link to={rotaLeitura(l.material.id)}>
+                          <strong>{l.material.titulo}</strong>
+                          <span>Página {l.paginaAtual}{percentual !== null && ` · ${percentual}% lido`}</span>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+              <div className="faixa__acoes">
+                <Link to="/acervo" className="botao botao--verde">📖 Explorar o acervo</Link>
+                <Link to="/historico" className="botao botao--secundario">📜 Ver histórico</Link>
+              </div>
             </article>
           </section>
         </main>

@@ -1,4 +1,5 @@
 import type {
+  AlterarSenhaRequest,
   EsqueciSenhaResponse,
   LoginRequest,
   LoginResponse,
@@ -17,4 +18,9 @@ export function solicitarRecuperacaoSenha(identificador: string): Promise<Esquec
 
 export function redefinirSenha(dados: RedefinirSenhaRequest): Promise<MensagemResponse> {
   return post<MensagemResponse>('/auth/redefinir-senha', dados);
+}
+
+//Troca de senha do usuário logado (qualquer perfil), confirmando a senha atual
+export function alterarSenha(dados: AlterarSenhaRequest): Promise<MensagemResponse> {
+  return post<MensagemResponse>('/auth/alterar-senha', dados);
 }
