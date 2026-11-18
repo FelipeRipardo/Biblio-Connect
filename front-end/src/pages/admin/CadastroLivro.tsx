@@ -4,8 +4,8 @@ import { ApiError } from '../../api/http';
 import { atualizarMaterial, buscarMaterial, cadastrarMaterial, listarMateriais } from '../../api/materiais';
 import { obterSessao } from '../../api/sessao';
 import { GestaoAcervoLayout } from '../../components/GestaoAcervoLayout';
-import type { CategoriaMaterial, Material, MaterialRequest, TipoMaterial } from '../../types/api';
-import { CATEGORIAS, TIPOS_MATERIAL, rotaGestaoAcervo, urlSegura, visualDisciplina } from '../../utils/acervo';
+import type { CategoriaMaterial, Material, MaterialRequest, TipoMaterial, Visibilidade } from '../../types/api';
+import { CATEGORIAS, TIPOS_MATERIAL, VISIBILIDADES, rotaGestaoAcervo, urlSegura, visualDisciplina } from '../../utils/acervo';
 import { DISCIPLINAS, SERIES, distintos, opcoesCom } from '../../utils/escola';
 
 interface Formulario {
@@ -21,6 +21,7 @@ interface Formulario {
   categoria: CategoriaMaterial;
   urlArquivo: string;
   descricao: string;
+  visibilidade: Visibilidade | '';
 }
 
 const FORMULARIO_INICIAL: Formulario = {
@@ -36,6 +37,7 @@ const FORMULARIO_INICIAL: Formulario = {
   categoria: 'DIDATICO',
   urlArquivo: '',
   descricao: '',
+  visibilidade: '', //O gestor precisa escolher conscientemente se o material pode ser baixado
 };
 
 //Mesmas regras e mensagens do MaterialRequestDTO
@@ -52,6 +54,7 @@ function validar(f: Formulario): string | null {
   if (!f.urlArquivo.trim()) return 'A URL do arquivo digital (PDF/E-book) é obrigatória';
   if (!urlSegura(f.urlArquivo)) return 'O link do arquivo deve começar com http:// ou https://';
   if (!f.descricao.trim()) return 'A descrição/sinopse do material é obrigatória';
+  if (!f.visibilidade) return 'Informe se o material é público ou interno';
   return null;
 }
 
@@ -71,6 +74,7 @@ const paraFormulario = (m: Material): Formulario => ({
   categoria: m.categoria,
   urlArquivo: m.urlArquivo ?? '',
   descricao: m.descricao ?? '',
+  visibilidade: m.visibilidade ?? '',
 });
 
 const paraRequisicao = (f: Formulario): MaterialRequest => ({
@@ -86,6 +90,7 @@ const paraRequisicao = (f: Formulario): MaterialRequest => ({
   editora: opcional(f.editora),
   urlArquivo: f.urlArquivo.trim(),
   capaUrl: opcional(f.capaUrl),
+  visibilidade: f.visibilidade as Visibilidade, //Garantido pela validação
 });
 
 //Wireframe 05 - Cadastro de Livro, com os campos que o back-end (MaterialRequestDTO) aceita.
@@ -287,8 +292,23 @@ export function CadastroLivro() {
               <label className="rotulo" htmlFor="urlArquivo">Link do arquivo (PDF/E-book) *</label>
               <input id="urlArquivo" className="input" type="url" placeholder="https://..." maxLength={500}
                 value={form.urlArquivo} onChange={(e) => atualizar('urlArquivo', e.target.value)} />
-              <small className="dica">É este link que abre quando o aluno clica em "Ler Agora".</small>
+              <small className="dica">É este arquivo que abre no leitor da biblioteca quando o aluno clica em "Ler Agora".</small>
             </div>
+
+            <fieldset className="campo">
+              <legend className="rotulo">Acesso ao material *</legend>
+              <div className="acesso-material" role="radiogroup">
+                {VISIBILIDADES.map(({ valor, rotulo, icone, descricao }) => (
+                  <button key={valor} type="button" role="radio" aria-checked={form.visibilidade === valor}
+                    className={`acesso-material__opcao ${form.visibilidade === valor ? 'acesso-material__opcao--ativa' : ''}`}
+                    onClick={() => atualizar('visibilidade', valor)}>
+                    <strong><span aria-hidden="true">{icone}</span> {rotulo}</strong>
+                    <small>{descricao}</small>
+                  </button>
+                ))}
+              </div>
+              <small className="dica">Essa informação aparece para todos os perfis no acervo, nos detalhes e no leitor.</small>
+            </fieldset>
 
             <div className="campo">
               <label className="rotulo" htmlFor="descricao">Descrição/Sinopse *</label>
@@ -317,6 +337,8 @@ export function CadastroLivro() {
               <h2 className="cartao__titulo">📊 Estatísticas</h2>
               <Estatistica rotulo="Total no Acervo" cor="var(--azul-escuro)" valor={acervo?.length} />
               <Estatistica rotulo="Livros" cor="var(--verde)" valor={acervo?.filter((m) => m.tipoMaterial === 'LIVRO').length} />
+              <Estatistica rotulo="Públicos / Internos" cor="var(--azul-link)"
+                valor={acervo && `${acervo.filter((m) => m.visibilidade === 'PUBLICO').length} / ${acervo.filter((m) => m.visibilidade !== 'PUBLICO').length}`} />
               <Estatistica rotulo="Disciplinas Cobertas" cor="var(--laranja)" valor={acervo && distintos(acervo.map((m) => m.disciplina ?? '')).length} />
               <Estatistica rotulo="Séries Atendidas" cor="var(--roxo)" valor={acervo && distintos(acervo.map((m) => m.serie ?? '')).length} />
             </section>
@@ -342,7 +364,7 @@ export function CadastroLivro() {
   );
 }
 
-function Estatistica({ rotulo, valor, cor }: { rotulo: string; valor: number | null | undefined; cor: string }) {
+function Estatistica({ rotulo, valor, cor }: { rotulo: string; valor: number | string | null | undefined; cor: string }) {
   return (
     <div className="estatistica">
       <span>{rotulo}</span>

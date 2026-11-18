@@ -12,12 +12,27 @@ interface Tela {
 
 const TELAS: { perfil: Perfil; titulo: string; telas: Tela[] }[] = [
   {
+    perfil: 'ALUNO',
+    titulo: '🎒 Aluno',
+    telas: [
+      { rotulo: 'Minha Área (continue de onde parou)', rota: '/aluno', nova: true },
+      { rotulo: 'Acervo com favoritos e Público/Interno', rota: '/acervo', nova: true },
+      { rotulo: 'Detalhes de material público (com Baixar)', rota: '/acervo/30', nova: true },
+      { rotulo: 'Detalhes de material interno (sem Baixar)', rota: '/acervo/32', nova: true },
+      { rotulo: 'Leitor: continuar leitura (pág. 5)', rota: '/acervo/30/ler', nova: true },
+      { rotulo: 'Leitor: nova leitura de material interno', rota: '/acervo/35/ler', nova: true },
+      { rotulo: 'Histórico de leituras', rota: '/historico', nova: true },
+      { rotulo: 'Favoritos', rota: '/favoritos', nova: true },
+      { rotulo: 'Alterar senha (senha atual: Senha@123)', rota: '/alterar-senha', nova: true },
+    ],
+  },
+  {
     perfil: 'ADMINISTRADOR',
     titulo: '👤 Administrador',
     telas: [
       { rotulo: 'Gerenciar Livros (wireframe 20)', rota: '/admin/livros', nova: true },
+      { rotulo: 'Cadastro de livro com Público/Interno', rota: '/admin/livros/novo', nova: true },
       { rotulo: 'Editar livro', rota: '/admin/livros/30/editar', nova: true },
-      { rotulo: 'Cadastro de livro', rota: '/admin/livros/novo' },
       { rotulo: 'Gestores', rota: '/admin/gestores', nova: true },
       { rotulo: 'Novo gestor', rota: '/admin/gestores/novo', nova: true },
       { rotulo: 'Detalhes do material (com editar/excluir)', rota: '/acervo/30', nova: true },
@@ -30,7 +45,7 @@ const TELAS: { perfil: Perfil; titulo: string; telas: Tela[] }[] = [
     telas: [
       { rotulo: 'Painel do gestor', rota: '/gestor', nova: true },
       { rotulo: 'Gerenciar Livros', rota: '/gestor/livros', nova: true },
-      { rotulo: 'Editar livro', rota: '/gestor/livros/31/editar', nova: true },
+      { rotulo: 'Editar livro (Público/Interno)', rota: '/gestor/livros/32/editar', nova: true },
       { rotulo: 'Cadastro de livro', rota: '/gestor/livros/novo', nova: true },
       { rotulo: 'Acervo digital', rota: '/acervo' },
     ],
@@ -41,6 +56,8 @@ const TELAS: { perfil: Perfil; titulo: string; telas: Tela[] }[] = [
     telas: [
       { rotulo: 'Detalhes do material (sem editar/excluir)', rota: '/acervo/30' },
       { rotulo: 'Painel do professor', rota: '/professor' },
+      { rotulo: 'Histórico de leituras', rota: '/historico', nova: true },
+      { rotulo: 'Alterar senha', rota: '/alterar-senha', nova: true },
     ],
   },
 ];
@@ -103,6 +120,14 @@ export function Preview() {
             <li>
               <Link to="/login/gestor" onClick={ativarMocks}>Login do gestor <span className="etiqueta etiqueta--verde">nova</span></Link>
               <code>/login/gestor</code>
+            </li>
+            <li>
+              <Link to="/esqueci-senha" onClick={ativarMocks}>Recuperar senha (esqueci a senha)</Link>
+              <code>/esqueci-senha</code>
+            </li>
+            <li>
+              <Link to="/redefinir-senha?token=token-preview-123" onClick={ativarMocks}>Redefinir senha pelo link</Link>
+              <code>/redefinir-senha</code>
             </li>
           </ul>
         </section>

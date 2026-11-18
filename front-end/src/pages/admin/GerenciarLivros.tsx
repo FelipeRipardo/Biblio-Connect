@@ -6,8 +6,9 @@ import { obterSessao } from '../../api/sessao';
 import { GestaoAcervoLayout } from '../../components/GestaoAcervoLayout';
 import { CartaoNumero } from '../../components/PainelLayout';
 import { Paginacao } from '../../components/Paginacao';
-import type { CategoriaMaterial, Material } from '../../types/api';
-import { CATEGORIAS, rotaGestaoAcervo, rotuloCategoria, rotuloTipo, serieCurta, urlSegura, visualDisciplina } from '../../utils/acervo';
+import { SeloVisibilidade } from '../../components/SeloVisibilidade';
+import type { CategoriaMaterial, Material, Visibilidade } from '../../types/api';
+import { CATEGORIAS, VISIBILIDADES, rotaGestaoAcervo, rotuloCategoria, rotuloTipo, serieCurta, urlSegura, visualDisciplina } from '../../utils/acervo';
 import { distintos } from '../../utils/escola';
 
 const POR_PAGINA = 7;
@@ -25,6 +26,7 @@ export function GerenciarLivros() {
   const [busca, setBusca] = useState('');
   const [disciplina, setDisciplina] = useState('');
   const [categoria, setCategoria] = useState<CategoriaMaterial | ''>('');
+  const [visibilidade, setVisibilidade] = useState<Visibilidade | ''>('');
   const [pagina, setPagina] = useState(1);
   const [sucesso, setSucesso] = useState<string | null>(mensagemRecebida);
   const [erro, setErro] = useState<string | null>(null);
@@ -52,7 +54,8 @@ export function GerenciarLivros() {
     (m) =>
       (!termo || [m.titulo, m.autor, m.isbn ?? ''].some((v) => v.toLowerCase().includes(termo))) &&
       (!disciplina || m.disciplina === disciplina) &&
-      (!categoria || m.categoria === categoria),
+      (!categoria || m.categoria === categoria) &&
+      (!visibilidade || m.visibilidade === visibilidade),
   );
   const visiveis = filtrados.slice((pagina - 1) * POR_PAGINA, pagina * POR_PAGINA);
 
@@ -71,8 +74,8 @@ export function GerenciarLivros() {
       <section className="indicadores">
         <CartaoNumero icone="📚" rotulo="Total no Acervo" valor={total(lista.length)} cor="var(--azul-escuro)" />
         <CartaoNumero icone="📖" rotulo="Livros" valor={total(lista.filter((m) => m.tipoMaterial === 'LIVRO').length)} cor="var(--verde)" />
-        <CartaoNumero icone="🏷️" rotulo="Disciplinas" valor={total(disciplinas.length)} cor="var(--laranja)" />
-        <CartaoNumero icone="🎓" rotulo="Séries Atendidas" valor={total(distintos(lista.map((m) => m.serie ?? '')).length)} cor="var(--roxo)" />
+        <CartaoNumero icone="🌐" rotulo="Públicos" valor={total(lista.filter((m) => m.visibilidade === 'PUBLICO').length)} cor="var(--azul-link)" />
+        <CartaoNumero icone="🔒" rotulo="Internos" valor={total(lista.filter((m) => m.visibilidade !== 'PUBLICO').length)} cor="var(--laranja)" />
       </section>
 
       <div className="filtros filtros--soltos">
@@ -101,6 +104,15 @@ export function GerenciarLivros() {
           <option value="">🏷️ Tipo</option>
           {CATEGORIAS.map(({ valor, rotulo }) => <option key={valor} value={valor}>{rotulo}</option>)}
         </select>
+        <select
+          className="input"
+          aria-label="Filtrar por acesso"
+          value={visibilidade}
+          onChange={(e) => aoFiltrar(() => setVisibilidade(e.target.value as Visibilidade | ''))}
+        >
+          <option value="">🔐 Acesso</option>
+          {VISIBILIDADES.map(({ valor, rotulo }) => <option key={valor} value={valor}>{rotulo}</option>)}
+        </select>
         <Link className="botao botao--verde botao--pequeno filtros__acao" to={`${base}/novo`}>+ Novo Livro</Link>
       </div>
 
@@ -118,6 +130,7 @@ export function GerenciarLivros() {
                 <th>Tipo</th>
                 <th>Ano</th>
                 <th>Arquivo</th>
+                <th>Acesso</th>
                 <th>Ações</th>
               </tr>
             </thead>
@@ -144,6 +157,7 @@ export function GerenciarLivros() {
                       <span className="etiqueta etiqueta--amarela">Sem arquivo</span>
                     )}
                   </td>
+                  <td><SeloVisibilidade visibilidade={m.visibilidade} /></td>
                   <td>
                     <div className="acoes">
                       <Link to={`${base}/${m.id}/editar`} title="Editar" aria-label={`Editar ${m.titulo}`}>✏️</Link>

@@ -110,6 +110,10 @@ export interface ProfessorCadastroResponse {
 export type TipoMaterial = 'LIVRO' | 'ARTIGO' | 'APOSTILA' | 'REVISTA' | 'MANUAL';
 export type CategoriaMaterial = 'LITERATURA' | 'DIDATICO' | 'CIENTIFICO' | 'PERIODICO' | 'COMPLEMENTAR' | 'TECNICO';
 
+//Acesso ao material, definido pelo Gestor/Administrador no cadastro ou na edição.
+//PUBLICO: o aluno lê na biblioteca e também pode baixar. INTERNO: só leitura dentro da biblioteca, sem download.
+export type Visibilidade = 'PUBLICO' | 'INTERNO';
+
 //MaterialRequestDTO
 export interface MaterialRequest {
   titulo: string;
@@ -124,6 +128,7 @@ export interface MaterialRequest {
   editora?: string;
   urlArquivo: string; //Link do PDF/e-book: o back-end guarda só a URL, não recebe o arquivo
   capaUrl?: string;
+  visibilidade: Visibilidade;
 }
 
 //Filtros aceitos por GET /api/materiais
@@ -149,6 +154,7 @@ export interface Material {
   editora: string | null;
   urlArquivo: string | null;
   capaUrl: string | null;
+  visibilidade: Visibilidade;
   criadoEm: string;
   atualizadoEm: string | null;
 }
@@ -188,4 +194,36 @@ export interface Gestor {
   nome: string;
   email: string;
   perfil: Perfil;
+}
+
+//Corpo de POST /api/auth/alterar-senha (usuário logado troca a própria senha)
+export interface AlterarSenhaRequest {
+  senhaAtual: string;
+  novaSenha: string;
+  confirmarNovaSenha: string;
+}
+
+//Resposta de GET /api/favoritos: materiais favoritados pelo usuário logado
+export interface Favorito {
+  material: Material;
+  favoritadoEm: string;
+}
+
+//Uma leitura do usuário logado: criada ao iniciar um material e atualizada a cada página lida.
+//Resposta de GET /api/leituras (histórico), POST /api/leituras e PUT /api/leituras/{id}
+export interface Leitura {
+  id: number;
+  material: Material;
+  paginaAtual: number; //Página onde o usuário parou (começa em 1)
+  totalPaginas: number | null; //Informado pelo leitor; nulo enquanto o usuário não souber o total
+  concluida: boolean;
+  iniciadaEm: string;
+  ultimoAcessoEm: string;
+}
+
+//Corpo de PUT /api/leituras/{id}
+export interface LeituraProgressoRequest {
+  paginaAtual: number;
+  totalPaginas: number | null;
+  concluida: boolean;
 }

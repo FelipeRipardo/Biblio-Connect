@@ -1,0 +1,342 @@
+/* ---------- Links do topo: favoritos, histórico e alterar senha ---------- */
+.topo-usuario__links {
+  display: flex;
+  gap: 4px;
+}
+
+.topo-usuario__link {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  color: var(--azul-claro);
+  white-space: nowrap;
+}
+
+.topo-usuario__link:hover,
+.topo-usuario__link.active {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+/* ---------- Favoritar ---------- */
+.material {
+  position: relative;
+}
+
+.material__favorito {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+.favorito--compacto {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  font-size: 1.05rem;
+  color: var(--texto-suave);
+  cursor: pointer;
+}
+
+.favorito--compacto:hover:not(:disabled) {
+  transform: scale(1.08);
+}
+
+.favorito--ativo,
+.favorito--compacto.favorito--ativo {
+  color: var(--amarelo);
+}
+
+.botao.favorito--ativo {
+  border-color: var(--amarelo);
+  background: #fff8e6;
+}
+
+.favorito:disabled {
+  cursor: progress;
+  opacity: 0.6;
+}
+
+/* ---------- Público / Interno ---------- */
+.acesso-material {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.acesso-material__opcao {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  background: #fff;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.acesso-material__opcao strong {
+  font-size: 0.85rem;
+  color: var(--azul-escuro);
+}
+
+.acesso-material__opcao small {
+  font-size: 0.72rem;
+  color: var(--texto-suave);
+}
+
+.acesso-material__opcao:hover {
+  border-color: var(--azul-escuro);
+}
+
+.acesso-material__opcao--ativa {
+  border-color: var(--azul-escuro);
+  background: #eef3f9;
+  box-shadow: inset 0 0 0 1px var(--azul-escuro);
+}
+
+.detalhes__status--interno {
+  background: #fff3cd;
+  color: #856404;
+}
+
+/* ---------- Barra de progresso ---------- */
+.progresso {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #eceff3;
+}
+
+.progresso span {
+  display: block;
+  height: 100%;
+  border-radius: 4px;
+  background: var(--verde);
+  transition: width 0.2s;
+}
+
+/* ---------- Leitor ---------- */
+.leitor {
+  max-width: 1300px;
+}
+
+.leitor__cabecalho {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.leitor__cabecalho h1 {
+  margin: 0 0 4px;
+  font-family: var(--fonte-titulo);
+  font-size: 1.3rem;
+  color: var(--azul-escuro);
+}
+
+.leitor__cabecalho > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.leitor__cabecalho > div:first-child > span {
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+}
+
+.leitor__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.leitor__barra {
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 20px;
+}
+
+.leitor__pagina {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+}
+
+.leitor__pagina .input {
+  width: 72px;
+  height: 34px;
+  text-align: center;
+}
+
+.leitor__progresso {
+  display: flex;
+  flex: 1 1 180px;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 160px;
+}
+
+.leitor__progresso small {
+  font-size: 0.7rem;
+  color: var(--texto-suave);
+}
+
+.leitor__salvo {
+  flex-basis: 100%;
+}
+
+.leitor__arquivo {
+  width: 100%;
+  height: 78vh;
+  min-height: 480px;
+  border: 1px solid var(--borda-cartao);
+  border-radius: 10px;
+  background: #525659;
+}
+
+.leitor__link {
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ---------- Histórico de leituras ---------- */
+.historico {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.historico__item {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 20px;
+}
+
+.historico__capa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 94px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.historico__capa small {
+  font-size: 0.65rem;
+}
+
+.historico__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.historico__info h2 {
+  margin: 0;
+  font-family: var(--fonte-titulo);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.historico__info h2 a {
+  color: var(--azul-escuro);
+}
+
+.historico__autor {
+  font-size: 0.75rem;
+  color: var(--texto-suave);
+}
+
+.historico__progresso {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.historico__progresso .progresso {
+  flex: 0 1 260px;
+}
+
+.historico__progresso small {
+  font-size: 0.72rem;
+  color: var(--texto-suave);
+  white-space: nowrap;
+}
+
+.historico__vazio {
+  align-items: center;
+}
+
+/* ---------- Alterar senha ---------- */
+.alterar-senha {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  align-items: start;
+  gap: 24px;
+}
+
+/* Em telas menores os links do topo ficam só com o ícone */
+@media (max-width: 1100px) {
+  .topo-usuario__texto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 760px) {
+  .alterar-senha {
+    grid-template-columns: 1fr;
+  }
+
+  .acesso-material {
+    grid-template-columns: 1fr;
+  }
+
+  .historico__item {
+    grid-template-columns: 56px minmax(0, 1fr);
+  }
+
+  .historico__capa {
+    height: 76px;
+  }
+
+  .historico__acao {
+    grid-column: 1 / -1;
+  }
+
+  .leitor__arquivo {
+    height: 70vh;
+  }
+}
