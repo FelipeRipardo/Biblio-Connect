@@ -3,7 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { RotaProtegida } from './components/RotaProtegida';
 import { Acervo } from './pages/acervo/Acervo';
 import { DetalhesMaterial } from './pages/acervo/DetalhesMaterial';
-import { LeitorMaterial } from './pages/acervo/LeitorMaterial';
+import { LeitorBiblioteca } from './pages/acervo/leitor/LeitorBiblioteca';
 import { AlterarSenha } from './pages/AlterarSenha';
 import { Favoritos } from './pages/leituras/Favoritos';
 import { HistoricoLeituras } from './pages/leituras/HistoricoLeituras';
@@ -48,7 +48,7 @@ export function App() {
 
         <Route path="/acervo" element={<RotaProtegida><Acervo /></RotaProtegida>} />
         <Route path="/acervo/:id" element={<RotaProtegida><DetalhesMaterial /></RotaProtegida>} />
-        <Route path="/acervo/:id/ler" element={<RotaProtegida><LeitorMaterial /></RotaProtegida>} />
+        <Route path="/acervo/:id/ler" element={<RotaProtegida><LeitorBiblioteca /></RotaProtegida>} />
         <Route path="/favoritos" element={<RotaProtegida><Favoritos /></RotaProtegida>} />
         <Route path="/historico" element={<RotaProtegida><HistoricoLeituras /></RotaProtegida>} />
         <Route path="/alterar-senha" element={<RotaProtegida><AlterarSenha /></RotaProtegida>} />

@@ -1,0 +1,552 @@
+/* ---------- Leitor da biblioteca (estilo Minha Biblioteca) ---------- */
+/* Ocupa a tela inteira: topo com ferramentas, painel lateral (sumário/marcadores/busca), páginas e rodapé de navegação */
+.leitor-bib {
+  --leitor-fundo: #e9ebee;
+  --leitor-painel: #fff;
+  --leitor-texto: var(--texto);
+  --leitor-suave: var(--texto-suave);
+  --leitor-borda: var(--borda-cartao);
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  background: var(--leitor-fundo);
+  color: var(--leitor-texto);
+}
+
+.leitor-bib--escuro {
+  --leitor-fundo: #1d1f22;
+  --leitor-painel: #26292d;
+  --leitor-texto: #e6e6e6;
+  --leitor-suave: #a5abb3;
+  --leitor-borda: #3a3e44;
+}
+
+.leitor-bib--sepia {
+  --leitor-fundo: #e8dfcc;
+}
+
+/* Cor da página: o desenho do PDF recebe um filtro */
+.leitor-bib--sepia .leitor-bib__desenho canvas {
+  filter: sepia(0.45) brightness(0.97);
+}
+
+.leitor-bib--escuro .leitor-bib__desenho canvas {
+  filter: invert(0.9) hue-rotate(180deg);
+}
+
+.leitor-bib--mensagem {
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.leitor-bib--mensagem .cartao {
+  align-items: flex-start;
+  max-width: 440px;
+}
+
+/* Topo */
+.leitor-bib__topo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 6px 14px;
+  background: var(--azul-escuro);
+  color: #fff;
+}
+
+.leitor-bib__titulo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.leitor-bib__titulo strong,
+.leitor-bib__titulo span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.leitor-bib__titulo strong {
+  font-family: var(--fonte-titulo);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.leitor-bib__titulo span {
+  font-size: 0.72rem;
+  color: var(--azul-claro);
+}
+
+.leitor-bib__ferramentas,
+.leitor-bib__conta,
+.leitor-bib__grupo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.leitor-bib__ferramentas {
+  gap: 14px;
+}
+
+.leitor-bib__icone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.leitor-bib__icone:hover:not(:disabled),
+.leitor-bib__icone--ativo {
+  background: rgba(255, 255, 255, 0.14);
+  text-decoration: none;
+}
+
+.leitor-bib__icone:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+
+.leitor-bib__icone--marcado {
+  background: var(--laranja);
+}
+
+.leitor-bib__icone--marcado:hover:not(:disabled) {
+  background: var(--laranja);
+  filter: brightness(1.08);
+}
+
+.leitor-bib__zoom {
+  min-width: 56px;
+  height: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 6px;
+  background: transparent;
+  color: #fff;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.leitor-bib__zoom:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.leitor-bib__tema {
+  width: 28px;
+  height: 28px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  font-family: var(--fonte-titulo);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.leitor-bib__tema--claro {
+  background: #fff;
+  color: #333;
+}
+
+.leitor-bib__tema--sepia {
+  background: #f1e4c8;
+  color: #5b4636;
+}
+
+.leitor-bib__tema--escuro {
+  background: #2b2b2b;
+  color: #eee;
+}
+
+.leitor-bib__tema--ativo {
+  border-color: var(--laranja);
+}
+
+.leitor-bib__conta .favorito--compacto {
+  width: 36px;
+  height: 36px;
+}
+
+/* Corpo */
+.leitor-bib__corpo {
+  position: relative;
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.leitor-bib__painel {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 300px;
+  min-height: 0;
+  border-right: 1px solid var(--leitor-borda);
+  background: var(--leitor-painel);
+}
+
+.leitor-bib__abas {
+  display: flex;
+  border-bottom: 1px solid var(--leitor-borda);
+}
+
+.leitor-bib__aba {
+  flex: 1;
+  padding: 12px 6px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: none;
+  color: var(--leitor-suave);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.leitor-bib__aba--ativa {
+  border-bottom-color: var(--laranja);
+  color: var(--leitor-texto);
+  font-weight: 700;
+}
+
+.leitor-bib__conteudo-painel {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.leitor-bib__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.leitor-bib__subnivel {
+  padding-left: 14px;
+}
+
+.leitor-bib__item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: var(--leitor-texto);
+  font: inherit;
+  font-size: 0.8rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.leitor-bib__item:hover:not(:disabled) {
+  background: rgba(127, 127, 127, 0.12);
+}
+
+.leitor-bib__item:disabled {
+  cursor: default;
+  color: var(--leitor-suave);
+}
+
+.leitor-bib__item small {
+  flex-shrink: 0;
+  color: var(--leitor-suave);
+}
+
+.leitor-bib__item--atual {
+  background: rgba(224, 124, 36, 0.14);
+  color: var(--laranja);
+  font-weight: 700;
+}
+
+.leitor-bib__marcador {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.leitor-bib__marcador .leitor-bib__item {
+  flex-direction: column;
+  gap: 2px;
+}
+
+.leitor-bib__marcador .leitor-bib__item span {
+  font-size: 0.75rem;
+  color: var(--leitor-suave);
+}
+
+.leitor-bib__remover {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  margin-top: 6px;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: var(--leitor-suave);
+  cursor: pointer;
+}
+
+.leitor-bib__remover:hover {
+  background: var(--erro-fundo);
+  color: var(--erro-texto);
+}
+
+.leitor-bib__busca {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.leitor-bib__busca .input {
+  height: 36px;
+}
+
+.leitor-bib__resultado {
+  flex-direction: column;
+  gap: 4px;
+  line-height: 1.45;
+}
+
+.leitor-bib__resultado mark {
+  padding: 0 2px;
+  border-radius: 2px;
+  background: #ffe38a;
+  color: #333;
+}
+
+.leitor-bib__vazio {
+  margin: 6px 4px 10px;
+  font-size: 0.78rem;
+  color: var(--leitor-suave);
+}
+
+/* Área de leitura */
+.leitor-bib__leitura {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.leitor-bib__paginas {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  overflow: auto;
+  padding: 16px 24px 32px;
+  outline: none;
+}
+
+.leitor-bib__medida {
+  flex: 1;
+}
+
+.leitor-bib__pagina {
+  position: relative;
+  flex-shrink: 0;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+  user-select: none;
+}
+
+.leitor-bib--escuro .leitor-bib__pagina {
+  background: #2a2a2a;
+}
+
+.leitor-bib__desenho canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.leitor-bib__desenho {
+  width: 100%;
+  height: 100%;
+}
+
+.leitor-bib__carregando {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.leitor-bib__estado {
+  margin: auto;
+  color: var(--leitor-suave);
+}
+
+.leitor-bib__aviso {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: calc(100% - 32px);
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--azul-escuro);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-size: 0.8rem;
+  transform: translateX(-50%);
+}
+
+.leitor-bib__aviso button {
+  flex-shrink: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--azul-claro);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.leitor-bib__alternativo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.leitor-bib__alternativo .leitor-bib__aviso {
+  position: static;
+  max-width: none;
+  margin: 12px;
+  transform: none;
+}
+
+.leitor-bib__alternativo iframe {
+  flex: 1;
+  width: 100%;
+  border: 0;
+}
+
+/* Rodapé */
+.leitor-bib__rodape {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 6px 16px;
+  border-top: 1px solid var(--leitor-borda);
+  background: var(--leitor-painel);
+  color: var(--leitor-texto);
+}
+
+.leitor-bib__rodape .leitor-bib__icone {
+  font-size: 1.6rem;
+}
+
+.leitor-bib__rodape .leitor-bib__icone:hover:not(:disabled) {
+  background: rgba(127, 127, 127, 0.14);
+}
+
+.leitor-bib__trilha {
+  flex: 1;
+  min-width: 80px;
+  accent-color: var(--laranja);
+  cursor: pointer;
+}
+
+.leitor-bib__ir {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.leitor-bib__ir label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.leitor-bib__ir .input {
+  width: 58px;
+  height: 32px;
+  padding: 0 6px;
+  text-align: center;
+}
+
+.leitor-bib__percentual {
+  min-width: 40px;
+  font-size: 0.78rem;
+  color: var(--leitor-suave);
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  /* No celular o painel abre por cima das páginas */
+  .leitor-bib__painel {
+    position: absolute;
+    inset: 0 auto 0 0;
+    z-index: 3;
+    width: min(320px, 88%);
+    box-shadow: 4px 0 18px rgba(0, 0, 0, 0.25);
+  }
+
+  .leitor-bib__temas,
+  .leitor-bib__titulo span {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .leitor-bib__topo {
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 6px 8px;
+  }
+
+  .leitor-bib__titulo {
+    flex-basis: calc(100% - 170px);
+  }
+
+  .leitor-bib__ferramentas {
+    order: 3;
+    justify-content: space-between;
+    width: 100%;
+    gap: 4px;
+  }
+
+  .leitor-bib__paginas {
+    padding: 10px 8px 24px;
+  }
+
+  .leitor-bib__rodape {
+    gap: 4px;
+    padding: 6px 8px;
+  }
+
+  .leitor-bib__percentual {
+    display: none;
+  }
+}
