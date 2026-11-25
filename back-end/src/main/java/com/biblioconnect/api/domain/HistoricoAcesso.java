@@ -9,7 +9,9 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "historico_acessos")
+@Table(name = "historico_acessos", uniqueConstraints = {
+        @UniqueConstraint(columnNames = {"usuario_id", "material_id"})
+})
 @Getter
 @Setter
 @NoArgsConstructor
@@ -28,11 +30,25 @@ public class HistoricoAcesso {
     @JoinColumn(name = "material_id", nullable = false)
     private Material material;
 
-    @Column(name = "acessado_em", updatable = false)
+    @Column(name = "pagina_atual", nullable = false)
+    private Integer paginaAtual = 1;
+
+    @Column(name = "total_paginas")
+    private Integer totalPaginas;
+
+    @Column(name = "acessado_em", nullable = false)
     private LocalDateTime acessadoEm;
 
     @PrePersist
     protected void onCreate() {
+        if (this.paginaAtual == null || this.paginaAtual < 1) {
+            this.paginaAtual = 1;
+        }
+        this.acessadoEm = LocalDateTime.now();
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
         this.acessadoEm = LocalDateTime.now();
     }
 }
